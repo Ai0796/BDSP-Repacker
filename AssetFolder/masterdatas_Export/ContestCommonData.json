@@ -1,0 +1,96 @@
+{
+    "m_GameObject": {
+        "m_FileID": 0,
+        "m_PathID": 0
+    },
+    "m_Enabled": 1,
+    "m_Script": {
+        "m_FileID": 0,
+        "m_PathID": 6393957390472568495
+    },
+    "m_Name": "ContestCommonData",
+    "ContestCategory": [
+        {
+            "valid_flag": 1,
+            "id": 0,
+            "category": 1,
+            "needDpClear": 0,
+            "labelNameBrilliant": "DP_contest_118",
+            "labelNameShining": "DP_contest_118"
+        },
+        {
+            "valid_flag": 1,
+            "id": 1,
+            "category": 2,
+            "needDpClear": 0,
+            "labelNameBrilliant": "DP_contest_119",
+            "labelNameShining": "DP_contest_119"
+        },
+        {
+            "valid_flag": 1,
+            "id": 2,
+            "category": 3,
+            "needDpClear": 0,
+            "labelNameBrilliant": "DP_contest_120",
+            "labelNameShining": "DP_contest_120"
+        },
+        {
+            "valid_flag": 1,
+            "id": 3,
+            "category": 4,
+            "needDpClear": 0,
+            "labelNameBrilliant": "DP_contest_121",
+            "labelNameShining": "DP_contest_121"
+        },
+        {
+            "valid_flag": 1,
+            "id": 4,
+            "category": 5,
+            "needDpClear": 0,
+            "labelNameBrilliant": "DP_contest_122",
+            "labelNameShining": "DP_contest_122"
+        },
+        {
+            "valid_flag": 1,
+            "id": 5,
+            "category": 6,
+            "needDpClear": 0,
+            "labelNameBrilliant": "",
+            "labelNameShining": ""
+        },
+        {
+            "valid_flag": 1,
+            "id": 6,
+            "category": 7,
+            "needDpClear": 1,
+            "labelNameBrilliant": "DP_contest_641",
+            "labelNameShining": "DP_contest_642"
+        }
+    ],
+    "ContestRank": [
+        {
+            "valid_flag": 1,
+            "id": 0,
+            "rank": 1,
+            "labelName": "DP_contest_123"
+        },
+        {
+            "valid_flag": 1,
+            "id": 1,
+            "rank": 2,
+            "labelName": "DP_contest_124"
+        },
+        {
+            "valid_flag": 1,
+            "id": 2,
+            "rank": 3,
+            "labelName": "DP_contest_125"
+        },
+        {
+            "valid_flag": 1,
+            "id": 3,
+            "rank": 4,
+            "labelName": "DP_contest_126"
+        }
+    ]
+}

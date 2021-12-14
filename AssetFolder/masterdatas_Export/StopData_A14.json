@@ -1,0 +1,44 @@
+{
+    "m_GameObject": {
+        "m_FileID": 0,
+        "m_PathID": 0
+    },
+    "m_Enabled": 1,
+    "m_Script": {
+        "m_FileID": 0,
+        "m_PathID": 8423137904901713306
+    },
+    "m_Name": "StopData_A14",
+    "Data": [
+        {
+            "ID": "SCRID_POS_C11_GINGAM",
+            "Position": {
+                "x": 629.0,
+                "y": 428.0
+            },
+            "HeightLayer": 1,
+            "Size": {
+                "x": 2.0,
+                "y": 1.0
+            },
+            "ContactLabel": "pos_c11_pw_man_out01",
+            "Param": 0,
+            "Work": 31
+        },
+        {
+            "ID": "SCRID_POS_W230_GINGAM",
+            "Position": {
+                "x": 683.0,
+                "y": 430.0
+            },
+            "HeightLayer": 1,
+            "Size": {
+                "x": 1.0,
+                "y": 2.0
+            },
+            "ContactLabel": "pos_c11_pw_man_out02",
+            "Param": 0,
+            "Work": 31
+        }
+    ]
+}

@@ -1,0 +1,90 @@
+{
+    "m_GameObject": {
+        "m_FileID": 0,
+        "m_PathID": 0
+    },
+    "m_Enabled": 1,
+    "m_Script": {
+        "m_FileID": 0,
+        "m_PathID": -7768618106554099594
+    },
+    "m_Name": "MapWarp_D24R0105",
+    "Data": [
+        {
+            "Position": {
+                "x": 38.0,
+                "y": 8.0,
+                "z": 2.0
+            },
+            "GruopID": 1,
+            "Size": {
+                "x": 1.0,
+                "y": 1.0
+            },
+            "WarpZone": 301,
+            "WarpIndex": 0,
+            "InputDir": 3,
+            "FlagIndex": 4000,
+            "ScriptLabel": 6,
+            "ExitLabel": 999,
+            "ConnectionName": ""
+        },
+        {
+            "Position": {
+                "x": 38.0,
+                "y": 8.0,
+                "z": 3.0
+            },
+            "GruopID": 1,
+            "Size": {
+                "x": 1.0,
+                "y": 1.0
+            },
+            "WarpZone": 301,
+            "WarpIndex": 0,
+            "InputDir": 3,
+            "FlagIndex": 4000,
+            "ScriptLabel": 6,
+            "ExitLabel": 999,
+            "ConnectionName": ""
+        },
+        {
+            "Position": {
+                "x": 38.0,
+                "y": 8.0,
+                "z": 4.0
+            },
+            "GruopID": 1,
+            "Size": {
+                "x": 1.0,
+                "y": 1.0
+            },
+            "WarpZone": 301,
+            "WarpIndex": 0,
+            "InputDir": 3,
+            "FlagIndex": 4000,
+            "ScriptLabel": 6,
+            "ExitLabel": 999,
+            "ConnectionName": ""
+        },
+        {
+            "Position": {
+                "x": 14.0,
+                "y": 1.0,
+                "z": 47.75
+            },
+            "GruopID": 0,
+            "Size": {
+                "x": 1.0,
+                "y": 1.5
+            },
+            "WarpZone": 304,
+            "WarpIndex": 1,
+            "InputDir": 1,
+            "FlagIndex": 4000,
+            "ScriptLabel": 5,
+            "ExitLabel": 999,
+            "ConnectionName": ""
+        }
+    ]
+}

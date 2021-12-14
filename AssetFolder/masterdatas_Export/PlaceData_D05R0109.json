@@ -1,0 +1,53 @@
+{
+    "m_GameObject": {
+        "m_FileID": 0,
+        "m_PathID": 0
+    },
+    "m_Enabled": 1,
+    "m_Script": {
+        "m_FileID": 0,
+        "m_PathID": 4652281892236711381
+    },
+    "m_Name": "PlaceData_D05R0109",
+    "Data": [
+        {
+            "ID": "TR_GINGAW_15",
+            "zoneID": 211,
+            "TrainerID": 399,
+            "ObjectGraphicIndex": 54,
+            "ColorIndex": 0,
+            "Position": {
+                "x": 10.0,
+                "y": 15.0
+            },
+            "HeightLayer": 5,
+            "HeightIgnore": 0,
+            "Size": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "Rotation": 90,
+            "MoveLimit": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "EventType": 1,
+            "MoveCode": 16,
+            "MoveParam0": 6,
+            "MoveParam1": 0,
+            "MoveParam2": 0,
+            "TalkLabel": "ev_GINGAW_15",
+            "ContactLabel": "",
+            "Work": 595,
+            "Dowsing": 0,
+            "LoadFirst": 0,
+            "DoNotLoad": 4000,
+            "TalkToRange": 1.25,
+            "TalkToSize": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "TalkBit": 15
+        }
+    ]
+}

@@ -1,0 +1,71 @@
+{
+    "m_GameObject": {
+        "m_FileID": 0,
+        "m_PathID": 0
+    },
+    "m_Enabled": 1,
+    "m_Script": {
+        "m_FileID": 0,
+        "m_PathID": -7768618106554099594
+    },
+    "m_Name": "MapWarp_UGA09",
+    "Data": [
+        {
+            "Position": {
+                "x": 8.600000381469727,
+                "y": 0.0,
+                "z": 27.799999237060547
+            },
+            "GruopID": 0,
+            "Size": {
+                "x": 1.0,
+                "y": 1.399999976158142
+            },
+            "WarpZone": 563,
+            "WarpIndex": 1,
+            "InputDir": 1,
+            "FlagIndex": 4000,
+            "ScriptLabel": 3,
+            "ExitLabel": 999,
+            "ConnectionName": ""
+        },
+        {
+            "Position": {
+                "x": 77.4000015258789,
+                "y": 0.0,
+                "z": 57.79999923706055
+            },
+            "GruopID": 0,
+            "Size": {
+                "x": 1.0,
+                "y": 1.399999976158142
+            },
+            "WarpZone": 564,
+            "WarpIndex": 0,
+            "InputDir": 3,
+            "FlagIndex": 4000,
+            "ScriptLabel": 3,
+            "ExitLabel": 999,
+            "ConnectionName": ""
+        },
+        {
+            "Position": {
+                "x": 120.75,
+                "y": 0.0,
+                "z": 71.5
+            },
+            "GruopID": 0,
+            "Size": {
+                "x": 1.5,
+                "y": 1.0
+            },
+            "WarpZone": 565,
+            "WarpIndex": 1,
+            "InputDir": 0,
+            "FlagIndex": 4000,
+            "ScriptLabel": 3,
+            "ExitLabel": 999,
+            "ConnectionName": ""
+        }
+    ]
+}

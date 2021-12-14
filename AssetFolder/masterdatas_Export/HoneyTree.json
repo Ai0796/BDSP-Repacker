@@ -1,0 +1,208 @@
+{
+    "m_GameObject": {
+        "m_FileID": 0,
+        "m_PathID": 0
+    },
+    "m_Enabled": 1,
+    "m_Script": {
+        "m_FileID": 0,
+        "m_PathID": -1691934555814012242
+    },
+    "m_Name": "HoneyTree",
+    "HoneyTreeIndex": [
+        {
+            "ZoneID": 359,
+            "HoneyStartFlag": 493,
+            "HoneyPosXZ": {
+                "x": 7.0,
+                "y": 17.0
+            }
+        },
+        {
+            "ZoneID": 361,
+            "HoneyStartFlag": 495,
+            "HoneyPosXZ": {
+                "x": 10.0,
+                "y": 13.0
+            }
+        },
+        {
+            "ZoneID": 362,
+            "HoneyStartFlag": 496,
+            "HoneyPosXZ": {
+                "x": 11.0,
+                "y": 17.0
+            }
+        },
+        {
+            "ZoneID": 364,
+            "HoneyStartFlag": 498,
+            "HoneyPosXZ": {
+                "x": 11.0,
+                "y": 19.0
+            }
+        },
+        {
+            "ZoneID": 365,
+            "HoneyStartFlag": 499,
+            "HoneyPosXZ": {
+                "x": 15.0,
+                "y": 19.0
+            }
+        },
+        {
+            "ZoneID": 367,
+            "HoneyStartFlag": 501,
+            "HoneyPosXZ": {
+                "x": 19.0,
+                "y": 19.0
+            }
+        },
+        {
+            "ZoneID": 373,
+            "HoneyStartFlag": 507,
+            "HoneyPosXZ": {
+                "x": 20.0,
+                "y": 16.0
+            }
+        },
+        {
+            "ZoneID": 375,
+            "HoneyStartFlag": 509,
+            "HoneyPosXZ": {
+                "x": 19.0,
+                "y": 13.0
+            }
+        },
+        {
+            "ZoneID": 378,
+            "HoneyStartFlag": 512,
+            "HoneyPosXZ": {
+                "x": 15.0,
+                "y": 13.0
+            }
+        },
+        {
+            "ZoneID": 379,
+            "HoneyStartFlag": 513,
+            "HoneyPosXZ": {
+                "x": 16.0,
+                "y": 20.0
+            }
+        },
+        {
+            "ZoneID": 383,
+            "HoneyStartFlag": 517,
+            "HoneyPosXZ": {
+                "x": 19.0,
+                "y": 24.0
+            }
+        },
+        {
+            "ZoneID": 385,
+            "HoneyStartFlag": 519,
+            "HoneyPosXZ": {
+                "x": 24.0,
+                "y": 23.0
+            }
+        },
+        {
+            "ZoneID": 392,
+            "HoneyStartFlag": 526,
+            "HoneyPosXZ": {
+                "x": 26.0,
+                "y": 19.0
+            }
+        },
+        {
+            "ZoneID": 394,
+            "HoneyStartFlag": 528,
+            "HoneyPosXZ": {
+                "x": 21.0,
+                "y": 15.0
+            }
+        },
+        {
+            "ZoneID": 400,
+            "HoneyStartFlag": 534,
+            "HoneyPosXZ": {
+                "x": 2.0,
+                "y": 20.0
+            }
+        },
+        {
+            "ZoneID": 404,
+            "HoneyStartFlag": 538,
+            "HoneyPosXZ": {
+                "x": 9.0,
+                "y": 26.0
+            }
+        },
+        {
+            "ZoneID": 407,
+            "HoneyStartFlag": 541,
+            "HoneyPosXZ": {
+                "x": 29.0,
+                "y": 21.0
+            }
+        },
+        {
+            "ZoneID": 197,
+            "HoneyStartFlag": 331,
+            "HoneyPosXZ": {
+                "x": 9.0,
+                "y": 17.0
+            }
+        },
+        {
+            "ZoneID": 199,
+            "HoneyStartFlag": 333,
+            "HoneyPosXZ": {
+                "x": 8.0,
+                "y": 14.0
+            }
+        },
+        {
+            "ZoneID": 201,
+            "HoneyStartFlag": 335,
+            "HoneyPosXZ": {
+                "x": 6.0,
+                "y": 15.0
+            }
+        },
+        {
+            "ZoneID": 253,
+            "HoneyStartFlag": 387,
+            "HoneyPosXZ": {
+                "x": 6.0,
+                "y": 16.0
+            }
+        }
+    ],
+    "HoneyTreeShake": [
+        {
+            "Big": 19,
+            "Normal": 60,
+            "None": 20,
+            "Super": 1
+        },
+        {
+            "Big": 75,
+            "Normal": 20,
+            "None": 1,
+            "Super": 4
+        },
+        {
+            "Big": 1,
+            "Normal": 18,
+            "None": 80,
+            "Super": 1
+        },
+        {
+            "Big": 5,
+            "Normal": 1,
+            "None": 1,
+            "Super": 93
+        }
+    ]
+}

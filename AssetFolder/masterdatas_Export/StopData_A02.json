@@ -1,0 +1,74 @@
+{
+    "m_GameObject": {
+        "m_FileID": 0,
+        "m_PathID": 0
+    },
+    "m_Enabled": 1,
+    "m_Script": {
+        "m_FileID": 0,
+        "m_PathID": 8423137904901713306
+    },
+    "m_Name": "StopData_A02",
+    "Data": [
+        {
+            "ID": "SCRID_POS_C03_BOY2",
+            "Position": {
+                "x": 266.0,
+                "y": 748.0
+            },
+            "HeightLayer": 2,
+            "Size": {
+                "x": 1.0,
+                "y": 4.0
+            },
+            "ContactLabel": "pos_c03_boy2",
+            "Param": 0,
+            "Work": 55
+        },
+        {
+            "ID": "SCRID_POS_C03_RIVAL",
+            "Position": {
+                "x": 262.0,
+                "y": 748.0
+            },
+            "HeightLayer": 4,
+            "Size": {
+                "x": 1.0,
+                "y": 4.0
+            },
+            "ContactLabel": "pos_c03_rival",
+            "Param": 2,
+            "Work": 55
+        },
+        {
+            "ID": "SCRID_POS_R207_SUPPORT",
+            "Position": {
+                "x": 300.0,
+                "y": 708.0
+            },
+            "HeightLayer": 5,
+            "Size": {
+                "x": 8.0,
+                "y": 1.0
+            },
+            "ContactLabel": "pos_r207_support",
+            "Param": 0,
+            "Work": 74
+        },
+        {
+            "ID": "SCRID_POS_R207_SUPPORT",
+            "Position": {
+                "x": 300.0,
+                "y": 707.0
+            },
+            "HeightLayer": 5,
+            "Size": {
+                "x": 8.0,
+                "y": 1.0
+            },
+            "ContactLabel": "pos_r207_support_mae",
+            "Param": 0,
+            "Work": 74
+        }
+    ]
+}

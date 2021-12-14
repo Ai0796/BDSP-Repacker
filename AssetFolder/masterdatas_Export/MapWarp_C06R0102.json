@@ -1,0 +1,33 @@
+{
+    "m_GameObject": {
+        "m_FileID": 0,
+        "m_PathID": 0
+    },
+    "m_Enabled": 1,
+    "m_Script": {
+        "m_FileID": 0,
+        "m_PathID": -7768618106554099594
+    },
+    "m_Name": "MapWarp_C06R0102",
+    "Data": [
+        {
+            "Position": {
+                "x": 7.0,
+                "y": 0.0,
+                "z": 7.800000190734863
+            },
+            "GruopID": 0,
+            "Size": {
+                "x": 1.0,
+                "y": 1.2999999523162842
+            },
+            "WarpZone": 116,
+            "WarpIndex": 1,
+            "InputDir": 3,
+            "FlagIndex": 4000,
+            "ScriptLabel": 6,
+            "ExitLabel": 6,
+            "ConnectionName": ""
+        }
+    ]
+}

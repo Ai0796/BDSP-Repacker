@@ -1,0 +1,470 @@
+{
+    "m_GameObject": {
+        "m_FileID": 0,
+        "m_PathID": 0
+    },
+    "m_Enabled": 1,
+    "m_Script": {
+        "m_FileID": 0,
+        "m_PathID": -7768618106554099594
+    },
+    "m_Name": "MapWarp_D10R0101",
+    "Data": [
+        {
+            "Position": {
+                "x": 67.0,
+                "y": 2.0,
+                "z": 47.0
+            },
+            "GruopID": -1,
+            "Size": {
+                "x": 1.0,
+                "y": 1.0
+            },
+            "WarpZone": 498,
+            "WarpIndex": 0,
+            "InputDir": 0,
+            "FlagIndex": 4000,
+            "ScriptLabel": 3,
+            "ExitLabel": 999,
+            "ConnectionName": ""
+        },
+        {
+            "Position": {
+                "x": 68.0,
+                "y": 4.0,
+                "z": 47.0
+            },
+            "GruopID": -1,
+            "Size": {
+                "x": 1.0,
+                "y": 1.0
+            },
+            "WarpZone": 503,
+            "WarpIndex": 0,
+            "InputDir": 0,
+            "FlagIndex": 4000,
+            "ScriptLabel": 3,
+            "ExitLabel": 999,
+            "ConnectionName": ""
+        },
+        {
+            "Position": {
+                "x": 69.0,
+                "y": 2.0,
+                "z": 47.0
+            },
+            "GruopID": -1,
+            "Size": {
+                "x": 1.0,
+                "y": 1.0
+            },
+            "WarpZone": 497,
+            "WarpIndex": 0,
+            "InputDir": 0,
+            "FlagIndex": 4000,
+            "ScriptLabel": 3,
+            "ExitLabel": 999,
+            "ConnectionName": ""
+        },
+        {
+            "Position": {
+                "x": 70.0,
+                "y": 4.0,
+                "z": 47.0
+            },
+            "GruopID": -1,
+            "Size": {
+                "x": 1.0,
+                "y": 1.0
+            },
+            "WarpZone": 504,
+            "WarpIndex": 0,
+            "InputDir": 0,
+            "FlagIndex": 4000,
+            "ScriptLabel": 3,
+            "ExitLabel": 999,
+            "ConnectionName": ""
+        },
+        {
+            "Position": {
+                "x": 24.0,
+                "y": 2.0,
+                "z": 52.0
+            },
+            "GruopID": 1,
+            "Size": {
+                "x": 1.0,
+                "y": 1.0
+            },
+            "WarpZone": 405,
+            "WarpIndex": 1,
+            "InputDir": 2,
+            "FlagIndex": 4000,
+            "ScriptLabel": 3,
+            "ExitLabel": 999,
+            "ConnectionName": ""
+        },
+        {
+            "Position": {
+                "x": 25.0,
+                "y": 2.0,
+                "z": 52.0
+            },
+            "GruopID": 1,
+            "Size": {
+                "x": 1.0,
+                "y": 1.0
+            },
+            "WarpZone": 405,
+            "WarpIndex": 1,
+            "InputDir": 2,
+            "FlagIndex": 4000,
+            "ScriptLabel": 3,
+            "ExitLabel": 999,
+            "ConnectionName": ""
+        },
+        {
+            "Position": {
+                "x": 71.0,
+                "y": 1.0,
+                "z": 47.0
+            },
+            "GruopID": -1,
+            "Size": {
+                "x": 1.0,
+                "y": 1.0
+            },
+            "WarpZone": 496,
+            "WarpIndex": 0,
+            "InputDir": 0,
+            "FlagIndex": 4000,
+            "ScriptLabel": 3,
+            "ExitLabel": 999,
+            "ConnectionName": ""
+        },
+        {
+            "Position": {
+                "x": 72.0,
+                "y": 1.0,
+                "z": 47.0
+            },
+            "GruopID": -1,
+            "Size": {
+                "x": 1.0,
+                "y": 1.0
+            },
+            "WarpZone": 499,
+            "WarpIndex": 0,
+            "InputDir": 0,
+            "FlagIndex": 4000,
+            "ScriptLabel": 3,
+            "ExitLabel": 999,
+            "ConnectionName": ""
+        },
+        {
+            "Position": {
+                "x": 73.0,
+                "y": 1.0,
+                "z": 47.0
+            },
+            "GruopID": -1,
+            "Size": {
+                "x": 1.0,
+                "y": 1.0
+            },
+            "WarpZone": 500,
+            "WarpIndex": 0,
+            "InputDir": 0,
+            "FlagIndex": 4000,
+            "ScriptLabel": 3,
+            "ExitLabel": 999,
+            "ConnectionName": ""
+        },
+        {
+            "Position": {
+                "x": 74.0,
+                "y": 3.0,
+                "z": 47.0
+            },
+            "GruopID": -1,
+            "Size": {
+                "x": 1.0,
+                "y": 1.0
+            },
+            "WarpZone": 501,
+            "WarpIndex": 0,
+            "InputDir": 0,
+            "FlagIndex": 4000,
+            "ScriptLabel": 3,
+            "ExitLabel": 999,
+            "ConnectionName": ""
+        },
+        {
+            "Position": {
+                "x": 75.0,
+                "y": 2.0,
+                "z": 47.0
+            },
+            "GruopID": -1,
+            "Size": {
+                "x": 1.0,
+                "y": 1.0
+            },
+            "WarpZone": 502,
+            "WarpIndex": 0,
+            "InputDir": 0,
+            "FlagIndex": 4000,
+            "ScriptLabel": 3,
+            "ExitLabel": 999,
+            "ConnectionName": ""
+        },
+        {
+            "Position": {
+                "x": 76.0,
+                "y": 3.0,
+                "z": 47.0
+            },
+            "GruopID": -1,
+            "Size": {
+                "x": 1.0,
+                "y": 1.0
+            },
+            "WarpZone": 505,
+            "WarpIndex": 0,
+            "InputDir": 0,
+            "FlagIndex": 4000,
+            "ScriptLabel": 3,
+            "ExitLabel": 999,
+            "ConnectionName": ""
+        },
+        {
+            "Position": {
+                "x": 77.0,
+                "y": 5.0,
+                "z": 47.0
+            },
+            "GruopID": -1,
+            "Size": {
+                "x": 1.0,
+                "y": 1.0
+            },
+            "WarpZone": 624,
+            "WarpIndex": 0,
+            "InputDir": 3,
+            "FlagIndex": 4000,
+            "ScriptLabel": 3,
+            "ExitLabel": 999,
+            "ConnectionName": ""
+        },
+        {
+            "Position": {
+                "x": 78.0,
+                "y": 2.0,
+                "z": 47.0
+            },
+            "GruopID": -1,
+            "Size": {
+                "x": 1.0,
+                "y": 1.0
+            },
+            "WarpZone": 650,
+            "WarpIndex": 0,
+            "InputDir": 0,
+            "FlagIndex": 4000,
+            "ScriptLabel": 3,
+            "ExitLabel": 999,
+            "ConnectionName": ""
+        },
+        {
+            "Position": {
+                "x": 79.0,
+                "y": 4.0,
+                "z": 47.0
+            },
+            "GruopID": -1,
+            "Size": {
+                "x": 1.0,
+                "y": 1.0
+            },
+            "WarpZone": 655,
+            "WarpIndex": 0,
+            "InputDir": 0,
+            "FlagIndex": 4000,
+            "ScriptLabel": 3,
+            "ExitLabel": 999,
+            "ConnectionName": ""
+        },
+        {
+            "Position": {
+                "x": 80.0,
+                "y": 2.0,
+                "z": 47.0
+            },
+            "GruopID": -1,
+            "Size": {
+                "x": 1.0,
+                "y": 1.0
+            },
+            "WarpZone": 649,
+            "WarpIndex": 0,
+            "InputDir": 0,
+            "FlagIndex": 4000,
+            "ScriptLabel": 3,
+            "ExitLabel": 999,
+            "ConnectionName": ""
+        },
+        {
+            "Position": {
+                "x": 81.0,
+                "y": 4.0,
+                "z": 47.0
+            },
+            "GruopID": -1,
+            "Size": {
+                "x": 1.0,
+                "y": 1.0
+            },
+            "WarpZone": 656,
+            "WarpIndex": 0,
+            "InputDir": 0,
+            "FlagIndex": 4000,
+            "ScriptLabel": 3,
+            "ExitLabel": 999,
+            "ConnectionName": ""
+        },
+        {
+            "Position": {
+                "x": 82.0,
+                "y": 1.0,
+                "z": 47.0
+            },
+            "GruopID": -1,
+            "Size": {
+                "x": 1.0,
+                "y": 1.0
+            },
+            "WarpZone": 648,
+            "WarpIndex": 0,
+            "InputDir": 0,
+            "FlagIndex": 4000,
+            "ScriptLabel": 3,
+            "ExitLabel": 999,
+            "ConnectionName": ""
+        },
+        {
+            "Position": {
+                "x": 83.0,
+                "y": 1.0,
+                "z": 47.0
+            },
+            "GruopID": -1,
+            "Size": {
+                "x": 1.0,
+                "y": 1.0
+            },
+            "WarpZone": 651,
+            "WarpIndex": 0,
+            "InputDir": 0,
+            "FlagIndex": 4000,
+            "ScriptLabel": 3,
+            "ExitLabel": 999,
+            "ConnectionName": ""
+        },
+        {
+            "Position": {
+                "x": 84.0,
+                "y": 1.0,
+                "z": 47.0
+            },
+            "GruopID": -1,
+            "Size": {
+                "x": 1.0,
+                "y": 1.0
+            },
+            "WarpZone": 652,
+            "WarpIndex": 0,
+            "InputDir": 0,
+            "FlagIndex": 4000,
+            "ScriptLabel": 3,
+            "ExitLabel": 999,
+            "ConnectionName": ""
+        },
+        {
+            "Position": {
+                "x": 85.0,
+                "y": 3.0,
+                "z": 47.0
+            },
+            "GruopID": -1,
+            "Size": {
+                "x": 1.0,
+                "y": 1.0
+            },
+            "WarpZone": 653,
+            "WarpIndex": 0,
+            "InputDir": 0,
+            "FlagIndex": 4000,
+            "ScriptLabel": 3,
+            "ExitLabel": 999,
+            "ConnectionName": ""
+        },
+        {
+            "Position": {
+                "x": 86.0,
+                "y": 2.0,
+                "z": 47.0
+            },
+            "GruopID": -1,
+            "Size": {
+                "x": 1.0,
+                "y": 1.0
+            },
+            "WarpZone": 654,
+            "WarpIndex": 0,
+            "InputDir": 0,
+            "FlagIndex": 4000,
+            "ScriptLabel": 3,
+            "ExitLabel": 999,
+            "ConnectionName": ""
+        },
+        {
+            "Position": {
+                "x": 87.0,
+                "y": 3.0,
+                "z": 47.0
+            },
+            "GruopID": -1,
+            "Size": {
+                "x": 1.0,
+                "y": 1.0
+            },
+            "WarpZone": 657,
+            "WarpIndex": 0,
+            "InputDir": 0,
+            "FlagIndex": 4000,
+            "ScriptLabel": 3,
+            "ExitLabel": 999,
+            "ConnectionName": ""
+        },
+        {
+            "Position": {
+                "x": 88.0,
+                "y": 5.0,
+                "z": 47.0
+            },
+            "GruopID": -1,
+            "Size": {
+                "x": 1.0,
+                "y": 1.0
+            },
+            "WarpZone": 619,
+            "WarpIndex": 0,
+            "InputDir": 3,
+            "FlagIndex": 4000,
+            "ScriptLabel": 3,
+            "ExitLabel": 999,
+            "ConnectionName": ""
+        }
+    ]
+}

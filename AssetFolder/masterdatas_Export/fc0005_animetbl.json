@@ -1,0 +1,301 @@
+{
+    "m_GameObject": {
+        "m_FileID": 0,
+        "m_PathID": 0
+    },
+    "m_Enabled": 1,
+    "m_Script": {
+        "m_FileID": 0,
+        "m_PathID": -7561218979891876698
+    },
+    "m_Name": "fc0005_animetbl",
+    "cliplist": [
+        {
+            "clipindex": 0,
+            "data": {
+                "m_FileID": 0,
+                "m_PathID": 0
+            }
+        },
+        {
+            "clipindex": 1,
+            "data": {
+                "m_FileID": 0,
+                "m_PathID": -8195899298754228704
+            }
+        },
+        {
+            "clipindex": 2,
+            "data": {
+                "m_FileID": 0,
+                "m_PathID": -1623817800916708068
+            }
+        },
+        {
+            "clipindex": 3,
+            "data": {
+                "m_FileID": 0,
+                "m_PathID": 0
+            }
+        },
+        {
+            "clipindex": 4,
+            "data": {
+                "m_FileID": 0,
+                "m_PathID": 0
+            }
+        },
+        {
+            "clipindex": 5,
+            "data": {
+                "m_FileID": 0,
+                "m_PathID": 0
+            }
+        },
+        {
+            "clipindex": 6,
+            "data": {
+                "m_FileID": 0,
+                "m_PathID": 0
+            }
+        },
+        {
+            "clipindex": 7,
+            "data": {
+                "m_FileID": 0,
+                "m_PathID": 0
+            }
+        },
+        {
+            "clipindex": 8,
+            "data": {
+                "m_FileID": 0,
+                "m_PathID": 0
+            }
+        },
+        {
+            "clipindex": 9,
+            "data": {
+                "m_FileID": 0,
+                "m_PathID": 0
+            }
+        },
+        {
+            "clipindex": 10,
+            "data": {
+                "m_FileID": 0,
+                "m_PathID": 0
+            }
+        },
+        {
+            "clipindex": 11,
+            "data": {
+                "m_FileID": 0,
+                "m_PathID": 0
+            }
+        },
+        {
+            "clipindex": 12,
+            "data": {
+                "m_FileID": 0,
+                "m_PathID": 0
+            }
+        },
+        {
+            "clipindex": 13,
+            "data": {
+                "m_FileID": 0,
+                "m_PathID": 0
+            }
+        },
+        {
+            "clipindex": 14,
+            "data": {
+                "m_FileID": 0,
+                "m_PathID": 0
+            }
+        },
+        {
+            "clipindex": 15,
+            "data": {
+                "m_FileID": 0,
+                "m_PathID": 0
+            }
+        },
+        {
+            "clipindex": 16,
+            "data": {
+                "m_FileID": 0,
+                "m_PathID": 0
+            }
+        },
+        {
+            "clipindex": 17,
+            "data": {
+                "m_FileID": 0,
+                "m_PathID": 0
+            }
+        },
+        {
+            "clipindex": 18,
+            "data": {
+                "m_FileID": 0,
+                "m_PathID": 0
+            }
+        },
+        {
+            "clipindex": 19,
+            "data": {
+                "m_FileID": 0,
+                "m_PathID": 0
+            }
+        },
+        {
+            "clipindex": 20,
+            "data": {
+                "m_FileID": 0,
+                "m_PathID": 0
+            }
+        },
+        {
+            "clipindex": 21,
+            "data": {
+                "m_FileID": 0,
+                "m_PathID": 0
+            }
+        },
+        {
+            "clipindex": 22,
+            "data": {
+                "m_FileID": 0,
+                "m_PathID": 0
+            }
+        },
+        {
+            "clipindex": 23,
+            "data": {
+                "m_FileID": 0,
+                "m_PathID": 0
+            }
+        },
+        {
+            "clipindex": 24,
+            "data": {
+                "m_FileID": 0,
+                "m_PathID": 0
+            }
+        },
+        {
+            "clipindex": 25,
+            "data": {
+                "m_FileID": 0,
+                "m_PathID": 0
+            }
+        },
+        {
+            "clipindex": 26,
+            "data": {
+                "m_FileID": 0,
+                "m_PathID": 0
+            }
+        },
+        {
+            "clipindex": 27,
+            "data": {
+                "m_FileID": 0,
+                "m_PathID": 0
+            }
+        },
+        {
+            "clipindex": 28,
+            "data": {
+                "m_FileID": 0,
+                "m_PathID": 0
+            }
+        },
+        {
+            "clipindex": 29,
+            "data": {
+                "m_FileID": 0,
+                "m_PathID": 0
+            }
+        },
+        {
+            "clipindex": 30,
+            "data": {
+                "m_FileID": 0,
+                "m_PathID": 0
+            }
+        },
+        {
+            "clipindex": 31,
+            "data": {
+                "m_FileID": 0,
+                "m_PathID": 0
+            }
+        },
+        {
+            "clipindex": 32,
+            "data": {
+                "m_FileID": 0,
+                "m_PathID": 0
+            }
+        },
+        {
+            "clipindex": 33,
+            "data": {
+                "m_FileID": 0,
+                "m_PathID": 0
+            }
+        },
+        {
+            "clipindex": 34,
+            "data": {
+                "m_FileID": 0,
+                "m_PathID": 0
+            }
+        },
+        {
+            "clipindex": 35,
+            "data": {
+                "m_FileID": 0,
+                "m_PathID": 0
+            }
+        },
+        {
+            "clipindex": 36,
+            "data": {
+                "m_FileID": 0,
+                "m_PathID": 0
+            }
+        },
+        {
+            "clipindex": 37,
+            "data": {
+                "m_FileID": 0,
+                "m_PathID": 0
+            }
+        },
+        {
+            "clipindex": 38,
+            "data": {
+                "m_FileID": 0,
+                "m_PathID": 0
+            }
+        },
+        {
+            "clipindex": 39,
+            "data": {
+                "m_FileID": 0,
+                "m_PathID": 0
+            }
+        },
+        {
+            "clipindex": 40,
+            "data": {
+                "m_FileID": 0,
+                "m_PathID": 0
+            }
+        }
+    ]
+}

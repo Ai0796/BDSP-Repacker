@@ -1,0 +1,59 @@
+{
+    "m_GameObject": {
+        "m_FileID": 0,
+        "m_PathID": 0
+    },
+    "m_Enabled": 1,
+    "m_Script": {
+        "m_FileID": 0,
+        "m_PathID": 8423137904901713306
+    },
+    "m_Name": "StopData_D09R0104",
+    "Data": [
+        {
+            "ID": "SCRID_D09R0104_SEVEN4_04",
+            "Position": {
+                "x": 51.0,
+                "y": 19.0
+            },
+            "HeightLayer": 2,
+            "Size": {
+                "x": 4.0,
+                "y": 1.0
+            },
+            "ContactLabel": "ev_d09r0104_seven4_04",
+            "Param": 1,
+            "Work": 76
+        },
+        {
+            "ID": "SCRID_D09R0104_SEVEN4_03",
+            "Position": {
+                "x": 4.0,
+                "y": 55.0
+            },
+            "HeightLayer": 7,
+            "Size": {
+                "x": 1.0,
+                "y": 6.0
+            },
+            "ContactLabel": "ev_d09r0104_seven4_03",
+            "Param": 1,
+            "Work": 76
+        },
+        {
+            "ID": "SCRID_D09R0104_SEVEN4_01",
+            "Position": {
+                "x": 5.0,
+                "y": 55.0
+            },
+            "HeightLayer": 7,
+            "Size": {
+                "x": 1.0,
+                "y": 6.0
+            },
+            "ContactLabel": "ev_d09r0104_seven4_01",
+            "Param": 0,
+            "Work": 76
+        }
+    ]
+}

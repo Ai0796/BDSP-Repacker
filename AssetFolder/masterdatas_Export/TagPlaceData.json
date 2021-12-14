@@ -1,0 +1,29 @@
+{
+    "m_GameObject": {
+        "m_FileID": 0,
+        "m_PathID": 0
+    },
+    "m_Enabled": 1,
+    "m_Script": {
+        "m_FileID": 0,
+        "m_PathID": 4402146641358906143
+    },
+    "m_Name": "TagPlaceData",
+    "data": [
+        {
+            "ID": "TR_LOVELOVE_01",
+            "ParentID": "TR_LOVELOVE_01_2",
+            "TagType": 0
+        },
+        {
+            "ID": "TR_DOUBLETEAM_01",
+            "ParentID": "TR_DOUBLETEAM_01_2",
+            "TagType": 0
+        },
+        {
+            "ID": "TR_DOUBLETEAM_02",
+            "ParentID": "TR_DOUBLETEAM_02_2",
+            "TagType": 0
+        }
+    ]
+}

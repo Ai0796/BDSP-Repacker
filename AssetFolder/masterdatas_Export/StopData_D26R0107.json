@@ -1,0 +1,29 @@
+{
+    "m_GameObject": {
+        "m_FileID": 0,
+        "m_PathID": 0
+    },
+    "m_Enabled": 1,
+    "m_Script": {
+        "m_FileID": 0,
+        "m_PathID": 8423137904901713306
+    },
+    "m_Name": "StopData_D26R0107",
+    "Data": [
+        {
+            "ID": "SCRID_POS_D26R0107_GKANBU",
+            "Position": {
+                "x": 7.5,
+                "y": 13.0
+            },
+            "HeightLayer": 0,
+            "Size": {
+                "x": 2.0,
+                "y": 1.0
+            },
+            "ContactLabel": "pos_d26r0107_gkanbu",
+            "Param": 1,
+            "Work": 177
+        }
+    ]
+}

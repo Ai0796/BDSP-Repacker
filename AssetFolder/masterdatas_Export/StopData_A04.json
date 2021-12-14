@@ -1,0 +1,44 @@
+{
+    "m_GameObject": {
+        "m_FileID": 0,
+        "m_PathID": 0
+    },
+    "m_Enabled": 1,
+    "m_Script": {
+        "m_FileID": 0,
+        "m_PathID": 8423137904901713306
+    },
+    "m_Name": "StopData_A04",
+    "Data": [
+        {
+            "ID": "SCRID_C05_RIVAL",
+            "Position": {
+                "x": 484.0,
+                "y": 718.0
+            },
+            "HeightLayer": 2,
+            "Size": {
+                "x": 6.0,
+                "y": 1.0
+            },
+            "ContactLabel": "ev_c05_rival",
+            "Param": 1,
+            "Work": 57
+        },
+        {
+            "ID": "SCRID_POS_C05_JUDGE",
+            "Position": {
+                "x": 461.0,
+                "y": 725.0
+            },
+            "HeightLayer": 2,
+            "Size": {
+                "x": 1.0,
+                "y": 5.0
+            },
+            "ContactLabel": "pos_c05_judge",
+            "Param": 0,
+            "Work": 154
+        }
+    ]
+}

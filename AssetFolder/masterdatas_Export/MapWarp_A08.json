@@ -1,0 +1,185 @@
+{
+    "m_GameObject": {
+        "m_FileID": 0,
+        "m_PathID": 0
+    },
+    "m_Enabled": 1,
+    "m_Script": {
+        "m_FileID": 0,
+        "m_PathID": -7768618106554099594
+    },
+    "m_Name": "MapWarp_A08",
+    "Data": [
+        {
+            "Position": {
+                "x": 849.0,
+                "y": 1.0,
+                "z": 763.0
+            },
+            "GruopID": 9,
+            "Size": {
+                "x": 1.0,
+                "y": 1.0
+            },
+            "WarpZone": 150,
+            "WarpIndex": 0,
+            "InputDir": 0,
+            "FlagIndex": 4000,
+            "ScriptLabel": 3,
+            "ExitLabel": 999,
+            "ConnectionName": ""
+        },
+        {
+            "Position": {
+                "x": 850.0,
+                "y": 1.0,
+                "z": 763.0
+            },
+            "GruopID": 9,
+            "Size": {
+                "x": 1.0,
+                "y": 1.0
+            },
+            "WarpZone": 150,
+            "WarpIndex": 0,
+            "InputDir": 0,
+            "FlagIndex": 4000,
+            "ScriptLabel": 3,
+            "ExitLabel": 999,
+            "ConnectionName": ""
+        },
+        {
+            "Position": {
+                "x": 832.0,
+                "y": 1.0,
+                "z": 790.0
+            },
+            "GruopID": 1,
+            "Size": {
+                "x": 1.0,
+                "y": 1.0
+            },
+            "WarpZone": 410,
+            "WarpIndex": 1,
+            "InputDir": 1,
+            "FlagIndex": 4000,
+            "ScriptLabel": 27,
+            "ExitLabel": 999,
+            "ConnectionName": ""
+        },
+        {
+            "Position": {
+                "x": 832.0,
+                "y": 1.0,
+                "z": 791.0
+            },
+            "GruopID": 1,
+            "Size": {
+                "x": 1.0,
+                "y": 1.0
+            },
+            "WarpZone": 410,
+            "WarpIndex": 1,
+            "InputDir": 1,
+            "FlagIndex": 4000,
+            "ScriptLabel": 27,
+            "ExitLabel": 999,
+            "ConnectionName": ""
+        },
+        {
+            "Position": {
+                "x": 885.8499755859375,
+                "y": 5.0,
+                "z": 790.7999877929688
+            },
+            "GruopID": -1,
+            "Size": {
+                "x": 1.2999999523162842,
+                "y": 1.0
+            },
+            "WarpZone": 158,
+            "WarpIndex": 0,
+            "InputDir": 0,
+            "FlagIndex": 4000,
+            "ScriptLabel": 3,
+            "ExitLabel": 999,
+            "ConnectionName": ""
+        },
+        {
+            "Position": {
+                "x": 846.75,
+                "y": 20.0,
+                "z": 560.0
+            },
+            "GruopID": -1,
+            "Size": {
+                "x": 1.5,
+                "y": 1.0
+            },
+            "WarpZone": 171,
+            "WarpIndex": 1,
+            "InputDir": 0,
+            "FlagIndex": 4000,
+            "ScriptLabel": 3,
+            "ExitLabel": 999,
+            "ConnectionName": ""
+        },
+        {
+            "Position": {
+                "x": 850.75,
+                "y": 6.0,
+                "z": 598.0
+            },
+            "GruopID": -1,
+            "Size": {
+                "x": 1.5,
+                "y": 1.0
+            },
+            "WarpZone": 244,
+            "WarpIndex": 7,
+            "InputDir": 0,
+            "FlagIndex": 4000,
+            "ScriptLabel": 19,
+            "ExitLabel": 999,
+            "ConnectionName": ""
+        },
+        {
+            "Position": {
+                "x": 853.0,
+                "y": 6.0,
+                "z": 581.7999877929688
+            },
+            "GruopID": -1,
+            "Size": {
+                "x": 1.0,
+                "y": 1.399999976158142
+            },
+            "WarpZone": 244,
+            "WarpIndex": 8,
+            "InputDir": 3,
+            "FlagIndex": 4000,
+            "ScriptLabel": 19,
+            "ExitLabel": 999,
+            "ConnectionName": ""
+        },
+        {
+            "Position": {
+                "x": 878.0,
+                "y": 6.0,
+                "z": 559.75
+            },
+            "GruopID": -1,
+            "Size": {
+                "x": 1.0,
+                "y": 1.5
+            },
+            "WarpZone": 249,
+            "WarpIndex": 1,
+            "InputDir": 1,
+            "FlagIndex": 4000,
+            "ScriptLabel": 19,
+            "ExitLabel": 999,
+            "ConnectionName": ""
+        }
+    ]
+}

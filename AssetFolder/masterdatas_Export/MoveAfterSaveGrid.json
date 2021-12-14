@@ -1,0 +1,91 @@
+{
+    "m_GameObject": {
+        "m_FileID": 0,
+        "m_PathID": 0
+    },
+    "m_Enabled": 1,
+    "m_Script": {
+        "m_FileID": 0,
+        "m_PathID": -7206133242551323445
+    },
+    "m_Name": "MoveAfterSaveGrid",
+    "data": [
+        {
+            "zoneID": 171,
+            "grid": {
+                "x": 12,
+                "y": 3
+            },
+            "regrid": {
+                "x": 12,
+                "y": 4
+            }
+        },
+        {
+            "zoneID": 171,
+            "grid": {
+                "x": 11,
+                "y": 3
+            },
+            "regrid": {
+                "x": 11,
+                "y": 4
+            }
+        },
+        {
+            "zoneID": 171,
+            "grid": {
+                "x": 10,
+                "y": 3
+            },
+            "regrid": {
+                "x": 10,
+                "y": 4
+            }
+        },
+        {
+            "zoneID": 8,
+            "grid": {
+                "x": 3,
+                "y": 7
+            },
+            "regrid": {
+                "x": 2,
+                "y": 7
+            }
+        },
+        {
+            "zoneID": 186,
+            "grid": {
+                "x": 658,
+                "y": 430
+            },
+            "regrid": {
+                "x": 658,
+                "y": 428
+            }
+        },
+        {
+            "zoneID": 324,
+            "grid": {
+                "x": 50,
+                "y": 37
+            },
+            "regrid": {
+                "x": 50,
+                "y": 38
+            }
+        },
+        {
+            "zoneID": 324,
+            "grid": {
+                "x": 50,
+                "y": 39
+            },
+            "regrid": {
+                "x": 50,
+                "y": 38
+            }
+        }
+    ]
+}

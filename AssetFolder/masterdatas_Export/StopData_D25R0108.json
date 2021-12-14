@@ -1,0 +1,29 @@
+{
+    "m_GameObject": {
+        "m_FileID": 0,
+        "m_PathID": 0
+    },
+    "m_Enabled": 1,
+    "m_Script": {
+        "m_FileID": 0,
+        "m_PathID": 8423137904901713306
+    },
+    "m_Name": "StopData_D25R0108",
+    "Data": [
+        {
+            "ID": "",
+            "Position": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "HeightLayer": 0,
+            "Size": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "ContactLabel": "",
+            "Param": 0,
+            "Work": 500
+        }
+    ]
+}

@@ -1,0 +1,52 @@
+{
+    "m_GameObject": {
+        "m_FileID": 0,
+        "m_PathID": 0
+    },
+    "m_Enabled": 1,
+    "m_Script": {
+        "m_FileID": 0,
+        "m_PathID": -7768618106554099594
+    },
+    "m_Name": "MapWarp_C01R0301",
+    "Data": [
+        {
+            "Position": {
+                "x": 10.75,
+                "y": 0.0,
+                "z": 12.0
+            },
+            "GruopID": 0,
+            "Size": {
+                "x": 1.5,
+                "y": 1.0
+            },
+            "WarpZone": 0,
+            "WarpIndex": 5,
+            "InputDir": 2,
+            "FlagIndex": 4000,
+            "ScriptLabel": 4,
+            "ExitLabel": 1,
+            "ConnectionName": "C01R0301_D01"
+        },
+        {
+            "Position": {
+                "x": 15.0,
+                "y": 0.0,
+                "z": 3.0
+            },
+            "GruopID": 0,
+            "Size": {
+                "x": 1.0,
+                "y": 1.5
+            },
+            "WarpZone": 17,
+            "WarpIndex": 0,
+            "InputDir": 1,
+            "FlagIndex": 4000,
+            "ScriptLabel": 5,
+            "ExitLabel": 5,
+            "ConnectionName": ""
+        }
+    ]
+}

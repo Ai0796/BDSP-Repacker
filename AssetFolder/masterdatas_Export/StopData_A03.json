@@ -1,0 +1,89 @@
+{
+    "m_GameObject": {
+        "m_FileID": 0,
+        "m_PathID": 0
+    },
+    "m_Enabled": 1,
+    "m_Script": {
+        "m_FileID": 0,
+        "m_PathID": 8423137904901713306
+    },
+    "m_Name": "StopData_A03",
+    "Data": [
+        {
+            "ID": "SCRID_POS_C04_CHAMP",
+            "Position": {
+                "x": 303.0,
+                "y": 523.0
+            },
+            "HeightLayer": 7,
+            "Size": {
+                "x": 1.0,
+                "y": 4.0
+            },
+            "ContactLabel": "pos_c04_champ",
+            "Param": 0,
+            "Work": 56
+        },
+        {
+            "ID": "SCRID_C04_WOMAN1A_STOPPER",
+            "Position": {
+                "x": 303.0,
+                "y": 565.0
+            },
+            "HeightLayer": 7,
+            "Size": {
+                "x": 5.0,
+                "y": 1.0
+            },
+            "ContactLabel": "ev_c04_woman1a_stopper",
+            "Param": 0,
+            "Work": 184
+        },
+        {
+            "ID": "SCRID_POS_C04_STOP_01",
+            "Position": {
+                "x": 297.0,
+                "y": 532.0
+            },
+            "HeightLayer": 7,
+            "Size": {
+                "x": 1.0,
+                "y": 5.0
+            },
+            "ContactLabel": "pos_c04_stop_01",
+            "Param": 1,
+            "Work": 191
+        },
+        {
+            "ID": "SCRID_POS_R205A_BABYGIRL",
+            "Position": {
+                "x": 211.0,
+                "y": 659.0
+            },
+            "HeightLayer": 5,
+            "Size": {
+                "x": 1.0,
+                "y": 6.0
+            },
+            "ContactLabel": "pos_r205a_babygirl",
+            "Param": 0,
+            "Work": 71
+        },
+        {
+            "ID": "SCRID_POS_R205A_GINGA",
+            "Position": {
+                "x": 217.0,
+                "y": 653.0
+            },
+            "HeightLayer": 5,
+            "Size": {
+                "x": 1.0,
+                "y": 1.0
+            },
+            "ContactLabel": "pos_r205a_ginga",
+            "Param": 1,
+            "Work": 71
+        }
+    ]
+}

@@ -1,54 +1,60 @@
-import os
-import UnityPy
-import json
+import os, json, UnityPy, glob, traceback
 
-#Smackteo's BDSP repacker
-#2.1
+def repackassets(src, output):
+    ##Creates a new folder named {src}_Export
+    ##Puts files from source in folder
+    extract_dir = str(src) + "_Export"
+    if os.path.exists(extract_dir):
+        try:
+            env = UnityPy.load(src)
+            
+            for obj in env.objects:
+                if obj.type.name == "MonoBehaviour":
+                    # export
+                    if obj.serialized_type.nodes:
+                        # save decoded data
+                        tree = obj.read_typetree()
+                        fp = os.path.join(extract_dir, f"{tree['m_Name']}.json")
+                        with open(fp, "r", encoding = "utf8") as f:
+                            obj.save_typetree(json.loads(f.read()))
+                    else:
+                        # save raw relevant data (without Unity MonoBehaviour header)
+                        data = obj.read()
+                        fp = os.path.join(extract_dir, f"{data.name}.bin")
+                        with open(fp, "rb") as f:
+                            obj.set_raw_data(f.read())
 
-src = "Resources/personal_masterdatas"
-directory = r'import'
-env = UnityPy.load(src)
-if not os.path.exists(src):
-    input("Error: personal_masterdatas not found \n Ensure personal_masterdatas is in Resources folder and the file name is exact \n if this is intentional press any key to continue")
+            
+            fp = os.path.join(output, os.path.basename(src))
+            with open(fp, "wb") as f:
+                f.write(env.file.save(packer=(64,2)))                
+            return(f"{src} repacked successfully")
+        
+        except:
+            
+            print(traceback.format_exc())
+            return(f"{src} failed to repack")
+    else:
+        
+        print("Error: "f"{src}_Export does not exist (Have you ran Unpack.exe?)")
+    
+    
+path = "AssetFolder"
+output = "EditedAssets"
 
-if os.path.exists(src):
-    for filename in os.listdir(directory):
-        checkfile = os.path.splitext(filename)[0]
-        checkfile2 = checkfile.lower()
-        for obj in env.objects:
-            if obj.container == "assets/pml/data/{}.asset".format(checkfile2):
-                tree = obj.read_typetree()
-                with open('import/{}'.format(filename), "rt", encoding="utf8") as f:
-                    data = json.load(f)
-                print('{} updated'.format(checkfile))
-                obj.save_typetree(data)
-    with open("output/personal_masterdatas", "wb") as t:
-        t.write(env.file.save(packer=(64, 2)))
+if not os.path.exists(path):
+    os.makedirs(path, 0o666)
+    print("Created folder 'AssetFolder' put Unity Assets e.g. masterdatas, ev_scripts in folder")
+    input("Once all files are in, press enter to continue...")
+    
+if not os.path.exists(output):
+    os.makedirs(output, 0o666)
 
-src = "Resources/masterdatas"
-
-if not os.path.exists(src):
-    input("Error: masterdatas not found \n  Ensure masterdatas is in Resources folder and the file name is exact\n if this is intentional press any key to continue")
-
-directory = r'import'
-env = UnityPy.load(src)
-
-if os.path.exists(src):
-    for filename in os.listdir(directory):
-        checkfile = os.path.splitext(filename)[0]
-        checkfile2 = checkfile.lower()
-        for obj in env.objects:
-            if obj.container == "assets/md/placedata/{}.asset".format(checkfile2) or obj.container == "assets/md/adventurenote/{}.asset".format(checkfile2) or obj.container == "assets/md/characterinfo/{}.asset".format(checkfile2) or obj.container == "assets/md/common/{}.asset".format(checkfile2) or obj.container == "assets/md/honeytree/{}.asset".format(checkfile2) or obj.container == "assets/md/kinomidata/{}.asset".format(checkfile2) or obj.container == "assets/md/localkoukan/{}.asset".format(checkfile2) or obj.container == "assets/md/mapwarpdata/{}.asset".format(checkfile2) or obj.container == "assets/md/msgwindowdata/{}.asset".format(checkfile2) or obj.container == "assets/md/network/{}.asset".format(checkfile2) or obj.container == "assets/md/placetagdata/{}.asset".format(checkfile2) or obj.container == "assets/md/pokemondata/{}.asset".format(checkfile2) or obj.container == "assets/md/shopdata/{}.asset".format(checkfile2)  or obj.container == "assets/md/stopdata/{}.asset".format(checkfile2) or obj.container == "assets/md/tower/{}.asset".format(checkfile2) or obj.container == "assets/md/tv/{}.asset".format(checkfile2) or obj.container == "assets/md/underground/{}.asset".format(checkfile2):
-                tree = obj.read_typetree()
-                with open('import/{}'.format(filename), "rt", encoding="utf8") as f:
-                    data = json.load(f)
-                print('{} updated'.format(checkfile))
-                obj.save_typetree(data)
-    with open("output/masterdatas", "wb") as t:
-        t.write(env.file.save(packer=(64, 2)))
-
-
-print('Please consider joining our discord https://discord.gg/nrZGaRdqvw')
-print('Please consider Subscribing to my youtube! https://www.youtube.com/channel/UCXUlKU3oQB0fO0EHfsJKfpg')
-print('Or following my twitter! https://twitter.com/smackteo')
-input('Repack complete enter any key to exit')
+i = 0
+for filepath in glob.iglob(path + "**/**", recursive=False):
+    if os.path.isfile(filepath):
+        i += 1
+        print(repackassets(filepath, output))
+        
+print("Finished Repacking "f"{i} Files")
+input("Press Enter to Exit...")

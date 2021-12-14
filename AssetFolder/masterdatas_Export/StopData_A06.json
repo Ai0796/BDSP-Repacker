@@ -1,0 +1,59 @@
+{
+    "m_GameObject": {
+        "m_FileID": 0,
+        "m_PathID": 0
+    },
+    "m_Enabled": 1,
+    "m_Script": {
+        "m_FileID": 0,
+        "m_PathID": 8423137904901713306
+    },
+    "m_Name": "StopData_A06",
+    "Data": [
+        {
+            "ID": "SCRID_POS_C07_GINGAM",
+            "Position": {
+                "x": 697.0,
+                "y": 596.0
+            },
+            "HeightLayer": 1,
+            "Size": {
+                "x": 1.0,
+                "y": 1.0
+            },
+            "ContactLabel": "pos_c07_gingam",
+            "Param": 0,
+            "Work": 59
+        },
+        {
+            "ID": "SCRID_POS_C07_SUPPORT",
+            "Position": {
+                "x": 681.0,
+                "y": 616.0
+            },
+            "HeightLayer": 1,
+            "Size": {
+                "x": 4.0,
+                "y": 1.0
+            },
+            "ContactLabel": "pos_c07_support",
+            "Param": 0,
+            "Work": 153
+        },
+        {
+            "ID": "SCRID_POS_C07_LOVELOVE",
+            "Position": {
+                "x": 680.0,
+                "y": 627.0
+            },
+            "HeightLayer": 1,
+            "Size": {
+                "x": 2.0,
+                "y": 1.0
+            },
+            "ContactLabel": "pos_c07_lovelove_out",
+            "Param": 0,
+            "Work": 31
+        }
+    ]
+}

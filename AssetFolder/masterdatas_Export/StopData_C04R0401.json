@@ -1,0 +1,29 @@
+{
+    "m_GameObject": {
+        "m_FileID": 0,
+        "m_PathID": 0
+    },
+    "m_Enabled": 1,
+    "m_Script": {
+        "m_FileID": 0,
+        "m_PathID": 8423137904901713306
+    },
+    "m_Name": "StopData_C04R0401",
+    "Data": [
+        {
+            "ID": "SCRID_C04R0401_STOPPER",
+            "Position": {
+                "x": 4.0,
+                "y": 7.0
+            },
+            "HeightLayer": 0,
+            "Size": {
+                "x": 3.0,
+                "y": 1.0
+            },
+            "ContactLabel": "pos_c04r0401_stopper",
+            "Param": 0,
+            "Work": 144
+        }
+    ]
+}

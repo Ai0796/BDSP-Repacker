@@ -1,0 +1,1434 @@
+{
+    "m_GameObject": {
+        "m_FileID": 0,
+        "m_PathID": 0
+    },
+    "m_Enabled": 1,
+    "m_Script": {
+        "m_FileID": 0,
+        "m_PathID": 4838757959856762239
+    },
+    "m_Name": "CharacterGraphics_data",
+    "Data": [
+        {
+            "ID": "pc0001_00_hero",
+            "FieldGraphic": "fc0001_00",
+            "Scale": 1.0,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 5036114812539242579
+            }
+        },
+        {
+            "ID": "pc0001_01_hero",
+            "FieldGraphic": "fc0001_01",
+            "Scale": 1.0,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 5036114812539242579
+            }
+        },
+        {
+            "ID": "pc0001_02_hero",
+            "FieldGraphic": "fc0028_00",
+            "Scale": 1.0,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 5036114812539242579
+            }
+        },
+        {
+            "ID": "pc0001_03_hero",
+            "FieldGraphic": "fc0028_00",
+            "Scale": 1.0,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 5036114812539242579
+            }
+        },
+        {
+            "ID": "pc0002_00_heroine",
+            "FieldGraphic": "fc0002_00",
+            "Scale": 1.0,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 5350731036513862785
+            }
+        },
+        {
+            "ID": "pc0002_01_heroine",
+            "FieldGraphic": "fc0002_01",
+            "Scale": 1.0,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 5350731036513862785
+            }
+        },
+        {
+            "ID": "pc0002_02_heroine",
+            "FieldGraphic": "fc0028_00",
+            "Scale": 1.0,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 5350731036513862785
+            }
+        },
+        {
+            "ID": "pc0002_03_heroine",
+            "FieldGraphic": "fc0028_00",
+            "Scale": 1.0,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 5350731036513862785
+            }
+        },
+        {
+            "ID": "tr0002_00_friend",
+            "FieldGraphic": "fc0003_00",
+            "Scale": 1.0,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": -1572313773236436749
+            }
+        },
+        {
+            "ID": "tr2003_00",
+            "FieldGraphic": "fc2003_00",
+            "Scale": 1.2000000476837158,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 9223350612601226578
+            }
+        },
+        {
+            "ID": "tr2003_01",
+            "FieldGraphic": "fc2003_01",
+            "Scale": 1.2000000476837158,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 9223350612601226578
+            }
+        },
+        {
+            "ID": "",
+            "FieldGraphic": "fc2004_00",
+            "Scale": 1.100000023841858,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 9223350612601226578
+            }
+        },
+        {
+            "ID": "tr0000_00_mother",
+            "FieldGraphic": "fc2005_00",
+            "Scale": 1.100000023841858,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 9223350612601226578
+            }
+        },
+        {
+            "ID": "",
+            "FieldGraphic": "fc2006_00",
+            "Scale": 1.100000023841858,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 9223350612601226578
+            }
+        },
+        {
+            "ID": "tr1062_00",
+            "FieldGraphic": "fc1062_00",
+            "Scale": 1.100000023841858,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 9223350612601226578
+            }
+        },
+        {
+            "ID": "tr1074_00",
+            "FieldGraphic": "fc1074_00",
+            "Scale": 1.100000023841858,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 9223350612601226578
+            }
+        },
+        {
+            "ID": "tr1076_00",
+            "FieldGraphic": "fc1076_00",
+            "Scale": 1.100000023841858,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 9223350612601226578
+            }
+        },
+        {
+            "ID": "tr1075_00",
+            "FieldGraphic": "fc1075_00",
+            "Scale": 1.2999999523162842,
+            "HandScale": 1.0,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 9223350612601226578
+            }
+        },
+        {
+            "ID": "tr1077_00",
+            "FieldGraphic": "fc1077_00",
+            "Scale": 1.100000023841858,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 9223350612601226578
+            }
+        },
+        {
+            "ID": "tr1064_00",
+            "FieldGraphic": "fc1064_00",
+            "Scale": 1.100000023841858,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 9223350612601226578
+            }
+        },
+        {
+            "ID": "tr1078_00",
+            "FieldGraphic": "fc1078_00",
+            "Scale": 1.100000023841858,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 9223350612601226578
+            }
+        },
+        {
+            "ID": "tr1079_00",
+            "FieldGraphic": "fc1079_00",
+            "Scale": 1.100000023841858,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 9223350612601226578
+            }
+        },
+        {
+            "ID": "tr1072_00",
+            "FieldGraphic": "fc1072_00",
+            "Scale": 1.100000023841858,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 9223350612601226578
+            }
+        },
+        {
+            "ID": "tr1087_00",
+            "FieldGraphic": "fc1087_00",
+            "Scale": 1.100000023841858,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 9223350612601226578
+            }
+        },
+        {
+            "ID": "tr1088_00",
+            "FieldGraphic": "fc1088_00",
+            "Scale": 1.100000023841858,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 9223350612601226578
+            }
+        },
+        {
+            "ID": "tr1086_00",
+            "FieldGraphic": "fc1086_00",
+            "Scale": 1.100000023841858,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 9223350612601226578
+            }
+        },
+        {
+            "ID": "tr1065_00",
+            "FieldGraphic": "fc1065_00",
+            "Scale": 1.0,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 9223350612601226578
+            }
+        },
+        {
+            "ID": "tr1066_00",
+            "FieldGraphic": "fc1066_00",
+            "Scale": 1.0,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 9223350612601226578
+            }
+        },
+        {
+            "ID": "tr1067_00",
+            "FieldGraphic": "fc1067_00",
+            "Scale": 1.100000023841858,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 9223350612601226578
+            }
+        },
+        {
+            "ID": "tr1068_00",
+            "FieldGraphic": "fc1068_00",
+            "Scale": 1.100000023841858,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 9223350612601226578
+            }
+        },
+        {
+            "ID": "tr0001_00_champion",
+            "FieldGraphic": "fc2001_00",
+            "Scale": 1.100000023841858,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 9223350612601226578
+            }
+        },
+        {
+            "ID": "tr1085_00",
+            "FieldGraphic": "fc1085_00",
+            "Scale": 1.0,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 9223350612601226578
+            }
+        },
+        {
+            "ID": "tr1007_00",
+            "FieldGraphic": "fc1007_00",
+            "Scale": 1.100000023841858,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 9223350612601226578
+            }
+        },
+        {
+            "ID": "tr1048_00",
+            "FieldGraphic": "fc1048_00",
+            "Scale": 1.100000023841858,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 9223350612601226578
+            }
+        },
+        {
+            "ID": "tr1081_00",
+            "FieldGraphic": "fc1081_00",
+            "Scale": 1.100000023841858,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 9223350612601226578
+            }
+        },
+        {
+            "ID": "tr1026_00",
+            "FieldGraphic": "fc1026_00",
+            "Scale": 1.100000023841858,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 9223350612601226578
+            }
+        },
+        {
+            "ID": "tr1045_00",
+            "FieldGraphic": "fc1045_00",
+            "Scale": 0.8999999761581421,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 9223350612601226578
+            }
+        },
+        {
+            "ID": "tr1044_00",
+            "FieldGraphic": "fc1044_00",
+            "Scale": 0.8999999761581421,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 9223350612601226578
+            }
+        },
+        {
+            "ID": "tr1024_00",
+            "FieldGraphic": "fc1024_00",
+            "Scale": 1.100000023841858,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 9223350612601226578
+            }
+        },
+        {
+            "ID": "tr1025_00",
+            "FieldGraphic": "fc1025_00",
+            "Scale": 1.0499999523162842,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 9223350612601226578
+            }
+        },
+        {
+            "ID": "tr1053_00",
+            "FieldGraphic": "fc1053_00",
+            "Scale": 1.100000023841858,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 9223350612601226578
+            }
+        },
+        {
+            "ID": "tr1054_00",
+            "FieldGraphic": "fc1054_00",
+            "Scale": 1.100000023841858,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 9223350612601226578
+            }
+        },
+        {
+            "ID": "tr1033_00_Lady",
+            "FieldGraphic": "fc1033_00",
+            "Scale": 1.0,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 9223350612601226578
+            }
+        },
+        {
+            "ID": "tr0051_00_women",
+            "FieldGraphic": "fc0051_00",
+            "Scale": 1.100000023841858,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 9223350612601226578
+            }
+        },
+        {
+            "ID": "tr1032_00_preppy",
+            "FieldGraphic": "fc1032_00",
+            "Scale": 1.0,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 9223350612601226578
+            }
+        },
+        {
+            "ID": "tr0039_00_police",
+            "FieldGraphic": "fc0039_00",
+            "Scale": 1.100000023841858,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 9223350612601226578
+            }
+        },
+        {
+            "ID": "tr0053_00_seabread",
+            "FieldGraphic": "fc0053_00",
+            "Scale": 1.100000023841858,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 9223350612601226578
+            }
+        },
+        {
+            "ID": "tr0018_00",
+            "FieldGraphic": "fc1018_00",
+            "Scale": 1.0,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 9223350612601226578
+            }
+        },
+        {
+            "ID": "tr0062_00_cameraman",
+            "FieldGraphic": "fc0062_00",
+            "Scale": 1.100000023841858,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 9223350612601226578
+            }
+        },
+        {
+            "ID": "tr0050_00_karate",
+            "FieldGraphic": "fc0050_00",
+            "Scale": 1.100000023841858,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 9223350612601226578
+            }
+        },
+        {
+            "ID": "tr1052_00",
+            "FieldGraphic": "fc1052_00",
+            "Scale": 1.100000023841858,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 9223350612601226578
+            }
+        },
+        {
+            "ID": "tr1004_00",
+            "FieldGraphic": "fc1004_00",
+            "Scale": 1.0,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 9223350612601226578
+            }
+        },
+        {
+            "ID": "tr1051_00",
+            "FieldGraphic": "fc1051_00",
+            "Scale": 1.100000023841858,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 9223350612601226578
+            }
+        },
+        {
+            "ID": "tr1073_00",
+            "FieldGraphic": "fc1073_00",
+            "Scale": 1.100000023841858,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 9223350612601226578
+            }
+        },
+        {
+            "ID": "tr1089_00",
+            "FieldGraphic": "fc1089_00",
+            "Scale": 1.100000023841858,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 9223350612601226578
+            }
+        },
+        {
+            "ID": "tr0044_00_artist",
+            "FieldGraphic": "fc0044_00",
+            "Scale": 1.0,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 9223350612601226578
+            }
+        },
+        {
+            "ID": "tr1041_00",
+            "FieldGraphic": "fc1041_00",
+            "Scale": 1.100000023841858,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 9223350612601226578
+            }
+        },
+        {
+            "ID": "tr1049_00",
+            "FieldGraphic": "fc1049_00",
+            "Scale": 1.100000023841858,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 9223350612601226578
+            }
+        },
+        {
+            "ID": "tr1050_00",
+            "FieldGraphic": "fc1050_00",
+            "Scale": 1.0,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 9223350612601226578
+            }
+        },
+        {
+            "ID": "tr1012_00",
+            "FieldGraphic": "fc1012_00",
+            "Scale": 1.100000023841858,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 9223350612601226578
+            }
+        },
+        {
+            "ID": "tr1013_00",
+            "FieldGraphic": "fc1013_00",
+            "Scale": 1.100000023841858,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 9223350612601226578
+            }
+        },
+        {
+            "ID": "tr0040_00_workerM",
+            "FieldGraphic": "fc0040_00",
+            "Scale": 1.100000023841858,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 9223350612601226578
+            }
+        },
+        {
+            "ID": "tr0046_00_gentleman",
+            "FieldGraphic": "fc0046_00",
+            "Scale": 1.100000023841858,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 9223350612601226578
+            }
+        },
+        {
+            "ID": "tr0030_00_studentM",
+            "FieldGraphic": "fc0030_00",
+            "Scale": 0.8999999761581421,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 9223350612601226578
+            }
+        },
+        {
+            "ID": "tr0031_00_studentF",
+            "FieldGraphic": "fc0031_00",
+            "Scale": 0.8999999761581421,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 9223350612601226578
+            }
+        },
+        {
+            "ID": "tr1019_00",
+            "FieldGraphic": "fc1019_00",
+            "Scale": 1.100000023841858,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 9223350612601226578
+            }
+        },
+        {
+            "ID": "tr1055_00",
+            "FieldGraphic": "fc1055_00",
+            "Scale": 1.100000023841858,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 9223350612601226578
+            }
+        },
+        {
+            "ID": "tr1056_00",
+            "FieldGraphic": "fc1056_00",
+            "Scale": 1.100000023841858,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 9223350612601226578
+            }
+        },
+        {
+            "ID": "tr1057_00",
+            "FieldGraphic": "fc1057_00",
+            "Scale": 1.100000023841858,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 9223350612601226578
+            }
+        },
+        {
+            "ID": "tr1020_00_daisukiclubM",
+            "FieldGraphic": "fc1020_00",
+            "Scale": 1.100000023841858,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 9223350612601226578
+            }
+        },
+        {
+            "ID": "tr1020_01_daisukiclubC",
+            "FieldGraphic": "fc1020_01",
+            "Scale": 0.8999999761581421,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 9223350612601226578
+            }
+        },
+        {
+            "ID": "tr1021_00_daisukiclubF",
+            "FieldGraphic": "fc1021_00",
+            "Scale": 1.100000023841858,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 9223350612601226578
+            }
+        },
+        {
+            "ID": "tr0028_00_shortpants",
+            "FieldGraphic": "fc0028_00",
+            "Scale": 0.8999999761581421,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 9223350612601226578
+            }
+        },
+        {
+            "ID": "tr0048_00_angler",
+            "FieldGraphic": "fc0048_00",
+            "Scale": 1.100000023841858,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 9223350612601226578
+            }
+        },
+        {
+            "ID": "tr1029_00",
+            "FieldGraphic": "fc1029_00",
+            "Scale": 1.100000023841858,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 9223350612601226578
+            }
+        },
+        {
+            "ID": "tr1030_00",
+            "FieldGraphic": "fc1030_00",
+            "Scale": 1.100000023841858,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 9223350612601226578
+            }
+        },
+        {
+            "ID": "tr1028_00",
+            "FieldGraphic": "fc1028_00",
+            "Scale": 1.0,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 9223350612601226578
+            }
+        },
+        {
+            "ID": "tr1010_00",
+            "FieldGraphic": "fc1010_00",
+            "Scale": 1.0,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 9223350612601226578
+            }
+        },
+        {
+            "ID": "tr1080_00",
+            "FieldGraphic": "fc1080_00",
+            "Scale": 1.100000023841858,
+            "HandScale": 0.9100000262260437,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 9223350612601226578
+            }
+        },
+        {
+            "ID": "tr1058_00",
+            "FieldGraphic": "fc1058_00",
+            "Scale": 1.100000023841858,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 9223350612601226578
+            }
+        },
+        {
+            "ID": "tr0054_00_bikini",
+            "FieldGraphic": "fc0054_00",
+            "Scale": 1.100000023841858,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 9223350612601226578
+            }
+        },
+        {
+            "ID": "tr1005_00",
+            "FieldGraphic": "fc1005_00",
+            "Scale": 0.8999999761581421,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 9223350612601226578
+            }
+        },
+        {
+            "ID": "tr1008_00_twins",
+            "FieldGraphic": "fc1008_00",
+            "Scale": 0.8999999761581421,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 9223350612601226578
+            }
+        },
+        {
+            "ID": "tr1008_01_twins",
+            "FieldGraphic": "fc1008_01",
+            "Scale": 0.8999999761581421,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 9223350612601226578
+            }
+        },
+        {
+            "ID": "tr1046_00",
+            "FieldGraphic": "fc1046_00",
+            "Scale": 1.100000023841858,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 9223350612601226578
+            }
+        },
+        {
+            "ID": "tr1027_00",
+            "FieldGraphic": "fc1027_00",
+            "Scale": 1.100000023841858,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 9223350612601226578
+            }
+        },
+        {
+            "ID": "tr1071_00",
+            "FieldGraphic": "fc1071_00",
+            "Scale": 1.100000023841858,
+            "HandScale": 1.0,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 9223350612601226578
+            }
+        },
+        {
+            "ID": "tr0026_00_playpokeMtr0027_00_playpokeF",
+            "FieldGraphic": "fc0027_00",
+            "Scale": 0.8999999761581421,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 9223350612601226578
+            }
+        },
+        {
+            "ID": "tr1037_00",
+            "FieldGraphic": "fc1037_00",
+            "Scale": 1.100000023841858,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 9223350612601226578
+            }
+        },
+        {
+            "ID": "tr0042_00_breederM",
+            "FieldGraphic": "fc0042_00",
+            "Scale": 1.100000023841858,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 9223350612601226578
+            }
+        },
+        {
+            "ID": "tr0043_00_breederF",
+            "FieldGraphic": "fc0043_00",
+            "Scale": 1.100000023841858,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 9223350612601226578
+            }
+        },
+        {
+            "ID": "tr1039_00",
+            "FieldGraphic": "fc1039_00",
+            "Scale": 1.100000023841858,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 9223350612601226578
+            }
+        },
+        {
+            "ID": "tr1040_00",
+            "FieldGraphic": "fc1040_00",
+            "Scale": 1.100000023841858,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 9223350612601226578
+            }
+        },
+        {
+            "ID": "tr0047_00_madam",
+            "FieldGraphic": "fc0047_00",
+            "Scale": 1.100000023841858,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 9223350612601226578
+            }
+        },
+        {
+            "ID": "tr0029_00_miniskirt",
+            "FieldGraphic": "fc0029_00",
+            "Scale": 1.0,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 9223350612601226578
+            }
+        },
+        {
+            "ID": "tr1006_00",
+            "FieldGraphic": "fc1006_00",
+            "Scale": 0.8999999761581421,
+            "HandScale": 0.8999999761581421,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 9223350612601226578
+            }
+        },
+        {
+            "ID": "",
+            "FieldGraphic": "fc2032_00",
+            "Scale": 1.0,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 9223350612601226578
+            }
+        },
+        {
+            "ID": "tr0049_00_wondervogel",
+            "FieldGraphic": "fc0049_00",
+            "Scale": 1.100000023841858,
+            "HandScale": 1.0,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 9223350612601226578
+            }
+        },
+        {
+            "ID": "tr1023_00",
+            "FieldGraphic": "fc1023_00",
+            "Scale": 1.100000023841858,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 9223350612601226578
+            }
+        },
+        {
+            "ID": "tr1023_01",
+            "FieldGraphic": "fc1023_01",
+            "Scale": 1.100000023841858,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 9223350612601226578
+            }
+        },
+        {
+            "ID": "tr0061_00_reporter",
+            "FieldGraphic": "fc0061_00",
+            "Scale": 1.100000023841858,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 9223350612601226578
+            }
+        },
+        {
+            "ID": "tr1097_00",
+            "FieldGraphic": "fc1097_00",
+            "Scale": 1.100000023841858,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 9223350612601226578
+            }
+        },
+        {
+            "ID": "",
+            "FieldGraphic": "fc2012_00",
+            "Scale": 1.100000023841858,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 9223350612601226578
+            }
+        },
+        {
+            "ID": "",
+            "FieldGraphic": "fc2013_00",
+            "Scale": 1.100000023841858,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 9223350612601226578
+            }
+        },
+        {
+            "ID": "",
+            "FieldGraphic": "fc2014_00",
+            "Scale": 1.2999999523162842,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 9223350612601226578
+            }
+        },
+        {
+            "ID": "",
+            "FieldGraphic": "fc2015_00",
+            "Scale": 1.100000023841858,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 9223350612601226578
+            }
+        },
+        {
+            "ID": "",
+            "FieldGraphic": "fc2016_00",
+            "Scale": 1.0,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 9223350612601226578
+            }
+        },
+        {
+            "ID": "",
+            "FieldGraphic": "fc2017_00",
+            "Scale": 0.8999999761581421,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 9223350612601226578
+            }
+        },
+        {
+            "ID": "",
+            "FieldGraphic": "fc2018_00",
+            "Scale": 1.0,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 9223350612601226578
+            }
+        },
+        {
+            "ID": "",
+            "FieldGraphic": "fc0028_00",
+            "Scale": 1.0,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 9223350612601226578
+            }
+        },
+        {
+            "ID": "",
+            "FieldGraphic": "fc0028_00",
+            "Scale": 1.0,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 9223350612601226578
+            }
+        },
+        {
+            "ID": "",
+            "FieldGraphic": "fc0028_00",
+            "Scale": 1.0,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 9223350612601226578
+            }
+        },
+        {
+            "ID": "",
+            "FieldGraphic": "fc2022_00",
+            "Scale": 1.100000023841858,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 9223350612601226578
+            }
+        },
+        {
+            "ID": "",
+            "FieldGraphic": "fc2023_00",
+            "Scale": 1.100000023841858,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 9223350612601226578
+            }
+        },
+        {
+            "ID": "",
+            "FieldGraphic": "fc2024_00",
+            "Scale": 1.100000023841858,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 9223350612601226578
+            }
+        },
+        {
+            "ID": "",
+            "FieldGraphic": "fc2025_00",
+            "Scale": 1.0,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 9223350612601226578
+            }
+        },
+        {
+            "ID": "",
+            "FieldGraphic": "fc2026_00",
+            "Scale": 1.100000023841858,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 9223350612601226578
+            }
+        },
+        {
+            "ID": "",
+            "FieldGraphic": "fc2027_00",
+            "Scale": 1.0499999523162842,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 9223350612601226578
+            }
+        },
+        {
+            "ID": "",
+            "FieldGraphic": "fc2028_00",
+            "Scale": 1.0,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 9223350612601226578
+            }
+        },
+        {
+            "ID": "",
+            "FieldGraphic": "fc2029_00",
+            "Scale": 1.0,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 9223350612601226578
+            }
+        },
+        {
+            "ID": "",
+            "FieldGraphic": "fc2030_00",
+            "Scale": 1.100000023841858,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 9223350612601226578
+            }
+        },
+        {
+            "ID": "",
+            "FieldGraphic": "fc2033_00",
+            "Scale": 1.100000023841858,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 9223350612601226578
+            }
+        },
+        {
+            "ID": "",
+            "FieldGraphic": "fc2031_00",
+            "Scale": 1.2999999523162842,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 9223350612601226578
+            }
+        },
+        {
+            "ID": "",
+            "FieldGraphic": "fc2034_00",
+            "Scale": 1.100000023841858,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 9223350612601226578
+            }
+        },
+        {
+            "ID": "tr2007_00",
+            "FieldGraphic": "fc2007_00",
+            "Scale": 1.100000023841858,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 9223350612601226578
+            }
+        },
+        {
+            "ID": "tr2008_00",
+            "FieldGraphic": "fc2008_00",
+            "Scale": 0.8999999761581421,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 9223350612601226578
+            }
+        },
+        {
+            "ID": "tr2009_00",
+            "FieldGraphic": "fc2009_00",
+            "Scale": 1.100000023841858,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 9223350612601226578
+            }
+        },
+        {
+            "ID": "tr2010_00",
+            "FieldGraphic": "fc2010_00",
+            "Scale": 1.0,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 9223350612601226578
+            }
+        },
+        {
+            "ID": "tr2011_00",
+            "FieldGraphic": "fc2011_00",
+            "Scale": 1.0,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 9223350612601226578
+            }
+        },
+        {
+            "ID": "",
+            "FieldGraphic": "fc2035_00",
+            "Scale": 1.100000023841858,
+            "HandScale": 1.0,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 9223350612601226578
+            }
+        },
+        {
+            "ID": "",
+            "FieldGraphic": "fc2037_00",
+            "Scale": 1.2000000476837158,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 9223350612601226578
+            }
+        },
+        {
+            "ID": "",
+            "FieldGraphic": "fc2041_00",
+            "Scale": 0.8999999761581421,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 9223350612601226578
+            }
+        },
+        {
+            "ID": "",
+            "FieldGraphic": "fc2038_00",
+            "Scale": 1.0,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 9223350612601226578
+            }
+        },
+        {
+            "ID": "",
+            "FieldGraphic": "fc2039_00",
+            "Scale": 1.100000023841858,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 9223350612601226578
+            }
+        },
+        {
+            "ID": "",
+            "FieldGraphic": "fc2040_00",
+            "Scale": 1.0,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 9223350612601226578
+            }
+        },
+        {
+            "ID": "",
+            "FieldGraphic": "fc2043_00",
+            "Scale": 1.100000023841858,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 9223350612601226578
+            }
+        },
+        {
+            "ID": "",
+            "FieldGraphic": "fc2042_00",
+            "Scale": 1.100000023841858,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 9223350612601226578
+            }
+        },
+        {
+            "ID": "",
+            "FieldGraphic": "fc2044_00",
+            "Scale": 1.100000023841858,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 9223350612601226578
+            }
+        },
+        {
+            "ID": "",
+            "FieldGraphic": "fc2033_01",
+            "Scale": 1.100000023841858,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 9223350612601226578
+            }
+        },
+        {
+            "ID": "",
+            "FieldGraphic": "fc0004_00",
+            "Scale": 1.0,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 5864102115789105792
+            }
+        },
+        {
+            "ID": "",
+            "FieldGraphic": "fc0005_00",
+            "Scale": 1.0,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 7483787010903170689
+            }
+        },
+        {
+            "ID": "",
+            "FieldGraphic": "fc0029_01",
+            "Scale": 1.0,
+            "HandScale": 0.8500000238418579,
+            "animTbl": {
+                "m_FileID": 0,
+                "m_PathID": 9223350612601226578
+            }
+        }
+    ]
+}

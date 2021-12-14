@@ -1,0 +1,90 @@
+{
+    "m_GameObject": {
+        "m_FileID": 0,
+        "m_PathID": 0
+    },
+    "m_Enabled": 1,
+    "m_Script": {
+        "m_FileID": 0,
+        "m_PathID": -7768618106554099594
+    },
+    "m_Name": "MapWarp_C01R0208",
+    "Data": [
+        {
+            "Position": {
+                "x": 3.0,
+                "y": 0.0,
+                "z": 6.0
+            },
+            "GruopID": 0,
+            "Size": {
+                "x": 1.0,
+                "y": 1.0
+            },
+            "WarpZone": 8,
+            "WarpIndex": 2,
+            "InputDir": 2,
+            "FlagIndex": 4000,
+            "ScriptLabel": 4,
+            "ExitLabel": 16,
+            "ConnectionName": "C01R0208_D01"
+        },
+        {
+            "Position": {
+                "x": 3.0,
+                "y": 0.0,
+                "z": 6.0
+            },
+            "GruopID": 0,
+            "Size": {
+                "x": 1.0,
+                "y": 1.0
+            },
+            "WarpZone": 9,
+            "WarpIndex": 3,
+            "InputDir": 2,
+            "FlagIndex": 4000,
+            "ScriptLabel": 4,
+            "ExitLabel": 16,
+            "ConnectionName": "C01R0208_D01"
+        },
+        {
+            "Position": {
+                "x": 3.0,
+                "y": 0.0,
+                "z": 6.0
+            },
+            "GruopID": 0,
+            "Size": {
+                "x": 1.0,
+                "y": 1.0
+            },
+            "WarpZone": 10,
+            "WarpIndex": 4,
+            "InputDir": 2,
+            "FlagIndex": 4000,
+            "ScriptLabel": 4,
+            "ExitLabel": 16,
+            "ConnectionName": "C01R0208_D01"
+        },
+        {
+            "Position": {
+                "x": 3.0,
+                "y": 0.0,
+                "z": 6.0
+            },
+            "GruopID": 0,
+            "Size": {
+                "x": 1.0,
+                "y": 1.0
+            },
+            "WarpZone": 11,
+            "WarpIndex": 1,
+            "InputDir": 2,
+            "FlagIndex": 4000,
+            "ScriptLabel": 4,
+            "ExitLabel": 16,
+            "ConnectionName": "C01R0208_D01"
+        }
+    ]
+}

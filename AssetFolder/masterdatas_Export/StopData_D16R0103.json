@@ -1,0 +1,29 @@
+{
+    "m_GameObject": {
+        "m_FileID": 0,
+        "m_PathID": 0
+    },
+    "m_Enabled": 1,
+    "m_Script": {
+        "m_FileID": 0,
+        "m_PathID": 8423137904901713306
+    },
+    "m_Name": "StopData_D16R0103",
+    "Data": [
+        {
+            "ID": "SCRID_POS_D16R0103_SEVEN2",
+            "Position": {
+                "x": 7.0,
+                "y": 10.0
+            },
+            "HeightLayer": 1,
+            "Size": {
+                "x": 1.0,
+                "y": 1.0
+            },
+            "ContactLabel": "pos_d16r0103_seven2",
+            "Param": 0,
+            "Work": 90
+        }
+    ]
+}

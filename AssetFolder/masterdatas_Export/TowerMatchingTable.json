@@ -1,0 +1,1448 @@
+{
+    "m_GameObject": {
+        "m_FileID": 0,
+        "m_PathID": 0
+    },
+    "m_Enabled": 1,
+    "m_Script": {
+        "m_FileID": 0,
+        "m_PathID": -6999675548183224680
+    },
+    "m_Name": "TowerMatchingTable",
+    "TowerMatching": [
+        {
+            "ID": 0,
+            "StockIDMin": 0,
+            "StockIDMax": 0,
+            "shuffle": 0
+        },
+        {
+            "ID": 11011,
+            "StockIDMin": 1010000001,
+            "StockIDMax": 1010000100,
+            "shuffle": 1
+        },
+        {
+            "ID": 11012,
+            "StockIDMin": 1010000001,
+            "StockIDMax": 1010000100,
+            "shuffle": 1
+        },
+        {
+            "ID": 11013,
+            "StockIDMin": 1010000001,
+            "StockIDMax": 1010000100,
+            "shuffle": 1
+        },
+        {
+            "ID": 11014,
+            "StockIDMin": 1010000001,
+            "StockIDMax": 1010000100,
+            "shuffle": 1
+        },
+        {
+            "ID": 11015,
+            "StockIDMin": 1010000001,
+            "StockIDMax": 1010000100,
+            "shuffle": 1
+        },
+        {
+            "ID": 11016,
+            "StockIDMin": 1010000001,
+            "StockIDMax": 1010000100,
+            "shuffle": 1
+        },
+        {
+            "ID": 11017,
+            "StockIDMin": 1010000001,
+            "StockIDMax": 1010000100,
+            "shuffle": 1
+        },
+        {
+            "ID": 11021,
+            "StockIDMin": 1020000001,
+            "StockIDMax": 1020000100,
+            "shuffle": 1
+        },
+        {
+            "ID": 11022,
+            "StockIDMin": 1020000001,
+            "StockIDMax": 1020000100,
+            "shuffle": 1
+        },
+        {
+            "ID": 11023,
+            "StockIDMin": 1020000001,
+            "StockIDMax": 1020000100,
+            "shuffle": 1
+        },
+        {
+            "ID": 11024,
+            "StockIDMin": 1020000001,
+            "StockIDMax": 1020000100,
+            "shuffle": 1
+        },
+        {
+            "ID": 11025,
+            "StockIDMin": 1020000001,
+            "StockIDMax": 1020000100,
+            "shuffle": 1
+        },
+        {
+            "ID": 11026,
+            "StockIDMin": 1020000001,
+            "StockIDMax": 1020000100,
+            "shuffle": 1
+        },
+        {
+            "ID": 11027,
+            "StockIDMin": 1020000001,
+            "StockIDMax": 1020000100,
+            "shuffle": 1
+        },
+        {
+            "ID": 11031,
+            "StockIDMin": 1030000001,
+            "StockIDMax": 1030000100,
+            "shuffle": 1
+        },
+        {
+            "ID": 11032,
+            "StockIDMin": 1030000001,
+            "StockIDMax": 1030000100,
+            "shuffle": 1
+        },
+        {
+            "ID": 11033,
+            "StockIDMin": 1030000001,
+            "StockIDMax": 1030000100,
+            "shuffle": 1
+        },
+        {
+            "ID": 11034,
+            "StockIDMin": 1030000001,
+            "StockIDMax": 1030000100,
+            "shuffle": 1
+        },
+        {
+            "ID": 11035,
+            "StockIDMin": 1030000001,
+            "StockIDMax": 1030000100,
+            "shuffle": 1
+        },
+        {
+            "ID": 11036,
+            "StockIDMin": 1030000001,
+            "StockIDMax": 1030000100,
+            "shuffle": 1
+        },
+        {
+            "ID": 11037,
+            "StockIDMin": 1030100001,
+            "StockIDMax": 1030100003,
+            "shuffle": 0
+        },
+        {
+            "ID": 11041,
+            "StockIDMin": 1040000001,
+            "StockIDMax": 1040000100,
+            "shuffle": 1
+        },
+        {
+            "ID": 11042,
+            "StockIDMin": 1040000001,
+            "StockIDMax": 1040000100,
+            "shuffle": 1
+        },
+        {
+            "ID": 11043,
+            "StockIDMin": 1040000001,
+            "StockIDMax": 1040000100,
+            "shuffle": 1
+        },
+        {
+            "ID": 11044,
+            "StockIDMin": 1040000001,
+            "StockIDMax": 1040000100,
+            "shuffle": 1
+        },
+        {
+            "ID": 11045,
+            "StockIDMin": 1040000001,
+            "StockIDMax": 1040000100,
+            "shuffle": 1
+        },
+        {
+            "ID": 11046,
+            "StockIDMin": 1040000001,
+            "StockIDMax": 1040000100,
+            "shuffle": 1
+        },
+        {
+            "ID": 11047,
+            "StockIDMin": 1040000001,
+            "StockIDMax": 1040000100,
+            "shuffle": 1
+        },
+        {
+            "ID": 11051,
+            "StockIDMin": 1050000001,
+            "StockIDMax": 1050000100,
+            "shuffle": 1
+        },
+        {
+            "ID": 11052,
+            "StockIDMin": 1050000001,
+            "StockIDMax": 1050000100,
+            "shuffle": 1
+        },
+        {
+            "ID": 11053,
+            "StockIDMin": 1050000001,
+            "StockIDMax": 1050000100,
+            "shuffle": 1
+        },
+        {
+            "ID": 11054,
+            "StockIDMin": 1050000001,
+            "StockIDMax": 1050000100,
+            "shuffle": 1
+        },
+        {
+            "ID": 11055,
+            "StockIDMin": 1050000001,
+            "StockIDMax": 1050000100,
+            "shuffle": 1
+        },
+        {
+            "ID": 11056,
+            "StockIDMin": 1050000001,
+            "StockIDMax": 1050000100,
+            "shuffle": 1
+        },
+        {
+            "ID": 11057,
+            "StockIDMin": 1050000001,
+            "StockIDMax": 1050000100,
+            "shuffle": 1
+        },
+        {
+            "ID": 11061,
+            "StockIDMin": 1060000001,
+            "StockIDMax": 1060000100,
+            "shuffle": 1
+        },
+        {
+            "ID": 11062,
+            "StockIDMin": 1060000001,
+            "StockIDMax": 1060000100,
+            "shuffle": 1
+        },
+        {
+            "ID": 11063,
+            "StockIDMin": 1060000001,
+            "StockIDMax": 1060000100,
+            "shuffle": 1
+        },
+        {
+            "ID": 11064,
+            "StockIDMin": 1060000001,
+            "StockIDMax": 1060000100,
+            "shuffle": 1
+        },
+        {
+            "ID": 11065,
+            "StockIDMin": 1060000001,
+            "StockIDMax": 1060000100,
+            "shuffle": 1
+        },
+        {
+            "ID": 11066,
+            "StockIDMin": 1060000001,
+            "StockIDMax": 1060000100,
+            "shuffle": 1
+        },
+        {
+            "ID": 11067,
+            "StockIDMin": 1060000001,
+            "StockIDMax": 1060000100,
+            "shuffle": 1
+        },
+        {
+            "ID": 11071,
+            "StockIDMin": 1070000001,
+            "StockIDMax": 1070000100,
+            "shuffle": 1
+        },
+        {
+            "ID": 11072,
+            "StockIDMin": 1070000001,
+            "StockIDMax": 1070000100,
+            "shuffle": 1
+        },
+        {
+            "ID": 11073,
+            "StockIDMin": 1070000001,
+            "StockIDMax": 1070000100,
+            "shuffle": 1
+        },
+        {
+            "ID": 11074,
+            "StockIDMin": 1070000001,
+            "StockIDMax": 1070000100,
+            "shuffle": 1
+        },
+        {
+            "ID": 11075,
+            "StockIDMin": 1070000001,
+            "StockIDMax": 1070000100,
+            "shuffle": 1
+        },
+        {
+            "ID": 11076,
+            "StockIDMin": 1070000001,
+            "StockIDMax": 1070000100,
+            "shuffle": 1
+        },
+        {
+            "ID": 11077,
+            "StockIDMin": 1070100001,
+            "StockIDMax": 1070100003,
+            "shuffle": 0
+        },
+        {
+            "ID": 12011,
+            "StockIDMin": 2010000001,
+            "StockIDMax": 2010000278,
+            "shuffle": 1
+        },
+        {
+            "ID": 12012,
+            "StockIDMin": 2010000001,
+            "StockIDMax": 2010000278,
+            "shuffle": 1
+        },
+        {
+            "ID": 12013,
+            "StockIDMin": 2010000001,
+            "StockIDMax": 2010000278,
+            "shuffle": 1
+        },
+        {
+            "ID": 12014,
+            "StockIDMin": 2010000001,
+            "StockIDMax": 2010000278,
+            "shuffle": 1
+        },
+        {
+            "ID": 12015,
+            "StockIDMin": 2010000001,
+            "StockIDMax": 2010000278,
+            "shuffle": 1
+        },
+        {
+            "ID": 12016,
+            "StockIDMin": 2010000001,
+            "StockIDMax": 2010000278,
+            "shuffle": 1
+        },
+        {
+            "ID": 12017,
+            "StockIDMin": 2010100001,
+            "StockIDMax": 2010100003,
+            "shuffle": 0
+        },
+        {
+            "ID": 12021,
+            "StockIDMin": 2010000001,
+            "StockIDMax": 2010000278,
+            "shuffle": 1
+        },
+        {
+            "ID": 12022,
+            "StockIDMin": 2010000001,
+            "StockIDMax": 2010000278,
+            "shuffle": 1
+        },
+        {
+            "ID": 12023,
+            "StockIDMin": 2010000001,
+            "StockIDMax": 2010000278,
+            "shuffle": 1
+        },
+        {
+            "ID": 12024,
+            "StockIDMin": 2010000001,
+            "StockIDMax": 2010000278,
+            "shuffle": 1
+        },
+        {
+            "ID": 12025,
+            "StockIDMin": 2010000001,
+            "StockIDMax": 2010000278,
+            "shuffle": 1
+        },
+        {
+            "ID": 12026,
+            "StockIDMin": 2010000001,
+            "StockIDMax": 2010000278,
+            "shuffle": 1
+        },
+        {
+            "ID": 12027,
+            "StockIDMin": 2020100001,
+            "StockIDMax": 2020100003,
+            "shuffle": 0
+        },
+        {
+            "ID": 12031,
+            "StockIDMin": 2010000001,
+            "StockIDMax": 2010000278,
+            "shuffle": 1
+        },
+        {
+            "ID": 12032,
+            "StockIDMin": 2010000001,
+            "StockIDMax": 2010000278,
+            "shuffle": 1
+        },
+        {
+            "ID": 12033,
+            "StockIDMin": 2010000001,
+            "StockIDMax": 2010000278,
+            "shuffle": 1
+        },
+        {
+            "ID": 12034,
+            "StockIDMin": 2010000001,
+            "StockIDMax": 2010000278,
+            "shuffle": 1
+        },
+        {
+            "ID": 12035,
+            "StockIDMin": 2010000001,
+            "StockIDMax": 2010000278,
+            "shuffle": 1
+        },
+        {
+            "ID": 12036,
+            "StockIDMin": 2010000001,
+            "StockIDMax": 2010000278,
+            "shuffle": 1
+        },
+        {
+            "ID": 12037,
+            "StockIDMin": 2030100001,
+            "StockIDMax": 2030100003,
+            "shuffle": 0
+        },
+        {
+            "ID": 12041,
+            "StockIDMin": 2010000001,
+            "StockIDMax": 2010000278,
+            "shuffle": 1
+        },
+        {
+            "ID": 12042,
+            "StockIDMin": 2010000001,
+            "StockIDMax": 2010000278,
+            "shuffle": 1
+        },
+        {
+            "ID": 12043,
+            "StockIDMin": 2010000001,
+            "StockIDMax": 2010000278,
+            "shuffle": 1
+        },
+        {
+            "ID": 12044,
+            "StockIDMin": 2010000001,
+            "StockIDMax": 2010000278,
+            "shuffle": 1
+        },
+        {
+            "ID": 12045,
+            "StockIDMin": 2010000001,
+            "StockIDMax": 2010000278,
+            "shuffle": 1
+        },
+        {
+            "ID": 12046,
+            "StockIDMin": 2010000001,
+            "StockIDMax": 2010000278,
+            "shuffle": 1
+        },
+        {
+            "ID": 12047,
+            "StockIDMin": 2040100001,
+            "StockIDMax": 2040100003,
+            "shuffle": 0
+        },
+        {
+            "ID": 12051,
+            "StockIDMin": 2010000001,
+            "StockIDMax": 2010000278,
+            "shuffle": 1
+        },
+        {
+            "ID": 12052,
+            "StockIDMin": 2010000001,
+            "StockIDMax": 2010000278,
+            "shuffle": 1
+        },
+        {
+            "ID": 12053,
+            "StockIDMin": 2010000001,
+            "StockIDMax": 2010000278,
+            "shuffle": 1
+        },
+        {
+            "ID": 12054,
+            "StockIDMin": 2010000001,
+            "StockIDMax": 2010000278,
+            "shuffle": 1
+        },
+        {
+            "ID": 12055,
+            "StockIDMin": 2010000001,
+            "StockIDMax": 2010000278,
+            "shuffle": 1
+        },
+        {
+            "ID": 12056,
+            "StockIDMin": 2010000001,
+            "StockIDMax": 2010000278,
+            "shuffle": 1
+        },
+        {
+            "ID": 12057,
+            "StockIDMin": 2050100001,
+            "StockIDMax": 2050100003,
+            "shuffle": 0
+        },
+        {
+            "ID": 12061,
+            "StockIDMin": 2010000001,
+            "StockIDMax": 2010000278,
+            "shuffle": 1
+        },
+        {
+            "ID": 12062,
+            "StockIDMin": 2010000001,
+            "StockIDMax": 2010000278,
+            "shuffle": 1
+        },
+        {
+            "ID": 12063,
+            "StockIDMin": 2010000001,
+            "StockIDMax": 2010000278,
+            "shuffle": 1
+        },
+        {
+            "ID": 12064,
+            "StockIDMin": 2010000001,
+            "StockIDMax": 2010000278,
+            "shuffle": 1
+        },
+        {
+            "ID": 12065,
+            "StockIDMin": 2010000001,
+            "StockIDMax": 2010000278,
+            "shuffle": 1
+        },
+        {
+            "ID": 12066,
+            "StockIDMin": 2010000001,
+            "StockIDMax": 2010000278,
+            "shuffle": 1
+        },
+        {
+            "ID": 12067,
+            "StockIDMin": 2060100001,
+            "StockIDMax": 2060100003,
+            "shuffle": 0
+        },
+        {
+            "ID": 12071,
+            "StockIDMin": 2010000001,
+            "StockIDMax": 2010000278,
+            "shuffle": 1
+        },
+        {
+            "ID": 12072,
+            "StockIDMin": 2010000001,
+            "StockIDMax": 2010000278,
+            "shuffle": 1
+        },
+        {
+            "ID": 12073,
+            "StockIDMin": 2010000001,
+            "StockIDMax": 2010000278,
+            "shuffle": 1
+        },
+        {
+            "ID": 12074,
+            "StockIDMin": 2010000001,
+            "StockIDMax": 2010000278,
+            "shuffle": 1
+        },
+        {
+            "ID": 12075,
+            "StockIDMin": 2010000001,
+            "StockIDMax": 2010000278,
+            "shuffle": 1
+        },
+        {
+            "ID": 12076,
+            "StockIDMin": 2010000001,
+            "StockIDMax": 2010000278,
+            "shuffle": 1
+        },
+        {
+            "ID": 12077,
+            "StockIDMin": 2070100001,
+            "StockIDMax": 2070100003,
+            "shuffle": 0
+        },
+        {
+            "ID": 12081,
+            "StockIDMin": 2010000001,
+            "StockIDMax": 2010000278,
+            "shuffle": 1
+        },
+        {
+            "ID": 12082,
+            "StockIDMin": 2010000001,
+            "StockIDMax": 2010000278,
+            "shuffle": 1
+        },
+        {
+            "ID": 12083,
+            "StockIDMin": 2010000001,
+            "StockIDMax": 2010000278,
+            "shuffle": 1
+        },
+        {
+            "ID": 12084,
+            "StockIDMin": 2010000001,
+            "StockIDMax": 2010000278,
+            "shuffle": 1
+        },
+        {
+            "ID": 12085,
+            "StockIDMin": 2010000001,
+            "StockIDMax": 2010000278,
+            "shuffle": 1
+        },
+        {
+            "ID": 12086,
+            "StockIDMin": 2010000001,
+            "StockIDMax": 2010000278,
+            "shuffle": 1
+        },
+        {
+            "ID": 12087,
+            "StockIDMin": 2080100001,
+            "StockIDMax": 2080100003,
+            "shuffle": 0
+        },
+        {
+            "ID": 12091,
+            "StockIDMin": 2010000001,
+            "StockIDMax": 2010000278,
+            "shuffle": 1
+        },
+        {
+            "ID": 12092,
+            "StockIDMin": 2010000001,
+            "StockIDMax": 2010000278,
+            "shuffle": 1
+        },
+        {
+            "ID": 12093,
+            "StockIDMin": 2010000001,
+            "StockIDMax": 2010000278,
+            "shuffle": 1
+        },
+        {
+            "ID": 12094,
+            "StockIDMin": 2010000001,
+            "StockIDMax": 2010000278,
+            "shuffle": 1
+        },
+        {
+            "ID": 12095,
+            "StockIDMin": 2010000001,
+            "StockIDMax": 2010000278,
+            "shuffle": 1
+        },
+        {
+            "ID": 12096,
+            "StockIDMin": 2010000001,
+            "StockIDMax": 2010000278,
+            "shuffle": 1
+        },
+        {
+            "ID": 12097,
+            "StockIDMin": 2090100001,
+            "StockIDMax": 2090100003,
+            "shuffle": 0
+        },
+        {
+            "ID": 12101,
+            "StockIDMin": 2010000001,
+            "StockIDMax": 2010000278,
+            "shuffle": 1
+        },
+        {
+            "ID": 12102,
+            "StockIDMin": 2010000001,
+            "StockIDMax": 2010000278,
+            "shuffle": 1
+        },
+        {
+            "ID": 12103,
+            "StockIDMin": 2010000001,
+            "StockIDMax": 2010000278,
+            "shuffle": 1
+        },
+        {
+            "ID": 12104,
+            "StockIDMin": 2010000001,
+            "StockIDMax": 2010000278,
+            "shuffle": 1
+        },
+        {
+            "ID": 12105,
+            "StockIDMin": 2010000001,
+            "StockIDMax": 2010000278,
+            "shuffle": 1
+        },
+        {
+            "ID": 12106,
+            "StockIDMin": 2010000001,
+            "StockIDMax": 2010000278,
+            "shuffle": 1
+        },
+        {
+            "ID": 12107,
+            "StockIDMin": 2100100001,
+            "StockIDMax": 2100100003,
+            "shuffle": 0
+        },
+        {
+            "ID": 21011,
+            "StockIDMin": 1010000001,
+            "StockIDMax": 1010000100,
+            "shuffle": 1
+        },
+        {
+            "ID": 21012,
+            "StockIDMin": 1010000001,
+            "StockIDMax": 1010000100,
+            "shuffle": 1
+        },
+        {
+            "ID": 21013,
+            "StockIDMin": 1010000001,
+            "StockIDMax": 1010000100,
+            "shuffle": 1
+        },
+        {
+            "ID": 21014,
+            "StockIDMin": 1010000001,
+            "StockIDMax": 1010000100,
+            "shuffle": 1
+        },
+        {
+            "ID": 21015,
+            "StockIDMin": 1010000001,
+            "StockIDMax": 1010000100,
+            "shuffle": 1
+        },
+        {
+            "ID": 21016,
+            "StockIDMin": 1010000001,
+            "StockIDMax": 1010000100,
+            "shuffle": 1
+        },
+        {
+            "ID": 21017,
+            "StockIDMin": 1010000001,
+            "StockIDMax": 1010000100,
+            "shuffle": 1
+        },
+        {
+            "ID": 21021,
+            "StockIDMin": 1020000001,
+            "StockIDMax": 1020000100,
+            "shuffle": 1
+        },
+        {
+            "ID": 21022,
+            "StockIDMin": 1020000001,
+            "StockIDMax": 1020000100,
+            "shuffle": 1
+        },
+        {
+            "ID": 21023,
+            "StockIDMin": 1020000001,
+            "StockIDMax": 1020000100,
+            "shuffle": 1
+        },
+        {
+            "ID": 21024,
+            "StockIDMin": 1020000001,
+            "StockIDMax": 1020000100,
+            "shuffle": 1
+        },
+        {
+            "ID": 21025,
+            "StockIDMin": 1020000001,
+            "StockIDMax": 1020000100,
+            "shuffle": 1
+        },
+        {
+            "ID": 21026,
+            "StockIDMin": 1020000001,
+            "StockIDMax": 1020000100,
+            "shuffle": 1
+        },
+        {
+            "ID": 21027,
+            "StockIDMin": 1020000001,
+            "StockIDMax": 1020000100,
+            "shuffle": 1
+        },
+        {
+            "ID": 21031,
+            "StockIDMin": 1030000001,
+            "StockIDMax": 1030000100,
+            "shuffle": 1
+        },
+        {
+            "ID": 21032,
+            "StockIDMin": 1030000001,
+            "StockIDMax": 1030000100,
+            "shuffle": 1
+        },
+        {
+            "ID": 21033,
+            "StockIDMin": 1030000001,
+            "StockIDMax": 1030000100,
+            "shuffle": 1
+        },
+        {
+            "ID": 21034,
+            "StockIDMin": 1030000001,
+            "StockIDMax": 1030000100,
+            "shuffle": 1
+        },
+        {
+            "ID": 21035,
+            "StockIDMin": 1030000001,
+            "StockIDMax": 1030000100,
+            "shuffle": 1
+        },
+        {
+            "ID": 21036,
+            "StockIDMin": 1030000001,
+            "StockIDMax": 1030000100,
+            "shuffle": 1
+        },
+        {
+            "ID": 21037,
+            "StockIDMin": 1030000001,
+            "StockIDMax": 1030000100,
+            "shuffle": 1
+        },
+        {
+            "ID": 21041,
+            "StockIDMin": 1040000001,
+            "StockIDMax": 1040000100,
+            "shuffle": 1
+        },
+        {
+            "ID": 21042,
+            "StockIDMin": 1040000001,
+            "StockIDMax": 1040000100,
+            "shuffle": 1
+        },
+        {
+            "ID": 21043,
+            "StockIDMin": 1040000001,
+            "StockIDMax": 1040000100,
+            "shuffle": 1
+        },
+        {
+            "ID": 21044,
+            "StockIDMin": 1040000001,
+            "StockIDMax": 1040000100,
+            "shuffle": 1
+        },
+        {
+            "ID": 21045,
+            "StockIDMin": 1040000001,
+            "StockIDMax": 1040000100,
+            "shuffle": 1
+        },
+        {
+            "ID": 21046,
+            "StockIDMin": 1040000001,
+            "StockIDMax": 1040000100,
+            "shuffle": 1
+        },
+        {
+            "ID": 21047,
+            "StockIDMin": 1040000001,
+            "StockIDMax": 1040000100,
+            "shuffle": 1
+        },
+        {
+            "ID": 21051,
+            "StockIDMin": 1050000001,
+            "StockIDMax": 1050000100,
+            "shuffle": 1
+        },
+        {
+            "ID": 21052,
+            "StockIDMin": 1050000001,
+            "StockIDMax": 1050000100,
+            "shuffle": 1
+        },
+        {
+            "ID": 21053,
+            "StockIDMin": 1050000001,
+            "StockIDMax": 1050000100,
+            "shuffle": 1
+        },
+        {
+            "ID": 21054,
+            "StockIDMin": 1050000001,
+            "StockIDMax": 1050000100,
+            "shuffle": 1
+        },
+        {
+            "ID": 21055,
+            "StockIDMin": 1050000001,
+            "StockIDMax": 1050000100,
+            "shuffle": 1
+        },
+        {
+            "ID": 21056,
+            "StockIDMin": 1050000001,
+            "StockIDMax": 1050000100,
+            "shuffle": 1
+        },
+        {
+            "ID": 21057,
+            "StockIDMin": 1050000001,
+            "StockIDMax": 1050000100,
+            "shuffle": 1
+        },
+        {
+            "ID": 21061,
+            "StockIDMin": 1060000001,
+            "StockIDMax": 1060000100,
+            "shuffle": 1
+        },
+        {
+            "ID": 21062,
+            "StockIDMin": 1060000001,
+            "StockIDMax": 1060000100,
+            "shuffle": 1
+        },
+        {
+            "ID": 21063,
+            "StockIDMin": 1060000001,
+            "StockIDMax": 1060000100,
+            "shuffle": 1
+        },
+        {
+            "ID": 21064,
+            "StockIDMin": 1060000001,
+            "StockIDMax": 1060000100,
+            "shuffle": 1
+        },
+        {
+            "ID": 21065,
+            "StockIDMin": 1060000001,
+            "StockIDMax": 1060000100,
+            "shuffle": 1
+        },
+        {
+            "ID": 21066,
+            "StockIDMin": 1060000001,
+            "StockIDMax": 1060000100,
+            "shuffle": 1
+        },
+        {
+            "ID": 21067,
+            "StockIDMin": 1060000001,
+            "StockIDMax": 1060000100,
+            "shuffle": 1
+        },
+        {
+            "ID": 21071,
+            "StockIDMin": 1070000001,
+            "StockIDMax": 1070000100,
+            "shuffle": 1
+        },
+        {
+            "ID": 21072,
+            "StockIDMin": 1070000001,
+            "StockIDMax": 1070000100,
+            "shuffle": 1
+        },
+        {
+            "ID": 21073,
+            "StockIDMin": 1070000001,
+            "StockIDMax": 1070000100,
+            "shuffle": 1
+        },
+        {
+            "ID": 21074,
+            "StockIDMin": 1070000001,
+            "StockIDMax": 1070000100,
+            "shuffle": 1
+        },
+        {
+            "ID": 21075,
+            "StockIDMin": 1070000001,
+            "StockIDMax": 1070000100,
+            "shuffle": 1
+        },
+        {
+            "ID": 21076,
+            "StockIDMin": 1070000001,
+            "StockIDMax": 1070000100,
+            "shuffle": 1
+        },
+        {
+            "ID": 21077,
+            "StockIDMin": 1070000001,
+            "StockIDMax": 1070000100,
+            "shuffle": 1
+        },
+        {
+            "ID": 22011,
+            "StockIDMin": 2010000001,
+            "StockIDMax": 2010000162,
+            "shuffle": 1
+        },
+        {
+            "ID": 22012,
+            "StockIDMin": 2010000001,
+            "StockIDMax": 2010000162,
+            "shuffle": 1
+        },
+        {
+            "ID": 22013,
+            "StockIDMin": 2010000001,
+            "StockIDMax": 2010000162,
+            "shuffle": 1
+        },
+        {
+            "ID": 22014,
+            "StockIDMin": 2010000001,
+            "StockIDMax": 2010000162,
+            "shuffle": 1
+        },
+        {
+            "ID": 22015,
+            "StockIDMin": 2010000001,
+            "StockIDMax": 2010000162,
+            "shuffle": 1
+        },
+        {
+            "ID": 22016,
+            "StockIDMin": 2010000001,
+            "StockIDMax": 2010000162,
+            "shuffle": 1
+        },
+        {
+            "ID": 22017,
+            "StockIDMin": 2010100001,
+            "StockIDMax": 2010100003,
+            "shuffle": 0
+        },
+        {
+            "ID": 22021,
+            "StockIDMin": 2010000001,
+            "StockIDMax": 2010000162,
+            "shuffle": 1
+        },
+        {
+            "ID": 22022,
+            "StockIDMin": 2010000001,
+            "StockIDMax": 2010000162,
+            "shuffle": 1
+        },
+        {
+            "ID": 22023,
+            "StockIDMin": 2010000001,
+            "StockIDMax": 2010000162,
+            "shuffle": 1
+        },
+        {
+            "ID": 22024,
+            "StockIDMin": 2010000001,
+            "StockIDMax": 2010000162,
+            "shuffle": 1
+        },
+        {
+            "ID": 22025,
+            "StockIDMin": 2010000001,
+            "StockIDMax": 2010000162,
+            "shuffle": 1
+        },
+        {
+            "ID": 22026,
+            "StockIDMin": 2010000001,
+            "StockIDMax": 2010000162,
+            "shuffle": 1
+        },
+        {
+            "ID": 22027,
+            "StockIDMin": 2020100001,
+            "StockIDMax": 2020100003,
+            "shuffle": 1
+        },
+        {
+            "ID": 22031,
+            "StockIDMin": 2010000001,
+            "StockIDMax": 2010000162,
+            "shuffle": 1
+        },
+        {
+            "ID": 22032,
+            "StockIDMin": 2010000001,
+            "StockIDMax": 2010000162,
+            "shuffle": 1
+        },
+        {
+            "ID": 22033,
+            "StockIDMin": 2010000001,
+            "StockIDMax": 2010000162,
+            "shuffle": 1
+        },
+        {
+            "ID": 22034,
+            "StockIDMin": 2010000001,
+            "StockIDMax": 2010000162,
+            "shuffle": 1
+        },
+        {
+            "ID": 22035,
+            "StockIDMin": 2010000001,
+            "StockIDMax": 2010000162,
+            "shuffle": 1
+        },
+        {
+            "ID": 22036,
+            "StockIDMin": 2010000001,
+            "StockIDMax": 2010000162,
+            "shuffle": 1
+        },
+        {
+            "ID": 22037,
+            "StockIDMin": 2030100001,
+            "StockIDMax": 2030100003,
+            "shuffle": 0
+        },
+        {
+            "ID": 22041,
+            "StockIDMin": 2010000001,
+            "StockIDMax": 2010000162,
+            "shuffle": 1
+        },
+        {
+            "ID": 22042,
+            "StockIDMin": 2010000001,
+            "StockIDMax": 2010000162,
+            "shuffle": 1
+        },
+        {
+            "ID": 22043,
+            "StockIDMin": 2010000001,
+            "StockIDMax": 2010000162,
+            "shuffle": 1
+        },
+        {
+            "ID": 22044,
+            "StockIDMin": 2010000001,
+            "StockIDMax": 2010000162,
+            "shuffle": 1
+        },
+        {
+            "ID": 22045,
+            "StockIDMin": 2010000001,
+            "StockIDMax": 2010000162,
+            "shuffle": 1
+        },
+        {
+            "ID": 22046,
+            "StockIDMin": 2010000001,
+            "StockIDMax": 2010000162,
+            "shuffle": 1
+        },
+        {
+            "ID": 22047,
+            "StockIDMin": 2040100001,
+            "StockIDMax": 2040100003,
+            "shuffle": 0
+        },
+        {
+            "ID": 22051,
+            "StockIDMin": 2010000001,
+            "StockIDMax": 2010000162,
+            "shuffle": 1
+        },
+        {
+            "ID": 22052,
+            "StockIDMin": 2010000001,
+            "StockIDMax": 2010000162,
+            "shuffle": 1
+        },
+        {
+            "ID": 22053,
+            "StockIDMin": 2010000001,
+            "StockIDMax": 2010000162,
+            "shuffle": 1
+        },
+        {
+            "ID": 22054,
+            "StockIDMin": 2010000001,
+            "StockIDMax": 2010000162,
+            "shuffle": 1
+        },
+        {
+            "ID": 22055,
+            "StockIDMin": 2010000001,
+            "StockIDMax": 2010000162,
+            "shuffle": 1
+        },
+        {
+            "ID": 22056,
+            "StockIDMin": 2010000001,
+            "StockIDMax": 2010000162,
+            "shuffle": 1
+        },
+        {
+            "ID": 22057,
+            "StockIDMin": 2050100001,
+            "StockIDMax": 2050100003,
+            "shuffle": 0
+        },
+        {
+            "ID": 22061,
+            "StockIDMin": 2010000001,
+            "StockIDMax": 2010000162,
+            "shuffle": 1
+        },
+        {
+            "ID": 22062,
+            "StockIDMin": 2010000001,
+            "StockIDMax": 2010000162,
+            "shuffle": 1
+        },
+        {
+            "ID": 22063,
+            "StockIDMin": 2010000001,
+            "StockIDMax": 2010000162,
+            "shuffle": 1
+        },
+        {
+            "ID": 22064,
+            "StockIDMin": 2010000001,
+            "StockIDMax": 2010000162,
+            "shuffle": 1
+        },
+        {
+            "ID": 22065,
+            "StockIDMin": 2010000001,
+            "StockIDMax": 2010000162,
+            "shuffle": 1
+        },
+        {
+            "ID": 22066,
+            "StockIDMin": 2010000001,
+            "StockIDMax": 2010000162,
+            "shuffle": 1
+        },
+        {
+            "ID": 22067,
+            "StockIDMin": 2060100001,
+            "StockIDMax": 2060100003,
+            "shuffle": 0
+        },
+        {
+            "ID": 22071,
+            "StockIDMin": 2010000001,
+            "StockIDMax": 2010000162,
+            "shuffle": 1
+        },
+        {
+            "ID": 22072,
+            "StockIDMin": 2010000001,
+            "StockIDMax": 2010000162,
+            "shuffle": 1
+        },
+        {
+            "ID": 22073,
+            "StockIDMin": 2010000001,
+            "StockIDMax": 2010000162,
+            "shuffle": 1
+        },
+        {
+            "ID": 22074,
+            "StockIDMin": 2010000001,
+            "StockIDMax": 2010000162,
+            "shuffle": 1
+        },
+        {
+            "ID": 22075,
+            "StockIDMin": 2010000001,
+            "StockIDMax": 2010000162,
+            "shuffle": 1
+        },
+        {
+            "ID": 22076,
+            "StockIDMin": 2010000001,
+            "StockIDMax": 2010000162,
+            "shuffle": 1
+        },
+        {
+            "ID": 22077,
+            "StockIDMin": 2070100001,
+            "StockIDMax": 2070100003,
+            "shuffle": 0
+        },
+        {
+            "ID": 22081,
+            "StockIDMin": 2010000001,
+            "StockIDMax": 2010000162,
+            "shuffle": 1
+        },
+        {
+            "ID": 22082,
+            "StockIDMin": 2010000001,
+            "StockIDMax": 2010000162,
+            "shuffle": 1
+        },
+        {
+            "ID": 22083,
+            "StockIDMin": 2010000001,
+            "StockIDMax": 2010000162,
+            "shuffle": 1
+        },
+        {
+            "ID": 22084,
+            "StockIDMin": 2010000001,
+            "StockIDMax": 2010000162,
+            "shuffle": 1
+        },
+        {
+            "ID": 22085,
+            "StockIDMin": 2010000001,
+            "StockIDMax": 2010000162,
+            "shuffle": 1
+        },
+        {
+            "ID": 22086,
+            "StockIDMin": 2010000001,
+            "StockIDMax": 2010000162,
+            "shuffle": 1
+        },
+        {
+            "ID": 22087,
+            "StockIDMin": 2080100001,
+            "StockIDMax": 2080100003,
+            "shuffle": 0
+        },
+        {
+            "ID": 22091,
+            "StockIDMin": 2010000001,
+            "StockIDMax": 2010000162,
+            "shuffle": 1
+        },
+        {
+            "ID": 22092,
+            "StockIDMin": 2010000001,
+            "StockIDMax": 2010000162,
+            "shuffle": 1
+        },
+        {
+            "ID": 22093,
+            "StockIDMin": 2010000001,
+            "StockIDMax": 2010000162,
+            "shuffle": 1
+        },
+        {
+            "ID": 22094,
+            "StockIDMin": 2010000001,
+            "StockIDMax": 2010000162,
+            "shuffle": 1
+        },
+        {
+            "ID": 22095,
+            "StockIDMin": 2010000001,
+            "StockIDMax": 2010000162,
+            "shuffle": 1
+        },
+        {
+            "ID": 22096,
+            "StockIDMin": 2010000001,
+            "StockIDMax": 2010000162,
+            "shuffle": 1
+        },
+        {
+            "ID": 22097,
+            "StockIDMin": 2090100001,
+            "StockIDMax": 2090100003,
+            "shuffle": 0
+        },
+        {
+            "ID": 22101,
+            "StockIDMin": 2010000001,
+            "StockIDMax": 2010000162,
+            "shuffle": 1
+        },
+        {
+            "ID": 22102,
+            "StockIDMin": 2010000001,
+            "StockIDMax": 2010000162,
+            "shuffle": 1
+        },
+        {
+            "ID": 22103,
+            "StockIDMin": 2010000001,
+            "StockIDMax": 2010000162,
+            "shuffle": 1
+        },
+        {
+            "ID": 22104,
+            "StockIDMin": 2010000001,
+            "StockIDMax": 2010000162,
+            "shuffle": 1
+        },
+        {
+            "ID": 22105,
+            "StockIDMin": 2010000001,
+            "StockIDMax": 2010000162,
+            "shuffle": 1
+        },
+        {
+            "ID": 22106,
+            "StockIDMin": 2010000001,
+            "StockIDMax": 2010000162,
+            "shuffle": 1
+        },
+        {
+            "ID": 22107,
+            "StockIDMin": 2100100001,
+            "StockIDMax": 2100100003,
+            "shuffle": 0
+        }
+    ]
+}

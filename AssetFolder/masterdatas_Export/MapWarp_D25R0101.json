@@ -1,0 +1,109 @@
+{
+    "m_GameObject": {
+        "m_FileID": 0,
+        "m_PathID": 0
+    },
+    "m_Enabled": 1,
+    "m_Script": {
+        "m_FileID": 0,
+        "m_PathID": -7768618106554099594
+    },
+    "m_Name": "MapWarp_D25R0101",
+    "Data": [
+        {
+            "Position": {
+                "x": 1.0,
+                "y": 3.0,
+                "z": 5.849999904632568
+            },
+            "GruopID": 0,
+            "Size": {
+                "x": 1.0,
+                "y": 1.2999999523162842
+            },
+            "WarpZone": 308,
+            "WarpIndex": 0,
+            "InputDir": 1,
+            "FlagIndex": 4000,
+            "ScriptLabel": 3,
+            "ExitLabel": 999,
+            "ConnectionName": ""
+        },
+        {
+            "Position": {
+                "x": 17.0,
+                "y": 3.0,
+                "z": 5.849999904632568
+            },
+            "GruopID": 0,
+            "Size": {
+                "x": 1.0,
+                "y": 1.2999999523162842
+            },
+            "WarpZone": 308,
+            "WarpIndex": 1,
+            "InputDir": 3,
+            "FlagIndex": 4000,
+            "ScriptLabel": 3,
+            "ExitLabel": 999,
+            "ConnectionName": ""
+        },
+        {
+            "Position": {
+                "x": 8.850000381469727,
+                "y": 1.0,
+                "z": 6.0
+            },
+            "GruopID": 0,
+            "Size": {
+                "x": 1.2999999523162842,
+                "y": 1.0
+            },
+            "WarpZone": 307,
+            "WarpIndex": 0,
+            "InputDir": 0,
+            "FlagIndex": 4000,
+            "ScriptLabel": 3,
+            "ExitLabel": 999,
+            "ConnectionName": ""
+        },
+        {
+            "Position": {
+                "x": 8.850000381469727,
+                "y": 3.0,
+                "z": 3.0
+            },
+            "GruopID": 0,
+            "Size": {
+                "x": 1.2999999523162842,
+                "y": 1.0
+            },
+            "WarpZone": 309,
+            "WarpIndex": 0,
+            "InputDir": 0,
+            "FlagIndex": 4000,
+            "ScriptLabel": 3,
+            "ExitLabel": 999,
+            "ConnectionName": ""
+        },
+        {
+            "Position": {
+                "x": 8.75,
+                "y": 1.0,
+                "z": 15.0
+            },
+            "GruopID": 0,
+            "Size": {
+                "x": 1.5,
+                "y": 1.0
+            },
+            "WarpZone": 200,
+            "WarpIndex": 4,
+            "InputDir": 2,
+            "FlagIndex": 4000,
+            "ScriptLabel": 7,
+            "ExitLabel": 1,
+            "ConnectionName": "D25R0101_D01"
+        }
+    ]
+}

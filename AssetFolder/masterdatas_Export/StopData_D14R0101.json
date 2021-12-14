@@ -1,0 +1,29 @@
+{
+    "m_GameObject": {
+        "m_FileID": 0,
+        "m_PathID": 0
+    },
+    "m_Enabled": 1,
+    "m_Script": {
+        "m_FileID": 0,
+        "m_PathID": 8423137904901713306
+    },
+    "m_Name": "StopData_D14R0101",
+    "Data": [
+        {
+            "ID": "SCRID_POS_D14R0101",
+            "Position": {
+                "x": 7.0,
+                "y": 22.0
+            },
+            "HeightLayer": 1,
+            "Size": {
+                "x": 1.0,
+                "y": 1.0
+            },
+            "ContactLabel": "pos_d14r0101",
+            "Param": 1,
+            "Work": 79
+        }
+    ]
+}

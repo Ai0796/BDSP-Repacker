@@ -1,0 +1,71 @@
+{
+    "m_GameObject": {
+        "m_FileID": 0,
+        "m_PathID": 0
+    },
+    "m_Enabled": 1,
+    "m_Script": {
+        "m_FileID": 0,
+        "m_PathID": -7768618106554099594
+    },
+    "m_Name": "MapWarp_C04R0201",
+    "Data": [
+        {
+            "Position": {
+                "x": 10.75,
+                "y": 0.0,
+                "z": 12.0
+            },
+            "GruopID": 0,
+            "Size": {
+                "x": 1.5,
+                "y": 1.0
+            },
+            "WarpZone": 54,
+            "WarpIndex": 4,
+            "InputDir": 2,
+            "FlagIndex": 4000,
+            "ScriptLabel": 4,
+            "ExitLabel": 2,
+            "ConnectionName": "C04R0201_D01"
+        },
+        {
+            "Position": {
+                "x": 15.0,
+                "y": 0.0,
+                "z": 3.0
+            },
+            "GruopID": 0,
+            "Size": {
+                "x": 1.0,
+                "y": 1.5
+            },
+            "WarpZone": 63,
+            "WarpIndex": 0,
+            "InputDir": 1,
+            "FlagIndex": 4000,
+            "ScriptLabel": 5,
+            "ExitLabel": 5,
+            "ConnectionName": ""
+        },
+        {
+            "Position": {
+                "x": 3.75,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "GruopID": 0,
+            "Size": {
+                "x": 1.5,
+                "y": 1.0
+            },
+            "WarpZone": 494,
+            "WarpIndex": 0,
+            "InputDir": 0,
+            "FlagIndex": 4000,
+            "ScriptLabel": 3,
+            "ExitLabel": 999,
+            "ConnectionName": ""
+        }
+    ]
+}

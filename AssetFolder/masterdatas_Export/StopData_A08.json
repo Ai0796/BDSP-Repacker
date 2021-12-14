@@ -1,0 +1,44 @@
+{
+    "m_GameObject": {
+        "m_FileID": 0,
+        "m_PathID": 0
+    },
+    "m_Enabled": 1,
+    "m_Script": {
+        "m_FileID": 0,
+        "m_PathID": 8423137904901713306
+    },
+    "m_Name": "StopData_A08",
+    "Data": [
+        {
+            "ID": "SCRID_POS_C08_MIKAN",
+            "Position": {
+                "x": 853.0,
+                "y": 743.0
+            },
+            "HeightLayer": 1,
+            "Size": {
+                "x": 5.0,
+                "y": 1.0
+            },
+            "ContactLabel": "pos_c08_mikan",
+            "Param": 1,
+            "Work": 60
+        },
+        {
+            "ID": "SCRID_POS_C10_CHECKIN",
+            "Position": {
+                "x": 846.0,
+                "y": 560.0
+            },
+            "HeightLayer": 20,
+            "Size": {
+                "x": 3.0,
+                "y": 1.0
+            },
+            "ContactLabel": "pos_c10_checkin",
+            "Param": 0,
+            "Work": 62
+        }
+    ]
+}

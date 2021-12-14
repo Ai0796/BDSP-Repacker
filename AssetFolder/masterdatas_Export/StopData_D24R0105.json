@@ -1,0 +1,74 @@
+{
+    "m_GameObject": {
+        "m_FileID": 0,
+        "m_PathID": 0
+    },
+    "m_Enabled": 1,
+    "m_Script": {
+        "m_FileID": 0,
+        "m_PathID": 8423137904901713306
+    },
+    "m_Name": "StopData_D24R0105",
+    "Data": [
+        {
+            "ID": "SCRID_D24R0105_SEVEN3_01",
+            "Position": {
+                "x": 35.0,
+                "y": 2.0
+            },
+            "HeightLayer": 8,
+            "Size": {
+                "x": 1.0,
+                "y": 2.0
+            },
+            "ContactLabel": "ev_d24r0105_seven3_01",
+            "Param": 0,
+            "Work": 78
+        },
+        {
+            "ID": "SCRID_D24R0105_SEVEN3_03",
+            "Position": {
+                "x": 36.0,
+                "y": 2.0
+            },
+            "HeightLayer": 8,
+            "Size": {
+                "x": 1.0,
+                "y": 2.0
+            },
+            "ContactLabel": "ev_d24r0105_seven3_03",
+            "Param": 1,
+            "Work": 78
+        },
+        {
+            "ID": "SCRID_POS_D24R0105_LIFT",
+            "Position": {
+                "x": 19.0,
+                "y": 44.0
+            },
+            "HeightLayer": 9,
+            "Size": {
+                "x": 1.0,
+                "y": 1.0
+            },
+            "ContactLabel": "pos_d24r0105_lift",
+            "Param": 0,
+            "Work": 0
+        },
+        {
+            "ID": "SCRID_D24R0105_GINGAM",
+            "Position": {
+                "x": 21.0,
+                "y": 40.0
+            },
+            "HeightLayer": 9,
+            "Size": {
+                "x": 1.0,
+                "y": 2.0
+            },
+            "ContactLabel": "ev_d24r0105_gingam",
+            "Param": 1,
+            "Work": 78
+        }
+    ]
+}

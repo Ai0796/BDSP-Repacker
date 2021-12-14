@@ -1,0 +1,29 @@
+{
+    "m_GameObject": {
+        "m_FileID": 0,
+        "m_PathID": 0
+    },
+    "m_Enabled": 1,
+    "m_Script": {
+        "m_FileID": 0,
+        "m_PathID": 8423137904901713306
+    },
+    "m_Name": "StopData_D21R0101",
+    "Data": [
+        {
+            "ID": "SCRID_D21R0101_SEVEN2_04",
+            "Position": {
+                "x": 41.0,
+                "y": 52.0
+            },
+            "HeightLayer": 0,
+            "Size": {
+                "x": 1.0,
+                "y": 1.0
+            },
+            "ContactLabel": "ev_d21r0101_seven2_04",
+            "Param": 1,
+            "Work": 77
+        }
+    ]
+}
