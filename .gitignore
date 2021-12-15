@@ -1,3 +1,5 @@
-/Resources/
-/import/
-/output/
+AssetFolder*
+AssetFolder/**
+EditedAssets*
+EditedAssets/**
+build*
