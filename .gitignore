@@ -3,3 +3,4 @@ AssetFolder/**
 EditedAssets*
 EditedAssets/**
 build*
+__pycache__*
