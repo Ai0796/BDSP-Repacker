@@ -1,5 +1,7 @@
 import os, json, UnityPy, glob, traceback
 
+from PIL import Image
+
 def repackassets(src, output):
     ##Creates a new folder named {src}_Export
     ##Puts files from source in folder
@@ -23,6 +25,16 @@ def repackassets(src, output):
                         fp = os.path.join(extract_dir, f"{data.name}.bin")
                         with open(fp, "rb") as f:
                             obj.set_raw_data(f.read())
+                
+                elif obj.type.name == "Texture2D":
+                    # export texture
+                    tree = obj.read_typetree()
+                    data = obj.read()
+                    fp = os.path.join(extract_dir, f"{tree['m_Name']}.png")
+                    
+                    pil_img = Image.open(fp)
+                    data.image = pil_img
+                    data.save()
 
             
             fp = os.path.join(output, os.path.basename(src))

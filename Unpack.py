@@ -1,5 +1,7 @@
 import os, json, UnityPy, glob, traceback
 
+from PIL import Image
+
 def unpackassets(src):
     ##Creates a new folder named {src}_Export
     ##Puts files from source in folder
@@ -25,6 +27,18 @@ def unpackassets(src):
                     with open(fp, "wb") as f:
                         f.write(data.raw_data)
                         
+            elif obj.type.name == "Texture2D":
+                # export texture
+                tree = obj.read_typetree()
+                data = obj.read()
+                fp = os.path.join(extract_dir, f"{tree['m_Name']}.png")
+                data.image.save(fp)
+                # edit texture
+                
+                # pil_img = Image.open(fp)
+                # data.image = pil_img
+                # data.save()
+                        
         return(f"{src} unpacked successfully")
     
     except:
@@ -43,8 +57,9 @@ if not os.path.exists(path):
 i = 0
 for filepath in glob.iglob(path + "**/**", recursive=False):
     if os.path.isfile(filepath):
-        i += 1
         print(unpackassets(filepath))
+        i += 1
+        
         
 print("Finished Unpacking "f"{i} Files")
 input("Press Enter to Exit...")
