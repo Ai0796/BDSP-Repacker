@@ -17,7 +17,15 @@ def unpackassets(src):
                 if obj.serialized_type.nodes:
                     # save decoded data
                     tree = obj.read_typetree()
-                    fp = os.path.join(extract_dir, f"{tree['m_Name']}.json")
+                    data = obj.read()
+                    
+                    name = data.name
+                    if name == "":
+                        script_path_id = tree["m_Script"]["m_PathID"]
+                        for script in env.objects:
+                            if script.path_id == script_path_id:
+                                name = script.read().name
+                    fp = os.path.join(extract_dir, f"{name}.json")
                     with open(fp, "wt", encoding = "utf8") as f:
                         json.dump(tree, f, ensure_ascii = False, indent = 4)
                 else:
@@ -31,7 +39,14 @@ def unpackassets(src):
                 # export texture
                 tree = obj.read_typetree()
                 data = obj.read()
-                fp = os.path.join(extract_dir, f"{tree['m_Name']}.png")
+                    
+                name = data.name
+                if name == "":
+                    script_path_id = tree["m_Script"]["m_PathID"]
+                    for script in env.objects:
+                        if script.path_id == script_path_id:
+                            name = script.read().name
+                fp = os.path.join(extract_dir, f"{name}.png")
                 data.image.save(fp)
                 # edit texture
                 

@@ -16,7 +16,15 @@ def repackassets(src, output):
                     if obj.serialized_type.nodes:
                         # save decoded data
                         tree = obj.read_typetree()
-                        fp = os.path.join(extract_dir, f"{tree['m_Name']}.json")
+                        name = tree['m_Name']
+                        
+                        if name == "":
+                            script_path_id = tree["m_Script"]["m_PathID"]
+                            for script in env.objects:
+                                if script.path_id == script_path_id:
+                                    name = script.read().name
+                                    
+                        fp = os.path.join(extract_dir, f"{name}.json")
                         with open(fp, "r", encoding = "utf8") as f:
                             obj.save_typetree(json.loads(f.read()))
                     else:
@@ -30,6 +38,12 @@ def repackassets(src, output):
                     # export texture
                     tree = obj.read_typetree()
                     data = obj.read()
+                    
+                    if name == "":
+                        script_path_id = tree["m_Script"]["m_PathID"]
+                        for script in env.objects:
+                            if script.path_id == script_path_id:
+                                name = script.read().name
                     fp = os.path.join(extract_dir, f"{tree['m_Name']}.png")
                     
                     pil_img = Image.open(fp)
