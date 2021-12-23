@@ -35,24 +35,24 @@ def unpackassets(src):
                     with open(fp, "wb") as f:
                         f.write(data.raw_data)
                         
-            elif obj.type.name == "Texture2D":
-                # export texture
-                tree = obj.read_typetree()
-                data = obj.read()
+            # elif obj.type.name == "Texture2D":
+            #     # export texture
+            #     tree = obj.read_typetree()
+            #     data = obj.read()
                     
-                name = data.name
-                if name == "":
-                    script_path_id = tree["m_Script"]["m_PathID"]
-                    for script in env.objects:
-                        if script.path_id == script_path_id:
-                            name = script.read().name
-                fp = os.path.join(extract_dir, f"{name}.png")
-                data.image.save(fp)
-                # edit texture
+            #     name = data.name
+            #     if name == "":
+            #         script_path_id = tree["m_Script"]["m_PathID"]
+            #         for script in env.objects:
+            #             if script.path_id == script_path_id:
+            #                 name = script.read().name
+            #     fp = os.path.join(extract_dir, f"{name}.png")
+            #     data.image.save(fp)
+            #     # edit texture
                 
-                # pil_img = Image.open(fp)
-                # data.image = pil_img
-                # data.save()
+            #     # pil_img = Image.open(fp)
+            #     # data.image = pil_img
+            #     # data.save()
                         
         return(f"{src} unpacked successfully")
     

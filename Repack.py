@@ -34,21 +34,22 @@ def repackassets(src, output):
                         with open(fp, "rb") as f:
                             obj.set_raw_data(f.read())
                 
-                elif obj.type.name == "Texture2D":
-                    # export texture
-                    tree = obj.read_typetree()
-                    data = obj.read()
+                # elif obj.type.name == "Texture2D":
+                #     # import texture
+                #     tree = obj.read_typetree()
+                #     data = obj.read()
                     
-                    if name == "":
-                        script_path_id = tree["m_Script"]["m_PathID"]
-                        for script in env.objects:
-                            if script.path_id == script_path_id:
-                                name = script.read().name
-                    fp = os.path.join(extract_dir, f"{tree['m_Name']}.png")
+                #     d = data.getdata()
+ 
+                #     if name == "":
+                #         script_path_id = tree["m_Script"]["m_PathID"]
+                #         for script in env.objects:
+                #             if script.path_id == script_path_id:
+                #                 name = script.read().name
+                #     fp = os.path.join(extract_dir, f"{tree['m_Name']}.png")
                     
-                    pil_img = Image.open(fp)
-                    data.image = pil_img
-                    data.save()
+                #     data.image = Image.open(fp)
+                #     data.save()
 
             
             fp = os.path.join(output, os.path.basename(src))
