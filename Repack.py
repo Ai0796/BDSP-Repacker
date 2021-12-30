@@ -12,6 +12,7 @@ def repackassets(src, output):
     fp = os.path.join(path_dir, f"{filename}_pathIDs.json")
     with open(fp, "r") as f:
         pathDic = rapidjson.load(f)
+        pathDicKeys = list(pathDic.keys())
     if os.path.exists(extract_dir):
         try:
             env = UnityPy.load(src)
@@ -20,21 +21,21 @@ def repackassets(src, output):
                     # export
                     if obj.serialized_type.nodes:
                         # save decoded data
-                        # try:
+                        if str(obj.path_id) in pathDicKeys:
                             
-                        name = pathDic[str(obj.path_id)]
+                            name = pathDic[str(obj.path_id)]
                         
-                        # except:
+                        else:
                             
-                        #     tree = obj.read_typetree()
+                            tree = obj.read_typetree()
                             
-                        #     name = tree["m_Name"]
+                            name = tree["m_Name"]
                             
-                        #     if name == "":
-                        #         script_path_id = tree["m_Script"]["m_PathID"]
-                        #         for script in env.objects:
-                        #             if script.path_id == script_path_id:
-                        #                 name = script.read().name
+                            if name == "":
+                                script_path_id = tree["m_Script"]["m_PathID"]
+                                for script in env.objects:
+                                    if script.path_id == script_path_id:
+                                        name = script.read().name
                                     
                         fp = os.path.join(extract_dir, f"{name}.json")
                         with open(fp, "r", encoding = "utf8") as f:
