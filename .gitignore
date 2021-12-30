@@ -4,3 +4,4 @@ EditedAssets*
 EditedAssets/**
 build*
 __pycache__*
+pathIDs*

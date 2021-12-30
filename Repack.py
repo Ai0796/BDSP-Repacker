@@ -1,4 +1,4 @@
-import os, json, UnityPy, glob, traceback
+import os, rapidjson, UnityPy, glob, traceback, time
 
 from PIL import Image
 
@@ -6,55 +6,50 @@ def repackassets(src, output):
     ##Creates a new folder named {src}_Export
     ##Puts files from source in folder
     extract_dir = str(src) + "_Export"
+    path_dir = "pathIDs"
+        
+    filename = os.path.basename(src)   
+    fp = os.path.join(path_dir, f"{filename}_pathIDs.json")
+    with open(fp, "r") as f:
+        pathDic = rapidjson.load(f)
     if os.path.exists(extract_dir):
         try:
             env = UnityPy.load(src)
-            
             for obj in env.objects:
                 if obj.type.name == "MonoBehaviour":
                     # export
                     if obj.serialized_type.nodes:
                         # save decoded data
-                        tree = obj.read_typetree()
-                        name = tree['m_Name']
+                        # try:
+                            
+                        name = pathDic[str(obj.path_id)]
                         
-                        if name == "":
-                            script_path_id = tree["m_Script"]["m_PathID"]
-                            for script in env.objects:
-                                if script.path_id == script_path_id:
-                                    name = script.read().name
+                        # except:
+                            
+                        #     tree = obj.read_typetree()
+                            
+                        #     name = tree["m_Name"]
+                            
+                        #     if name == "":
+                        #         script_path_id = tree["m_Script"]["m_PathID"]
+                        #         for script in env.objects:
+                        #             if script.path_id == script_path_id:
+                        #                 name = script.read().name
                                     
                         fp = os.path.join(extract_dir, f"{name}.json")
                         with open(fp, "r", encoding = "utf8") as f:
-                            obj.save_typetree(json.loads(f.read()))
+                            obj.save_typetree(rapidjson.load(f))
                     else:
                         # save raw relevant data (without Unity MonoBehaviour header)
                         data = obj.read()
                         fp = os.path.join(extract_dir, f"{data.name}.bin")
                         with open(fp, "rb") as f:
                             obj.set_raw_data(f.read())
-                
-                # elif obj.type.name == "Texture2D":
-                #     # import texture
-                #     tree = obj.read_typetree()
-                #     data = obj.read()
-                    
-                #     d = data.getdata()
- 
-                #     if name == "":
-                #         script_path_id = tree["m_Script"]["m_PathID"]
-                #         for script in env.objects:
-                #             if script.path_id == script_path_id:
-                #                 name = script.read().name
-                #     fp = os.path.join(extract_dir, f"{tree['m_Name']}.png")
-                    
-                #     data.image = Image.open(fp)
-                #     data.save()
-
             
             fp = os.path.join(output, os.path.basename(src))
             with open(fp, "wb") as f:
-                f.write(env.file.save(packer=(64,2)))                
+                f.write(env.file.save(packer=(64,2))) 
+                f.close()               
             return(f"{src} repacked successfully")
         
         except:
@@ -65,7 +60,8 @@ def repackassets(src, output):
         
         print("Error: "f"{src}_Export does not exist (Have you ran Unpack.exe?)")
     
-    
+
+start_time = time.time()
 path = "AssetFolder"
 output = "EditedAssets"
 
@@ -84,4 +80,5 @@ for filepath in glob.iglob(path + "**/**", recursive=False):
         print(repackassets(filepath, output))
         
 print("Finished Repacking "f"{i} Files")
+print("Repacking took", time.time() - start_time, "seconds to run")
 input("Press Enter to Exit...")
