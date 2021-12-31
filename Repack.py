@@ -42,6 +42,7 @@ def repackassets(queue, src, output):
                         fp = os.path.join(extract_dir, f"{name}.json")
                         with open(fp, "r", encoding = "utf8") as f:
                             obj.save_typetree(rapidjson.load(f))
+                            f.close()
                     else:
                         # save raw relevant data (without Unity MonoBehaviour header)
                         data = obj.read()
@@ -100,4 +101,5 @@ def main():
     input("Press Enter to Exit...")
 
 if __name__ == "__main__":
+    mp.freeze_support()
     main()

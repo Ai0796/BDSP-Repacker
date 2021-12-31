@@ -5,11 +5,12 @@ build_exe_options = {"excludes": ["tkinter", "PyQt4.QtSql", "sqlite3",
                                   "PyQt4.QtNetwork",
                                   "PyQt4.QtScript",
                                   "numpy.core._dotblas", 
-                                  "PyQt5"],
+                                  "PyQt5", "numpy"],
                      "optimize": 2}
 
 setup(
-        name = "Showdown Import BDSP",
+        name = "Unity-Repacker",
         version = "1.0",
+        options = {"build_exe": build_exe_options},
         description = "Unpacks and Repacks in for Unity monobehavior jsons",
         executables = [Executable("Unpack.py"), Executable("Repack.py")])

@@ -1,4 +1,5 @@
 import multiprocessing as mp
+from multiprocessing import process
 
 import os, UnityPy, glob, traceback, time
 import queue
@@ -20,7 +21,8 @@ def unpackassets(queue, src):
         env = UnityPy.load(src)
         
         pathDic = {}
-        for obj in env.objects:
+        for i in range(len(env.objects)):
+            obj = env.objects[i]
             if obj.type.name == "MonoBehaviour":
                 # export
                 if obj.serialized_type.nodes:
@@ -38,8 +40,10 @@ def unpackassets(queue, src):
                                 
                     pathDic[str(obj.path_id)] = name
                     fp = os.path.join(extract_dir, f"{name}.json")
-                    with open(fp, "wt", encoding = "utf8") as f:
+                    with open(fp, "wb") as f:
                         rapidjson.dump(tree, f, ensure_ascii = False, indent = 4)
+                        # f.write(orjson.dumps(tree, option=orjson.OPT_INDENT_2))
+                        f.close()
                 else:
                     # save raw relevant data (without Unity MonoBehaviour header)
                     data = obj.read()
@@ -70,6 +74,7 @@ def unpackassets(queue, src):
         fp = os.path.join(path_dir, f"{filename}_pathIDs.json")
         with open(fp, "wt") as f:
             rapidjson.dump(pathDic, f, ensure_ascii = False, indent = 4)
+            f.close()
         queue.put(f"{src} unpacked successfully")
         return
     
@@ -107,4 +112,5 @@ def main():
     input("Press Enter to Exit...")
 
 if __name__ == "__main__":
+    mp.freeze_support()
     main()
