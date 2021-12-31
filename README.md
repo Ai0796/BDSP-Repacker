@@ -7,7 +7,7 @@ along with creating more futureproof code for a possible GUI or a better version
 ## Use
 - Run unpack.exe once
 - throw the file you want to unpack in the AssetFolder it created
-- run unpack.exe again, edit the json in fileName_Export
+- run unpack.exe again, edit the json in {fileName}_Export
 - then just run repack.exe
 
 new merged file will be in EditedAssets
