@@ -1,9 +1,12 @@
+import multiprocessing as mp
+
 import os, UnityPy, glob, traceback, time
+import queue
 import rapidjson
 
 from PIL import Image
 
-def unpackassets(src):
+def unpackassets(queue, src):
     ##Creates a new folder named {src}_Export
     ##Puts files from source in folder
     extract_dir = str(src) + "_Export"
@@ -67,15 +70,16 @@ def unpackassets(src):
         fp = os.path.join(path_dir, f"{filename}_pathIDs.json")
         with open(fp, "wt") as f:
             rapidjson.dump(pathDic, f, ensure_ascii = False, indent = 4)
-        return(f"{src} unpacked successfully")
+        queue.put(f"{src} unpacked successfully")
+        return
     
     except:
         
         print(traceback.format_exc())
-        return(f"{src} failed to unpack")
+        queue.put(f"{src} failed to unpack")
+        return
     
-    
-if __name__ == "__main__":
+def main():
     start_time = time.time()
     path = "AssetFolder"
 
@@ -84,13 +88,23 @@ if __name__ == "__main__":
         print("Created folder 'AssetFolder' put Unity Assets e.g. masterdatas, ev_scripts in folder")
         input("Once all files are in, press enter to continue...")
 
+    q = mp.Queue()
+    processes = []
     i = 0
     for filepath in glob.iglob(path + "**/**", recursive=False):
         if os.path.isfile(filepath):
-            print(unpackassets(filepath))
             i += 1
-            
+            p = mp.Process(target=unpackassets, args=(q,filepath))
+            p.start()
+            processes.append(p)
+
+    for process in processes:
+        print(q.get())
+        p.join()
             
     print("Finished Unpacking "f"{i} Files")
     print("Unpacking took", time.time() - start_time, "seconds to run")
     input("Press Enter to Exit...")
+
+if __name__ == "__main__":
+    main()
