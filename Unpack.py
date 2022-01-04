@@ -40,6 +40,14 @@ def unpackassets(queue, src):
                                 
                     pathDic[str(obj.path_id)] = name
                     fp = os.path.join(extract_dir, f"{name}.json")
+                    j = 0
+                    while os.path.exists(fp):
+                        j += 1
+                        fp = os.path.join(extract_dir, f"{name}_{j}.json")
+                    if j > 0: 
+                        pathDic[str(obj.path_id)] = f"{name}_{j}"
+                    else:
+                        pathDic[str(obj.path_id)] = name
                     with open(fp, "wb") as f:
                         rapidjson.dump(tree, f, ensure_ascii = False, indent = 4)
                         # f.write(orjson.dumps(tree, option=orjson.OPT_INDENT_2))
