@@ -43,9 +43,9 @@ def unpackassets(queue, src):
                     j = 0
                     while os.path.exists(fp):
                         j += 1
-                        fp = os.path.join(extract_dir, f"{name}_{j}.json")
+                        fp = os.path.join(extract_dir, f"{name}_{obj.path_id}.json")
                     if j > 0: 
-                        pathDic[str(obj.path_id)] = f"{name}_{j}"
+                        pathDic[str(obj.path_id)] = f"{name}_{obj.path_id}"
                     else:
                         pathDic[str(obj.path_id)] = name
                     with open(fp, "wb") as f:
