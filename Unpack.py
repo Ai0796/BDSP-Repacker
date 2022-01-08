@@ -1,7 +1,7 @@
 import multiprocessing as mp
 from multiprocessing import process
 
-import os, UnityPy, glob, traceback, time
+import os, UnityPy, glob, traceback, time, shutil
 import queue
 import rapidjson
 
@@ -40,14 +40,18 @@ def unpackassets(queue, src):
                                 
                     pathDic[str(obj.path_id)] = name
                     fp = os.path.join(extract_dir, f"{name}.json")
+                    
                     j = 0
                     while os.path.exists(fp):
                         j += 1
                         fp = os.path.join(extract_dir, f"{name}_{obj.path_id}.json")
+                        
                     if j > 0: 
                         pathDic[str(obj.path_id)] = f"{name}_{obj.path_id}"
+                        
                     else:
                         pathDic[str(obj.path_id)] = name
+                        
                     with open(fp, "wb") as f:
                         rapidjson.dump(tree, f, ensure_ascii = False, indent = 4)
                         # f.write(orjson.dumps(tree, option=orjson.OPT_INDENT_2))
@@ -107,6 +111,13 @@ def main():
     for filepath in glob.iglob(path + "**/**", recursive=False):
         if os.path.isfile(filepath):
             i += 1
+            extract_dir = str(filepath) + "_Export"
+            
+            ##This needs to be here b/c it'll break if done on a process
+            if os.path.exists(extract_dir):
+                input(f"Warning: {extract_dir} already exists, if this is intentional, press enter...")
+                shutil.rmtree(extract_dir)
+                
             p = mp.Process(target=unpackassets, args=(q,filepath))
             p.start()
             processes.append(p)
