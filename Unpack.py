@@ -4,8 +4,17 @@ from multiprocessing import process
 import os, UnityPy, glob, traceback, time, shutil
 import queue
 import rapidjson
+import tqdm
 
 from PIL import Image
+
+exportNames = [
+    "MonoBehaviour",
+    # "AssetBundleManifest",
+    "BoxCollider",
+    "Transform"
+    # "AssetBundle"
+]
 
 def unpackassets(queue, src):
     ##Creates a new folder named {src}_Export
@@ -23,24 +32,37 @@ def unpackassets(queue, src):
         pathDic = {}
         for i in range(len(env.objects)):
             obj = env.objects[i]
-            if obj.type.name == "MonoBehaviour":
+            if obj.type.name in exportNames:
                 # export
                 if obj.serialized_type.nodes:
                     
                     # save decoded data
                     tree = obj.read_typetree()
-                    # data = obj.read()
+                    data = obj.read()
                     
-                    name = tree["m_Name"]
+                    if "m_Name" in list(tree.keys()):
+                        name = tree["m_Name"]
+                    else:
+                        name = ""
+                        
                     if name == "":
-                        script_path_id = tree["m_Script"]["m_PathID"]
+                        
+                        if obj.type.name == "MonoBehaviour":
+                            script_path_id = tree["m_Script"]["m_PathID"]
+                            
+                        elif obj.type.name == "Transform" or obj.type.name == "BoxCollider":
+                            script_path_id = tree["m_GameObject"]["m_PathID"]
+                            
                         for script in env.objects:
                             if script.path_id == script_path_id:
                                 name = script.read().name
                                 
+                    name = os.path.basename(name)
+                                
                     pathDic[str(obj.path_id)] = name
                     fp = os.path.join(extract_dir, f"{name}.json")
                     
+                    ##Creates new file names for duplicates
                     j = 0
                     while os.path.exists(fp):
                         j += 1
@@ -52,6 +74,7 @@ def unpackassets(queue, src):
                     else:
                         pathDic[str(obj.path_id)] = name
                         
+                    ##Finish Dumping the file
                     with open(fp, "wb") as f:
                         rapidjson.dump(tree, f, ensure_ascii = False, indent = 4)
                         # f.write(orjson.dumps(tree, option=orjson.OPT_INDENT_2))
@@ -62,25 +85,6 @@ def unpackassets(queue, src):
                     fp = os.path.join(extract_dir, f"{data.name}.bin")
                     with open(fp, "wb") as f:
                         f.write(data.raw_data)
-                        
-            # elif obj.type.name == "Texture2D":
-            #     # export texture
-            #     tree = obj.read_typetree()
-            #     data = obj.read()
-                    
-            #     name = data.name
-            #     if name == "":
-            #         script_path_id = tree["m_Script"]["m_PathID"]
-            #         for script in env.objects:
-            #             if script.path_id == script_path_id:
-            #                 name = script.read().name
-            #     fp = os.path.join(extract_dir, f"{name}.png")
-            #     data.image.save(fp)
-            #     # edit texture
-                
-            #     # pil_img = Image.open(fp)
-            #     # data.image = pil_img
-            #     # data.save()
                      
         filename = os.path.basename(src)   
         fp = os.path.join(path_dir, f"{filename}_pathIDs.json")
@@ -118,6 +122,7 @@ def main():
                 input(f"Warning: {extract_dir} already exists, if this is intentional, press enter...")
                 shutil.rmtree(extract_dir)
                 
+            print(f"Unpacking {filepath}")
             p = mp.Process(target=unpackassets, args=(q,filepath))
             p.start()
             processes.append(p)

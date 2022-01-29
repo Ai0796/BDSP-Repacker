@@ -4,6 +4,14 @@ import os, rapidjson, UnityPy, glob, traceback, time
 
 from PIL import Image
 
+exportNames = [
+    "MonoBehaviour",
+    # "AssetBundleManifest",
+    "BoxCollider",
+    "Transform"
+    # "AssetBundle"
+]
+
 def repackassets(queue, src, output):
     ##Creates a new folder named {src}_Export
     ##Puts files from source in folder
@@ -19,7 +27,7 @@ def repackassets(queue, src, output):
         try:
             env = UnityPy.load(src)
             for obj in env.objects:
-                if obj.type.name == "MonoBehaviour":
+                if obj.type.name in exportNames:
                     # export
                     if obj.serialized_type.nodes:
                         # save decoded data
@@ -34,10 +42,18 @@ def repackassets(queue, src, output):
                             name = tree["m_Name"]
                             
                             if name == "":
-                                script_path_id = tree["m_Script"]["m_PathID"]
+                                
+                                if obj.type.name == "MonoBehaviour":
+                                    script_path_id = tree["m_Script"]["m_PathID"]
+                                    
+                                elif obj.type.name == "Transform" or obj.type.name == "BoxCollider":
+                                    script_path_id = tree["m_GameObject"]["m_PathID"]
+                                    
                                 for script in env.objects:
                                     if script.path_id == script_path_id:
                                         name = script.read().name
+                                        
+                            name = os.path.basename(name)
                                     
                         fp = os.path.join(extract_dir, f"{name}.json")
                         with open(fp, "r", encoding = "utf8") as f:
@@ -87,6 +103,7 @@ def main():
     for filepath in glob.iglob(path + "**/**", recursive=False):
         if os.path.isfile(filepath):
             i += 1
+            print(f"Repacking {filepath}")
             p = mp.Process(target=repackassets, args=(q,filepath, output))
             p.start()
             processes.append(p)
