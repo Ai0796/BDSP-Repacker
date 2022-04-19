@@ -1,16 +1,11 @@
 
 import multiprocessing as mp
 import os, rapidjson, UnityPy, glob, traceback, time
+import Constants
 
 from PIL import Image
 
-exportNames = [
-    "MonoBehaviour",
-    # "AssetBundleManifest",
-    "BoxCollider",
-    "Transform"
-    # "AssetBundle"
-]
+exportNames = Constants.Constants.exportNames
 
 def repackassets(queue, src, output):
     ##Creates a new folder named {src}_Export
@@ -41,12 +36,21 @@ def repackassets(queue, src, output):
                             
                             name = tree["m_Name"]
                             
+                            if "m_Name" in list(tree.keys()):
+                                name = tree["m_Name"]
+                            else:
+                                name = ""
+                                
                             if name == "":
                                 
-                                if obj.type.name == "MonoBehaviour":
+                                if obj.type.name == "AssetBundle":
+                                    name = "AssetBundle"
+                                    script_path_id = 0
+                                
+                                elif obj.type.name == "MonoBehaviour":
                                     script_path_id = tree["m_Script"]["m_PathID"]
                                     
-                                elif obj.type.name == "Transform" or obj.type.name == "BoxCollider":
+                                elif obj.type.name in ["Transform" ,"BoxCollider" ,"ParticleSystem", "MeshRenderer", "MeshFilter"]:
                                     script_path_id = tree["m_GameObject"]["m_PathID"]
                                     
                                 for script in env.objects:
@@ -75,11 +79,12 @@ def repackassets(queue, src, output):
         
         except:
             
+            print(name)
             print(traceback.format_exc())
             queue.put(f"{src} failed to repack")
             return
     else:
-        
+
         print("Error: "f"{src}_Export does not exist (Have you ran Unpack.exe?)")
     
 

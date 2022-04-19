@@ -4,17 +4,12 @@ from multiprocessing import process
 import os, UnityPy, glob, traceback, time, shutil
 import queue
 import rapidjson
-import tqdm
+
+import Constants
 
 from PIL import Image
 
-exportNames = [
-    "MonoBehaviour",
-    # "AssetBundleManifest",
-    "BoxCollider",
-    "Transform"
-    # "AssetBundle"
-]
+exportNames = Constants.Constants.exportNames
 
 def unpackassets(queue, src):
     ##Creates a new folder named {src}_Export
@@ -47,10 +42,14 @@ def unpackassets(queue, src):
                         
                     if name == "":
                         
-                        if obj.type.name == "MonoBehaviour":
+                        if obj.type.name == "AssetBundle":
+                            name = "AssetBundle"
+                            script_path_id = 0
+                        
+                        elif obj.type.name == "MonoBehaviour":
                             script_path_id = tree["m_Script"]["m_PathID"]
                             
-                        elif obj.type.name == "Transform" or obj.type.name == "BoxCollider":
+                        elif obj.type.name in ["Transform" ,"BoxCollider" ,"ParticleSystem", "MeshRenderer", "MeshFilter"]:
                             script_path_id = tree["m_GameObject"]["m_PathID"]
                             
                         for script in env.objects:
@@ -60,19 +59,21 @@ def unpackassets(queue, src):
                     name = os.path.basename(name)
                                 
                     pathDic[str(obj.path_id)] = name
-                    fp = os.path.join(extract_dir, f"{name}.json")
+                    # fp = os.path.join(extract_dir, f"{name}.json")
+                    fp = os.path.join(extract_dir, f"{name}_{obj.path_id}.json")
+                    pathDic[str(obj.path_id)] = f"{name}_{obj.path_id}"
                     
-                    ##Creates new file names for duplicates
-                    j = 0
-                    while os.path.exists(fp):
-                        j += 1
-                        fp = os.path.join(extract_dir, f"{name}_{obj.path_id}.json")
+                    # ##Creates new file names for duplicates
+                    # j = 0
+                    # while os.path.exists(fp):
+                    #     j += 1
+                    #     fp = os.path.join(extract_dir, f"{name}_{obj.path_id}.json")
                         
-                    if j > 0: 
-                        pathDic[str(obj.path_id)] = f"{name}_{obj.path_id}"
+                    # if j > 0: 
+                    #     pathDic[str(obj.path_id)] = f"{name}_{obj.path_id}"
                         
-                    else:
-                        pathDic[str(obj.path_id)] = name
+                    # else:
+                    #     pathDic[str(obj.path_id)] = name
                         
                     ##Finish Dumping the file
                     with open(fp, "wb") as f:
@@ -97,6 +98,7 @@ def unpackassets(queue, src):
     except:
         
         print(traceback.format_exc())
+        print(tree)
         queue.put(f"{src} failed to unpack")
         return
     

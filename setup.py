@@ -5,7 +5,7 @@ build_exe_options = {"excludes": ["tkinter", "PyQt4.QtSql", "sqlite3",
                                   "PyQt4.QtNetwork",
                                   "PyQt4.QtScript",
                                   "numpy.core._dotblas", 
-                                  "PyQt5", "numpy"],
+                                  "PyQt5", "numpy", "matplotlib", "scipy"],
                      "optimize": 2}
 
 setup(
