@@ -3,11 +3,14 @@ from multiprocessing import process
 
 import os, UnityPy, glob, traceback, time, shutil
 import queue
+from click import progressbar
 import rapidjson
 
 import Constants
 
 from PIL import Image
+
+from tqdm import tqdm
 
 exportNames = Constants.Constants.exportNames
 
@@ -25,7 +28,7 @@ def unpackassets(queue, src):
         env = UnityPy.load(src)
         
         pathDic = {}
-        for i in range(len(env.objects)):
+        for i in tqdm(range(len(env.objects))):
             obj = env.objects[i]
             if obj.type.name in exportNames:
                 # export

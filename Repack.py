@@ -5,6 +5,8 @@ import Constants
 
 from PIL import Image
 
+from tqdm import tqdm
+
 exportNames = Constants.Constants.exportNames
 
 def repackassets(queue, src, output):
@@ -21,7 +23,7 @@ def repackassets(queue, src, output):
     if os.path.exists(extract_dir):
         try:
             env = UnityPy.load(src)
-            for obj in env.objects:
+            for obj in tqdm(env.objects):
                 if obj.type.name in exportNames:
                     # export
                     if obj.serialized_type.nodes:
