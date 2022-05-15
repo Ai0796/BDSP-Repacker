@@ -1,0 +1,10 @@
+[
+    "MonoBehaviour",
+    "AssetBundleManifest",
+    "GameObject",
+    "BoxCollider",
+    "Transform",
+    "ParticleSystem",
+    "AssetBundle",
+    "AnimationClip"
+]

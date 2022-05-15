@@ -6,6 +6,7 @@ build_exe_options = {"excludes": ["tkinter", "PyQt4.QtSql", "sqlite3",
                                   "PyQt4.QtScript",
                                   "numpy.core._dotblas", 
                                   "PyQt5", "numpy", "matplotlib", "scipy"],
+                     "include_files": "types.json",
                      "optimize": 2}
 
 setup(
@@ -13,4 +14,5 @@ setup(
         version = "1.0",
         options = {"build_exe": build_exe_options},
         description = "Unpacks and Repacks in for Unity monobehavior jsons",
-        executables = [Executable("Unpack.py"), Executable("Repack.py")])
+        executables = [Executable("Unpack.py"), Executable("Repack.py")]
+)

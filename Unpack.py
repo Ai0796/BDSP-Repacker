@@ -3,18 +3,14 @@ from multiprocessing import process
 
 import os, UnityPy, glob, traceback, time, shutil
 import queue
-from click import progressbar
 import rapidjson
 
-import Constants
+from Constants import Constants
 
-from PIL import Image
+constants = Constants()
+exportNames = constants.exportNames
 
-from tqdm import tqdm
-
-exportNames = Constants.Constants.exportNames
-
-def unpackassets(queue, src):
+def unpackassets(queue, src, fileNum):
     ##Creates a new folder named {src}_Export
     ##Puts files from source in folder
     extract_dir = str(src) + "_Export"
@@ -28,8 +24,7 @@ def unpackassets(queue, src):
         env = UnityPy.load(src)
         
         pathDic = {}
-        for i in tqdm(range(len(env.objects))):
-            obj = env.objects[i]
+        for obj in env.objects:
             if obj.type.name in exportNames:
                 # export
                 if obj.serialized_type.nodes:
@@ -95,7 +90,7 @@ def unpackassets(queue, src):
         with open(fp, "wt") as f:
             rapidjson.dump(pathDic, f, ensure_ascii = False, indent = 4)
             f.close()
-        queue.put(f"{src} unpacked successfully")
+        # queue.put(f"{src} unpacked successfully")
         return
     
     except:
@@ -116,10 +111,10 @@ def main():
 
     q = mp.Queue()
     processes = []
-    i = 0
+    filepaths = []
+    
     for filepath in glob.iglob(path + "**/**", recursive=False):
         if os.path.isfile(filepath):
-            i += 1
             extract_dir = str(filepath) + "_Export"
             
             ##This needs to be here b/c it'll break if done on a process
@@ -127,12 +122,17 @@ def main():
                 input(f"Warning: {extract_dir} already exists, if this is intentional, press enter...")
                 shutil.rmtree(extract_dir)
                 
-            print(f"Unpacking {filepath}")
-            p = mp.Process(target=unpackassets, args=(q,filepath))
-            p.start()
-            processes.append(p)
+            filepaths.append(filepath)    
+          
+    i = 0
+    for filepath in filepaths:
+        i += 1
+        print(f"Unpacking {filepath}")
+        p = mp.Process(target=unpackassets, args=(q,filepath, i))
+        p.start()
+        processes.append(p)
 
-    for process in processes:
+    for p in processes:
         print(q.get())
         p.join()
             

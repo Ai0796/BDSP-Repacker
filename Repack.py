@@ -1,15 +1,14 @@
 
 import multiprocessing as mp
 import os, rapidjson, UnityPy, glob, traceback, time
-import Constants
+from Constants import Constants
 
 from PIL import Image
 
-from tqdm import tqdm
+constants = Constants()
+exportNames = constants.exportNames
 
-exportNames = Constants.Constants.exportNames
-
-def repackassets(queue, src, output):
+def repackassets(queue, src, output, fileNum):
     ##Creates a new folder named {src}_Export
     ##Puts files from source in folder
     extract_dir = str(src) + "_Export"
@@ -23,7 +22,7 @@ def repackassets(queue, src, output):
     if os.path.exists(extract_dir):
         try:
             env = UnityPy.load(src)
-            for obj in tqdm(env.objects):
+            for obj in tqdm(env.objects, desc=src, position = fileNum + 1):
                 if obj.type.name in exportNames:
                     # export
                     if obj.serialized_type.nodes:
@@ -110,14 +109,14 @@ def main():
     for filepath in glob.iglob(path + "**/**", recursive=False):
         if os.path.isfile(filepath):
             i += 1
-            print(f"Repacking {filepath}")
-            p = mp.Process(target=repackassets, args=(q,filepath, output))
+            
+            p = mp.Process(target=repackassets, args=(q, filepath, output, i))
             p.start()
             processes.append(p)
 
     for process in processes:
         print(q.get())
-        p.join()
+        process.join()
     # print(repackassets(filepath, output))
             
     print("Finished Repacking "f"{i} Files")
