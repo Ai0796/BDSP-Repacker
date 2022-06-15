@@ -22,7 +22,7 @@ def repackassets(queue, src, output, fileNum):
     if os.path.exists(extract_dir):
         try:
             env = UnityPy.load(src)
-            for obj in tqdm(env.objects, desc=src, position = fileNum + 1):
+            for obj in env.objects:
                 if obj.type.name in exportNames:
                     # export
                     if obj.serialized_type.nodes:

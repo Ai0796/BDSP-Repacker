@@ -38,6 +38,7 @@ def unpackassets(queue, src, fileNum):
                     else:
                         name = ""
                         
+                    ##Grab a name from script or gameobject name
                     if name == "":
                         
                         if obj.type.name == "AssetBundle":
@@ -58,20 +59,19 @@ def unpackassets(queue, src, fileNum):
                                 
                     pathDic[str(obj.path_id)] = name
                     # fp = os.path.join(extract_dir, f"{name}.json")
-                    fp = os.path.join(extract_dir, f"{name}_{obj.path_id}.json")
-                    pathDic[str(obj.path_id)] = f"{name}_{obj.path_id}"
+                    fp = os.path.join(extract_dir, f"{name}.json")
                     
-                    # ##Creates new file names for duplicates
-                    # j = 0
-                    # while os.path.exists(fp):
-                    #     j += 1
-                    #     fp = os.path.join(extract_dir, f"{name}_{obj.path_id}.json")
+                    ##Creates new file names for duplicates
+                    j = 0
+                    while os.path.exists(fp):
+                        j += 1
+                        fp = os.path.join(extract_dir, f"{name}_{obj.path_id}.json")
                         
-                    # if j > 0: 
-                    #     pathDic[str(obj.path_id)] = f"{name}_{obj.path_id}"
+                    if j > 0: 
+                        pathDic[str(obj.path_id)] = f"{name}_{obj.path_id}"
                         
-                    # else:
-                    #     pathDic[str(obj.path_id)] = name
+                    else:
+                        pathDic[str(obj.path_id)] = name
                         
                     ##Finish Dumping the file
                     with open(fp, "wb") as f:
@@ -90,7 +90,7 @@ def unpackassets(queue, src, fileNum):
         with open(fp, "wt") as f:
             rapidjson.dump(pathDic, f, ensure_ascii = False, indent = 4)
             f.close()
-        # queue.put(f"{src} unpacked successfully")
+        queue.put(f"{src} unpacked successfully")
         return
     
     except:
