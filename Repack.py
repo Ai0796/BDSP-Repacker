@@ -60,10 +60,11 @@ def repackassets(queue, src, output, fileNum):
                                         
                             name = os.path.basename(name)
                                     
-                        fp = os.path.join(extract_dir, f"{name}.json")
-                        with open(fp, "r", encoding = "utf8") as f:
-                            obj.save_typetree(rapidjson.load(f))
-                            f.close()
+                        if os.path.exists(name):
+                            fp = os.path.join(extract_dir, f"{name}.json")
+                            with open(fp, "r", encoding = "utf8") as f:
+                                obj.save_typetree(rapidjson.load(f))
+                                f.close()
                     else:
                         # save raw relevant data (without Unity MonoBehaviour header)
                         data = obj.read()

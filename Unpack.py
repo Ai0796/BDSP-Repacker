@@ -48,9 +48,13 @@ def unpackassets(queue, src, fileNum):
                         elif obj.type.name == "MonoBehaviour":
                             script_path_id = tree["m_Script"]["m_PathID"]
                             
-                        elif obj.type.name in ["Transform" ,"BoxCollider" ,"ParticleSystem", "MeshRenderer", "MeshFilter"]:
+                        elif obj.type.name in ["Transform" ,"BoxCollider" ,"ParticleSystem", "MeshRenderer", "MeshFilter", "SkinnedMeshRenderer"]:
                             script_path_id = tree["m_GameObject"]["m_PathID"]
                             
+                        else:
+                            print("Error, Type:", obj.type.name, "name not recognized")
+                            continue
+                        
                         for script in env.objects:
                             if script.path_id == script_path_id:
                                 name = script.read().name
