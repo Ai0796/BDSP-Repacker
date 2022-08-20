@@ -26,43 +26,47 @@ def unpackassets(queue, src, fileNum):
         pathDic = {}
         for obj in env.objects:
             if obj.type.name in exportNames:
-                # export
-                if obj.serialized_type.nodes:
                     
-                    # save decoded data
-                    tree = obj.read_typetree()
-                    data = obj.read()
+                # save decoded data
+                tree = obj.read_typetree()
+                data = obj.read()
+                
+                if "m_Name" in list(tree.keys()):
+                    name = tree["m_Name"]
+                else:
+                    name = ""
                     
-                    if "m_Name" in list(tree.keys()):
-                        name = tree["m_Name"]
+                ##Grab a name from script or gameobject name
+                if name == "":
+                    
+                    if obj.type.name == "AssetBundle":
+                        name = "AssetBundle"
+                        script_path_id = 0
+                    
+                    elif obj.type.name == "MonoBehaviour":
+                        script_path_id = tree["m_Script"]["m_PathID"]
+                        
+                    elif obj.type.name in ["Transform" ,"BoxCollider" ,"ParticleSystem", "MeshRenderer", "MeshFilter", "SkinnedMeshRenderer"]:
+                        script_path_id = tree["m_GameObject"]["m_PathID"]
+                        
                     else:
-                        name = ""
-                        
-                    ##Grab a name from script or gameobject name
-                    if name == "":
-                        
-                        if obj.type.name == "AssetBundle":
-                            name = "AssetBundle"
-                            script_path_id = 0
-                        
-                        elif obj.type.name == "MonoBehaviour":
-                            script_path_id = tree["m_Script"]["m_PathID"]
+                        print("Error, Type:", obj.type.name, "name not recognized")
+                        continue
+                    
+                    for script in env.objects:
+                        if script.path_id == script_path_id:
+                            name = script.read().name
                             
-                        elif obj.type.name in ["Transform" ,"BoxCollider" ,"ParticleSystem", "MeshRenderer", "MeshFilter", "SkinnedMeshRenderer"]:
-                            script_path_id = tree["m_GameObject"]["m_PathID"]
+                name = os.path.basename(name)
                             
-                        else:
-                            print("Error, Type:", obj.type.name, "name not recognized")
-                            continue
-                        
-                        for script in env.objects:
-                            if script.path_id == script_path_id:
-                                name = script.read().name
-                                
-                    name = os.path.basename(name)
-                                
+                pathDic[str(obj.path_id)] = name
+                # fp = os.path.join(extract_dir, f"{name}.json")
+                if obj.type.name == "Texture2D":
+                    fp = os.path.join(extract_dir, f"{name}.png")
+                    image = data.image
+                    image.save(fp)
                     pathDic[str(obj.path_id)] = name
-                    # fp = os.path.join(extract_dir, f"{name}.json")
+                else:
                     fp = os.path.join(extract_dir, f"{name}.json")
                     
                     ##Creates new file names for duplicates
@@ -82,12 +86,6 @@ def unpackassets(queue, src, fileNum):
                         rapidjson.dump(tree, f, ensure_ascii = False, indent = 4)
                         # f.write(orjson.dumps(tree, option=orjson.OPT_INDENT_2))
                         f.close()
-                else:
-                    # save raw relevant data (without Unity MonoBehaviour header)
-                    data = obj.read()
-                    fp = os.path.join(extract_dir, f"{data.name}.bin")
-                    with open(fp, "wb") as f:
-                        f.write(data.raw_data)
                      
         filename = os.path.basename(src)   
         fp = os.path.join(path_dir, f"{filename}_pathIDs.json")

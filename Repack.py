@@ -2,6 +2,7 @@
 import multiprocessing as mp
 import os, rapidjson, UnityPy, glob, traceback, time
 from Constants import Constants
+from UnityPy.enums import TextureFormat
 
 from PIL import Image
 
@@ -24,47 +25,54 @@ def repackassets(queue, src, output, fileNum):
             env = UnityPy.load(src)
             for obj in env.objects:
                 if obj.type.name in exportNames:
-                    # export
-                    if obj.serialized_type.nodes:
-                        # save decoded data
-                        if str(obj.path_id) in pathDicKeys:
-                            
-                            name = pathDic[str(obj.path_id)]
+                    # save decoded data
+                    if str(obj.path_id) in pathDicKeys:
                         
-                        else:
-                            
-                            tree = obj.read_typetree()
-                            
+                        name = pathDic[str(obj.path_id)]
+                    
+                    else:
+                        
+                        tree = obj.read_typetree()
+                        
+                        name = tree["m_Name"]
+                        
+                        if "m_Name" in list(tree.keys()):
                             name = tree["m_Name"]
+                        else:
+                            name = ""
                             
-                            if "m_Name" in list(tree.keys()):
-                                name = tree["m_Name"]
-                            else:
-                                name = ""
+                        if name == "":
+                            
+                            if obj.type.name == "AssetBundle":
+                                name = "AssetBundle"
+                                script_path_id = 0
+                            
+                            elif obj.type.name == "MonoBehaviour":
+                                script_path_id = tree["m_Script"]["m_PathID"]
                                 
-                            if name == "":
+                            elif obj.type.name in ["Transform" ,"BoxCollider" ,"ParticleSystem", "MeshRenderer", "MeshFilter"]:
+                                script_path_id = tree["m_GameObject"]["m_PathID"]
                                 
-                                if obj.type.name == "AssetBundle":
-                                    name = "AssetBundle"
-                                    script_path_id = 0
-                                
-                                elif obj.type.name == "MonoBehaviour":
-                                    script_path_id = tree["m_Script"]["m_PathID"]
+                            for script in env.objects:
+                                if script.path_id == script_path_id:
+                                    name = script.read().name
                                     
-                                elif obj.type.name in ["Transform" ,"BoxCollider" ,"ParticleSystem", "MeshRenderer", "MeshFilter"]:
-                                    script_path_id = tree["m_GameObject"]["m_PathID"]
+                        name = os.path.basename(name)
+                        
+                    if obj.type.name == "Texture2D":
+                        fp = os.path.join(extract_dir, f"{name}.png")
+                        image = Image.open(fp)
+                        data = obj.read()
+                        data.m_Width = image.width
+                        data.m_Height = image.height
+                        data.set_image(image, TextureFormat(10))
+                        data.save()
                                     
-                                for script in env.objects:
-                                    if script.path_id == script_path_id:
-                                        name = script.read().name
-                                        
-                            name = os.path.basename(name)
-                                    
-                        if os.path.exists(name):
-                            fp = os.path.join(extract_dir, f"{name}.json")
-                            with open(fp, "r", encoding = "utf8") as f:
-                                obj.save_typetree(rapidjson.load(f))
-                                f.close()
+                    elif os.path.exists(name):
+                        fp = os.path.join(extract_dir, f"{name}.json")
+                        with open(fp, "r", encoding = "utf8") as f:
+                            obj.save_typetree(rapidjson.load(f))
+                            f.close()
                     else:
                         # save raw relevant data (without Unity MonoBehaviour header)
                         data = obj.read()
