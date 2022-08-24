@@ -5,16 +5,25 @@ import os, UnityPy, glob, traceback, time, shutil
 import queue
 import rapidjson
 
-from Constants import Constants
+from Types import Types
 
-constants = Constants()
-exportNames = constants.exportNames
+import asyncio
 
-def unpackassets(queue, src, fileNum):
+async def dumpJson(tree, fp):
+    with open(fp, "wb") as f:
+        rapidjson.dump(tree, f, ensure_ascii=False, indent=4)
+        # f.write(orjson.dumps(tree, option=orjson.OPT_INDENT_2))
+        f.close()
+        
+async def dumpImg(image, fp):
+    image.save(fp)
+
+async def unpackassets(queue, src, exportNames):
     ##Creates a new folder named {src}_Export
     ##Puts files from source in folder
     extract_dir = str(src) + "_Export"
     path_dir = "pathIDs"
+    existingFPs = []
     if not os.path.exists(extract_dir):
         os.makedirs(extract_dir, 0o666)
         
@@ -22,37 +31,36 @@ def unpackassets(queue, src, fileNum):
         os.makedirs(path_dir, 0o666)
     try:
         env = UnityPy.load(src)
-        
+
         pathDic = {}
         for obj in env.objects:
             if obj.type.name in exportNames:
-                    
+                
                 # save decoded data
                 tree = obj.read_typetree()
-                data = obj.read()
                 
-                if "m_Name" in list(tree.keys()):
+                if "m_Name" in tree:
                     name = tree["m_Name"]
                 else:
                     name = ""
-                    
+
                 ##Grab a name from script or gameobject name
                 if name == "":
-                    
+
                     if obj.type.name == "AssetBundle":
                         name = "AssetBundle"
                         script_path_id = 0
-                    
+
                     elif obj.type.name == "MonoBehaviour":
                         script_path_id = tree["m_Script"]["m_PathID"]
-                        
-                    elif obj.type.name in ["Transform" ,"BoxCollider" ,"ParticleSystem", "MeshRenderer", "MeshFilter", "SkinnedMeshRenderer"]:
+
+                    elif obj.type.name in ["Transform", "BoxCollider", "ParticleSystem", "MeshRenderer", "MeshFilter", "SkinnedMeshRenderer"]:
                         script_path_id = tree["m_GameObject"]["m_PathID"]
-                        
+
                     else:
                         print("Error, Type:", obj.type.name, "name not recognized")
                         continue
-                    
+
                     for script in env.objects:
                         if script.path_id == script_path_id:
                             name = script.read().name
@@ -63,7 +71,7 @@ def unpackassets(queue, src, fileNum):
                 if obj.type.name == "Texture2D":
                     fp = os.path.join(extract_dir, f"{name}.png")
                     
-                    if os.path.exists(fp):
+                    if fp in existingFPs:
                         fp = os.path.join(extract_dir, f"{name}_{obj.path_id}.png")
                         pathDic[str(obj.path_id)] = f"{name}_{obj.path_id}"
 
@@ -71,27 +79,29 @@ def unpackassets(queue, src, fileNum):
                         pathDic[str(obj.path_id)] = name
                         
                     fp = os.path.join(extract_dir, f"{name}.png")
+                    data = obj.read()
                     image = data.image
                     image = image.convert("RGBA")
-                    image.save(fp)
+                    existingFPs.append(fp)
+                    task = asyncio.create_task(dumpImg(image, fp))
                 else:
                     fp = os.path.join(extract_dir, f"{name}.json")
                     
                     ##Creates new file names for duplicates
-                    j = 0
-                    while os.path.exists(fp):
-                        j += 1
-                        fp = os.path.join(extract_dir, f"{name}_{obj.path_id}.json")
-                        pathDic[str(obj.path_id)] = f"{name}_{obj.path_id}"
+                    if fp in existingFPs:
+                        fp = os.path.join(extract_dir, f"{name}_{obj.type.name}_{obj.path_id}.json")
+                        pathDic[str(obj.path_id)] = f"{name}_{obj.type.name}_{obj.path_id}"
 
                     else:
                         pathDic[str(obj.path_id)] = name
                         
+                    existingFPs.append(fp)
+                    task = asyncio.create_task(dumpJson(tree, fp))
+                        
                     ##Finish Dumping the file
-                    with open(fp, "wb") as f:
-                        rapidjson.dump(tree, f, ensure_ascii = False, indent = 4)
-                        # f.write(orjson.dumps(tree, option=orjson.OPT_INDENT_2))
-                        f.close()
+                    
+                await task
+                    
                      
         filename = os.path.basename(src)   
         fp = os.path.join(path_dir, f"{filename}_pathIDs.json")
@@ -108,9 +118,12 @@ def unpackassets(queue, src, fileNum):
         queue.put(f"{src} failed to unpack")
         return
     
-def main():
-    start_time = time.time()
+async def main():
     path = "AssetFolder"
+    
+    type = Types()
+    type.readTypes()
+    exportNames = type.getTypeNames()
 
     if not os.path.exists(path):
         os.makedirs(path, 0o666)
@@ -132,22 +145,29 @@ def main():
                 
             filepaths.append(filepath)    
           
+    start_time = time.time()
     i = 0
     for filepath in filepaths:
         i += 1
         print(f"Unpacking {filepath}")
-        p = mp.Process(target=unpackassets, args=(q,filepath, i))
-        p.start()
+        p = asyncio.create_task(unpackassets(q, filepath, exportNames))
         processes.append(p)
+    #     p = mp.Process(target=unpackassets, args=(q,filepath, exportNames))
+    #     p.start()
+    #     processes.append(p)
 
+    # for p in processes:
+    #     print(q.get())
+    #     p.join()
+    
     for p in processes:
-        print(q.get())
-        p.join()
+        await p
             
     print("Finished Unpacking "f"{i} Files")
     print("Unpacking took", time.time() - start_time, "seconds to run")
     input("Press Enter to Exit...")
 
 if __name__ == "__main__":
+    
     mp.freeze_support()
-    main()
+    asyncio.run(main())
