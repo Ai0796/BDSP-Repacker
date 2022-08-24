@@ -65,7 +65,7 @@ def unpackassets(queue, src, fileNum):
                     fp = os.path.join(extract_dir, f"{name}.png")
                     image = data.image
                     image.save(fp)
-                    pathDic[str(obj.path_id)] = name
+                    pathDic[str(obj.path_id)] = fp
                 else:
                     fp = os.path.join(extract_dir, f"{name}.json")
                     
