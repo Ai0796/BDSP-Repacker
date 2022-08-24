@@ -87,7 +87,7 @@ def repackassets(queue, src, output, fileNum):
                         data.set_image(image, textureFormat)
                         data.save()
                                     
-                    elif os.path.exists(name):
+                    elif os.path.join(extract_dir, f"{name}.json"):
                         fp = os.path.join(extract_dir, f"{name}.json")
                         with open(fp, "r", encoding = "utf8") as f:
                             obj.save_typetree(rapidjson.load(f))
