@@ -19,7 +19,7 @@ class Types():
     
     def readTypes(self) -> None:
         self.typeNames = []
-        if os.path.eixsts(self.TYPEFILE):
+        if os.path.exists(self.TYPEFILE):
             f = open(self.TYPEFILE, "r")
             lines = f.readlines()
 
