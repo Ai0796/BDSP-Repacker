@@ -80,8 +80,8 @@ def repackassets(queue, src, output, fileNum):
                         textureFormat = defaultFormat
                         image = Image.open(fp)
                         data = obj.read()
-                        if textureFormat(data.TextureFormat) in workingTypes:
-                            textureFormat = textureFormat(data.TextureFormat)
+                        if data.m_TextureFormat in workingTypes:
+                            textureFormat = data.m_TextureFormat
                         data.m_Width = image.width
                         data.m_Height = image.height
                         data.set_image(image, textureFormat)
