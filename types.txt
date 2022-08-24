@@ -1,0 +1,14 @@
+##This is a type file
+##Put your types here that you want unpacked
+##Caps is important ie "MonoBehaviour" will work, "monobehaviour" will not
+
+AssetBundle
+MonoBehaviour
+GameObject
+Transform
+Material
+MeshRenderer
+BoxCollider
+Texture2D
+ParticleSystem
+AnimationClip
