@@ -65,7 +65,7 @@ def repackassets(queue, src, output, fileNum):
                         data = obj.read()
                         data.m_Width = image.width
                         data.m_Height = image.height
-                        data.set_image(image, TextureFormat(10))
+                        data.set_image(image, TextureFormat(12))
                         data.save()
                                     
                     elif os.path.exists(name):
