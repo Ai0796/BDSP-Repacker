@@ -59,13 +59,24 @@ def unpackassets(queue, src, fileNum):
                             
                 name = os.path.basename(name)
                             
-                pathDic[str(obj.path_id)] = name
                 # fp = os.path.join(extract_dir, f"{name}.json")
                 if obj.type.name == "Texture2D":
                     fp = os.path.join(extract_dir, f"{name}.png")
+                    
+                    while os.path.exists(fp):
+                        j += 1
+                        fp = os.path.join(extract_dir, f"{name}_{obj.path_id}.png")
+                        
+                    if j > 0: 
+                        pathDic[str(obj.path_id)] = f"{name}_{obj.path_id}"
+                        
+                    else:
+                        pathDic[str(obj.path_id)] = name
+                        
+                    fp = os.path.join(extract_dir, f"{name}.png")
                     image = data.image
+                    image = image.convert("RGBA")
                     image.save(fp)
-                    pathDic[str(obj.path_id)] = fp
                 else:
                     fp = os.path.join(extract_dir, f"{name}.json")
                     

@@ -1,10 +1,3 @@
 [
-    "MonoBehaviour",
-    "AssetBundleManifest",
-    "GameObject",
-    "BoxCollider",
-    "Transform",
-    "ParticleSystem",
-    "AssetBundle",
-    "AnimationClip"
+    "Texture2D"
 ]

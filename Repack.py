@@ -4,10 +4,26 @@ import os, rapidjson, UnityPy, glob, traceback, time
 from Constants import Constants
 from UnityPy.enums import TextureFormat
 
+TF = TextureFormat
+
 from PIL import Image
 
 constants = Constants()
 exportNames = constants.exportNames
+
+workingTypes = [
+    TF.DXT1,
+    TF.DXT5,
+    TF.ETC_RGB4,
+    TF.ETC2_RGB,
+    TF.ETC2_RGBA8,
+    TF.Alpha8,
+    TF.R8,
+    TF.RGB24,
+    TF.RGBA32
+]
+
+defaultFormat = TextureFormat(12)
 
 def repackassets(queue, src, output, fileNum):
     ##Creates a new folder named {src}_Export
@@ -61,11 +77,14 @@ def repackassets(queue, src, output, fileNum):
                         
                     if obj.type.name == "Texture2D":
                         fp = os.path.join(extract_dir, f"{name}.png")
+                        textureFormat = defaultFormat
                         image = Image.open(fp)
                         data = obj.read()
+                        if textureFormat(data.TextureFormat) in workingTypes:
+                            textureFormat = textureFormat(data.TextureFormat)
                         data.m_Width = image.width
                         data.m_Height = image.height
-                        data.set_image(image, TextureFormat(10))
+                        data.set_image(image, textureFormat)
                         data.save()
                                     
                     elif os.path.exists(name):
@@ -73,12 +92,9 @@ def repackassets(queue, src, output, fileNum):
                         with open(fp, "r", encoding = "utf8") as f:
                             obj.save_typetree(rapidjson.load(f))
                             f.close()
+                            
                     else:
-                        # save raw relevant data (without Unity MonoBehaviour header)
-                        data = obj.read()
-                        fp = os.path.join(extract_dir, f"{data.name}.bin")
-                        with open(fp, "rb") as f:
-                            obj.set_raw_data(f.read())
+                        print("Error, File not found:", name)
             
             fp = os.path.join(output, os.path.basename(src))
             with open(fp, "wb") as f:
