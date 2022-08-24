@@ -63,13 +63,10 @@ def unpackassets(queue, src, fileNum):
                 if obj.type.name == "Texture2D":
                     fp = os.path.join(extract_dir, f"{name}.png")
                     
-                    while os.path.exists(fp):
-                        j += 1
+                    if os.path.exists(fp):
                         fp = os.path.join(extract_dir, f"{name}_{obj.path_id}.png")
-                        
-                    if j > 0: 
                         pathDic[str(obj.path_id)] = f"{name}_{obj.path_id}"
-                        
+
                     else:
                         pathDic[str(obj.path_id)] = name
                         
@@ -85,10 +82,8 @@ def unpackassets(queue, src, fileNum):
                     while os.path.exists(fp):
                         j += 1
                         fp = os.path.join(extract_dir, f"{name}_{obj.path_id}.json")
-                        
-                    if j > 0: 
                         pathDic[str(obj.path_id)] = f"{name}_{obj.path_id}"
-                        
+
                     else:
                         pathDic[str(obj.path_id)] = name
                         
