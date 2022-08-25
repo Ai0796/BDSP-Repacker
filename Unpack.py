@@ -1,6 +1,5 @@
 import multiprocessing as mp
 from multiprocessing import process
-
 import os, UnityPy, glob, traceback, time, shutil
 import queue
 import rapidjson
@@ -71,7 +70,7 @@ async def unpackassets(queue, src, exportNames):
                 if obj.type.name == "Texture2D":
                     fp = os.path.join(extract_dir, f"{name}.png")
                     
-                    if fp in existingFPs:
+                    if fp.upper() in existingFPs:
                         fp = os.path.join(extract_dir, f"{name}_{obj.path_id}.png")
                         pathDic[str(obj.path_id)] = f"{name}_{obj.path_id}"
 
@@ -82,20 +81,20 @@ async def unpackassets(queue, src, exportNames):
                     data = obj.read()
                     image = data.image
                     image = image.convert("RGBA")
-                    existingFPs.append(fp)
+                    existingFPs.append(fp.upper())
                     task = asyncio.create_task(dumpImg(image, fp))
                 else:
                     fp = os.path.join(extract_dir, f"{name}.json")
                     
                     ##Creates new file names for duplicates
-                    if fp in existingFPs:
+                    if fp.upper() in existingFPs:
                         fp = os.path.join(extract_dir, f"{name}_{obj.type.name}_{obj.path_id}.json")
                         pathDic[str(obj.path_id)] = f"{name}_{obj.type.name}_{obj.path_id}"
 
                     else:
                         pathDic[str(obj.path_id)] = name
                         
-                    existingFPs.append(fp)
+                    existingFPs.append(fp.upper())
                     task = asyncio.create_task(dumpJson(tree, fp))
                         
                     ##Finish Dumping the file
@@ -152,13 +151,6 @@ async def main():
         print(f"Unpacking {filepath}")
         p = asyncio.create_task(unpackassets(q, filepath, exportNames))
         processes.append(p)
-    #     p = mp.Process(target=unpackassets, args=(q,filepath, exportNames))
-    #     p.start()
-    #     processes.append(p)
-
-    # for p in processes:
-    #     print(q.get())
-    #     p.join()
     
     for p in processes:
         await p
