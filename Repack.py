@@ -1,15 +1,12 @@
 
 import multiprocessing as mp
 import os, rapidjson, UnityPy, glob, traceback, time
-from Constants import Constants
+from Types import Types
 from UnityPy.enums import TextureFormat
-
-TF = TextureFormat
-
 from PIL import Image
 
-constants = Constants()
-exportNames = constants.exportNames
+
+TF = TextureFormat
 
 workingTypes = [
     TF.DXT1,
@@ -25,7 +22,7 @@ workingTypes = [
 
 defaultFormat = TextureFormat(12)
 
-def repackassets(queue, src, output, fileNum):
+def repackassets(queue, src, output, exportNames):
     ##Creates a new folder named {src}_Export
     ##Puts files from source in folder
     extract_dir = str(src) + "_Export"
@@ -87,7 +84,7 @@ def repackassets(queue, src, output, fileNum):
                         data.set_image(image, textureFormat)
                         data.save()
                                     
-                    elif os.path.join(extract_dir, f"{name}.json"):
+                    elif os.path.exists(name):
                         fp = os.path.join(extract_dir, f"{name}.json")
                         with open(fp, "r", encoding = "utf8") as f:
                             obj.save_typetree(rapidjson.load(f))
@@ -116,9 +113,12 @@ def repackassets(queue, src, output, fileNum):
 
 def main():
     mp.set_start_method('spawn')
-    start_time = time.time()
     path = "AssetFolder"
     output = "EditedAssets"
+    
+    type = Types()
+    type.readTypes()
+    exportNames = type.getTypeNames()
 
     if not os.path.exists(path):
         os.makedirs(path, 0o666)
@@ -131,11 +131,12 @@ def main():
     q = mp.Queue()
     processes = []
     i = 0
+    start_time = time.time()
     for filepath in glob.iglob(path + "**/**", recursive=False):
         if os.path.isfile(filepath):
             i += 1
             
-            p = mp.Process(target=repackassets, args=(q, filepath, output, i))
+            p = mp.Process(target=repackassets, args=(q, filepath, output, exportNames))
             p.start()
             processes.append(p)
 
