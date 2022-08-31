@@ -20,7 +20,7 @@ workingTypes = [
     TF.RGBA32
 ]
 
-defaultFormat = TextureFormat(12)
+defaultFormat = TextureFormat(4)
 
 def repackassets(queue, src, output, exportNames):
     ##Creates a new folder named {src}_Export
