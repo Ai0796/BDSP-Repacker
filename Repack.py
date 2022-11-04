@@ -20,7 +20,32 @@ workingTypes = [
     TF.RGBA32
 ]
 
-defaultFormat = TextureFormat(4)
+defaultFormat = TF.RGBA32
+
+def getName(obj, tree):
+    name = tree["m_Name"]
+
+    if "m_Name" in list(tree.keys()):
+        name = tree["m_Name"]
+    else:
+        name = ""
+
+    if name == "":
+        if obj.type.name == "AssetBundle":
+            name = "AssetBundle"
+            script_path_id = 0
+
+        elif obj.type.name == "MonoBehaviour":
+            script_path_id = tree["m_Script"]["m_PathID"]
+            
+        elif obj.type.name in ["Transform" ,"BoxCollider" ,"ParticleSystem", "MeshRenderer", "MeshFilter"]:
+            script_path_id = tree["m_GameObject"]["m_PathID"]
+            
+        for script in env.objects:
+            if script.path_id == script_path_id:
+                name = script.read().name
+            
+    return name
 
 def repackassets(queue, src, output, exportNames):
     ##Creates a new folder named {src}_Export
@@ -47,30 +72,7 @@ def repackassets(queue, src, output, exportNames):
                         
                         tree = obj.read_typetree()
                         
-                        name = tree["m_Name"]
-                        
-                        if "m_Name" in list(tree.keys()):
-                            name = tree["m_Name"]
-                        else:
-                            name = ""
-                            
-                        if name == "":
-                            
-                            if obj.type.name == "AssetBundle":
-                                name = "AssetBundle"
-                                script_path_id = 0
-                            
-                            elif obj.type.name == "MonoBehaviour":
-                                script_path_id = tree["m_Script"]["m_PathID"]
-                                
-                            elif obj.type.name in ["Transform" ,"BoxCollider" ,"ParticleSystem", "MeshRenderer", "MeshFilter"]:
-                                script_path_id = tree["m_GameObject"]["m_PathID"]
-                                
-                            for script in env.objects:
-                                if script.path_id == script_path_id:
-                                    name = script.read().name
-                                    
-                        name = os.path.basename(name)
+                        name = getName(obj, tree)
                         
                     if obj.type.name == "Texture2D":
                         fp = os.path.join(extract_dir, f"{name}.png")
