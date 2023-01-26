@@ -57,14 +57,13 @@ def repackassets(queue, src, output, exportNames):
     fp = os.path.join(path_dir, f"{filename}_pathIDs.json")
     with open(fp, "r") as f:
         pathDic = rapidjson.load(f)
-        pathDicKeys = list(pathDic.keys())
     if os.path.exists(extract_dir):
         try:
             env = UnityPy.load(src)
             for obj in env.objects:
                 if obj.type.name in exportNames:
                     # save decoded data
-                    if str(obj.path_id) in pathDicKeys:
+                    if str(obj.path_id) in pathDic:
                         
                         name = pathDic[str(obj.path_id)]
                     
@@ -104,7 +103,6 @@ def repackassets(queue, src, output, exportNames):
         
         except:
             
-            print(name)
             print(traceback.format_exc())
             queue.put(f"{src} failed to repack")
             return

@@ -23,6 +23,7 @@ async def unpackassets(queue, src, exportNames):
     extract_dir = str(src) + "_Export"
     path_dir = "pathIDs"
     existingFPs = []
+    q = []
     if not os.path.exists(extract_dir):
         os.makedirs(extract_dir, 0o666)
         
@@ -77,12 +78,14 @@ async def unpackassets(queue, src, exportNames):
                     else:
                         pathDic[str(obj.path_id)] = name
                         
-                    fp = os.path.join(extract_dir, f"{name}.png")
+                    fp = os.path.join(
+                        extract_dir, f"{pathDic[str(obj.path_id)]}.png")
                     data = obj.read()
                     image = data.image
                     image = image.convert("RGBA")
                     existingFPs.append(fp.upper())
-                    task = asyncio.create_task(dumpImg(image, fp))
+                    q.append(dumpImg(image, fp))
+                        
                 else:
                     fp = os.path.join(extract_dir, f"{name}.json")
                     
@@ -95,13 +98,11 @@ async def unpackassets(queue, src, exportNames):
                         pathDic[str(obj.path_id)] = name
                         
                     existingFPs.append(fp.upper())
-                    task = asyncio.create_task(dumpJson(tree, fp))
+                    q.append(dumpJson(tree, fp))
                         
                     ##Finish Dumping the file
                     
-                await task
-                    
-                     
+        await asyncio.gather(*q)     
         filename = os.path.basename(src)   
         fp = os.path.join(path_dir, f"{filename}_pathIDs.json")
         with open(fp, "wt") as f:
@@ -116,6 +117,10 @@ async def unpackassets(queue, src, exportNames):
         print(tree)
         queue.put(f"{src} failed to unpack")
         return
+    
+def run(queue, src, exportNames):
+    loop = asyncio.get_event_loop()
+    loop.run_until_complete(unpackassets(queue, src, exportNames))
     
 async def main():
     path = "AssetFolder"
@@ -149,11 +154,10 @@ async def main():
     for filepath in filepaths:
         i += 1
         print(f"Unpacking {filepath}")
-        p = asyncio.create_task(unpackassets(q, filepath, exportNames))
+        p = unpackassets(q, filepath, exportNames)
         processes.append(p)
     
-    for p in processes:
-        await p
+    await asyncio.gather(*processes)
             
     print("Finished Unpacking "f"{i} Files")
     print("Unpacking took", time.time() - start_time, "seconds to run")
