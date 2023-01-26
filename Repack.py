@@ -73,7 +73,7 @@ def repackassets(queue, src, output, exportNames):
                         
                         name = getName(obj, tree)
                         
-                    if obj.type.name == "Texture2D":
+                    if obj.type.name in ["Texture2D", 'Sprite']:
                         fp = os.path.join(extract_dir, f"{name}.png")
                         textureFormat = defaultFormat
                         image = Image.open(fp)

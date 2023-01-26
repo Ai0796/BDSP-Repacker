@@ -68,7 +68,7 @@ async def unpackassets(queue, src, exportNames):
                 name = os.path.basename(name)
                             
                 # fp = os.path.join(extract_dir, f"{name}.json")
-                if obj.type.name == "Texture2D":
+                if obj.type.name in ["Texture2D", 'Sprite']:
                     fp = os.path.join(extract_dir, f"{name}.png")
                     
                     if fp.upper() in existingFPs:
@@ -79,7 +79,7 @@ async def unpackassets(queue, src, exportNames):
                         pathDic[str(obj.path_id)] = name
                         
                     fp = os.path.join(
-                        extract_dir, f"{pathDic[str(obj.path_id)]}.png")
+                        extract_dir, f"{fp}.png")
                     data = obj.read()
                     image = data.image
                     image = image.convert("RGBA")
