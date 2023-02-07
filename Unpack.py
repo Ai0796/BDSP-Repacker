@@ -1,12 +1,11 @@
 import multiprocessing as mp
-from multiprocessing import process
 import os, UnityPy, glob, traceback, time, shutil
-import queue
 import rapidjson
 
 from Types import Types
 
 import asyncio
+
 
 async def dumpJson(tree, fp):
     with open(fp, "wb") as f:
@@ -34,6 +33,7 @@ async def unpackassets(queue, src, exportNames):
 
         pathDic = {}
         for obj in env.objects:
+
             if obj.type.name in exportNames:
                 
                 # save decoded data
@@ -78,8 +78,6 @@ async def unpackassets(queue, src, exportNames):
                     else:
                         pathDic[str(obj.path_id)] = name
                         
-                    fp = os.path.join(
-                        extract_dir, f"{fp}.png")
                     data = obj.read()
                     image = data.image
                     image = image.convert("RGBA")

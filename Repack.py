@@ -22,7 +22,7 @@ workingTypes = [
 
 defaultFormat = TF.RGBA32
 
-def getName(obj, tree):
+def getName(env, obj, tree):
     name = tree["m_Name"]
 
     if "m_Name" in list(tree.keys()):
@@ -71,7 +71,7 @@ def repackassets(queue, src, output, exportNames):
                         
                         tree = obj.read_typetree()
                         
-                        name = getName(obj, tree)
+                        name = getName(env, obj, tree)
                         
                     if obj.type.name in ["Texture2D", 'Sprite']:
                         fp = os.path.join(extract_dir, f"{name}.png")
