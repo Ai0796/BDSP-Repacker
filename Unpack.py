@@ -3,9 +3,11 @@ import os, UnityPy, glob, traceback, time, shutil
 import rapidjson
 
 from Types import Types
+from Exports import Exports
 
 import asyncio
-
+import zipfile
+from zip import *
 
 async def dumpJson(tree, fp):
     with open(fp, "wb") as f:
@@ -16,89 +18,93 @@ async def dumpJson(tree, fp):
 async def dumpImg(image, fp):
     image.save(fp)
 
-async def unpackassets(queue, src, exportNames):
+async def unpackassets(queue, src, exportTypes, exportNames):
     ##Creates a new folder named {src}_Export
     ##Puts files from source in folder
     extract_dir = str(src) + "_Export"
     path_dir = "pathIDs"
     existingFPs = []
     q = []
-    if not os.path.exists(extract_dir):
-        os.makedirs(extract_dir, 0o666)
+    # if not os.path.exists(extract_dir):
+    #     os.makedirs(extract_dir, 0o666)
         
-    if not os.path.exists(path_dir):
-        os.makedirs(path_dir, 0o666)
+    # if not os.path.exists(path_dir):
+    #     os.makedirs(path_dir, 0o666)
     try:
         env = UnityPy.load(src)
 
         pathDic = {}
         for obj in env.objects:
 
-            if obj.type.name in exportNames:
-                
-                # save decoded data
-                tree = obj.read_typetree()
-                
-                if "m_Name" in tree:
-                    name = tree["m_Name"]
+            if obj.type.name not in exportTypes:
+                continue
+            # save decoded data
+            tree = obj.read_typetree()
+            
+            if "m_Name" in tree:
+                name = tree["m_Name"]
+            else:
+                name = ""
+
+            ##Grab a name from script or gameobject name
+            if name == "":
+
+                if obj.type.name == "AssetBundle":
+                    name = "AssetBundle"
+                    script_path_id = 0
+
+                elif obj.type.name == "MonoBehaviour":
+                    script_path_id = tree["m_Script"]["m_PathID"]
+
+                elif obj.type.name in ["Transform", "BoxCollider", "ParticleSystem", "MeshRenderer", "MeshFilter", "SkinnedMeshRenderer"]:
+                    script_path_id = tree["m_GameObject"]["m_PathID"]
+
                 else:
-                    name = ""
+                    print("Error, Type:", obj.type.name, "name not recognized")
+                    continue
 
-                ##Grab a name from script or gameobject name
-                if name == "":
-
-                    if obj.type.name == "AssetBundle":
-                        name = "AssetBundle"
-                        script_path_id = 0
-
-                    elif obj.type.name == "MonoBehaviour":
-                        script_path_id = tree["m_Script"]["m_PathID"]
-
-                    elif obj.type.name in ["Transform", "BoxCollider", "ParticleSystem", "MeshRenderer", "MeshFilter", "SkinnedMeshRenderer"]:
-                        script_path_id = tree["m_GameObject"]["m_PathID"]
-
-                    else:
-                        print("Error, Type:", obj.type.name, "name not recognized")
-                        continue
-
-                    for script in env.objects:
-                        if script.path_id == script_path_id:
-                            name = script.read().name
-                            
-                name = os.path.basename(name)
-                            
-                # fp = os.path.join(extract_dir, f"{name}.json")
-                if obj.type.name in ["Texture2D", 'Sprite']:
-                    fp = os.path.join(extract_dir, f"{name}.png")
-                    
-                    if fp.upper() in existingFPs:
-                        fp = os.path.join(extract_dir, f"{name}_{obj.path_id}.png")
-                        pathDic[str(obj.path_id)] = f"{name}_{obj.path_id}"
-
-                    else:
-                        pathDic[str(obj.path_id)] = name
+                for script in env.objects:
+                    if script.path_id == script_path_id:
+                        name = script.read().name
                         
-                    data = obj.read()
-                    image = data.image
-                    image = image.convert("RGBA")
-                    existingFPs.append(fp.upper())
-                    q.append(dumpImg(image, fp))
+            name = os.path.basename(name)
+            if name.lower() not in exportNames:
+                continue
                         
+            print(name)            
+            
+            # fp = os.path.join(extract_dir, f"{name}.json")
+            if obj.type.name in ["Texture2D", 'Sprite']:
+                fp = os.path.join(extract_dir, f"{name}.png")
+                
+                if fp.upper() in existingFPs:
+                    fp = os.path.join(extract_dir, f"{name}_{obj.path_id}.png")
+                    pathDic[str(obj.path_id)] = f"{name}_{obj.path_id}"
+
                 else:
-                    fp = os.path.join(extract_dir, f"{name}.json")
+                    pathDic[str(obj.path_id)] = name
                     
-                    ##Creates new file names for duplicates
-                    if fp.upper() in existingFPs:
-                        fp = os.path.join(extract_dir, f"{name}_{obj.type.name}_{obj.path_id}.json")
-                        pathDic[str(obj.path_id)] = f"{name}_{obj.type.name}_{obj.path_id}"
+                data = obj.read()
+                image = data.image
+                image = image.convert("RGBA")
+                existingFPs.append(fp.upper())
+                q.append(dumpImg(image, fp))
+                    
+            else:
+                fp = os.path.join(extract_dir, f"{name}.json")
+                
+                ##Creates new file names for duplicates
+                if fp.upper() in existingFPs:
+                    fp = os.path.join(extract_dir, f"{name}_{obj.type.name}_{obj.path_id}.json")
+                    pathDic[str(obj.path_id)] = f"{name}_{obj.type.name}_{obj.path_id}"
 
-                    else:
-                        pathDic[str(obj.path_id)] = name
-                        
-                    existingFPs.append(fp.upper())
-                    q.append(dumpJson(tree, fp))
-                        
-                    ##Finish Dumping the file
+                else:
+                    pathDic[str(obj.path_id)] = name
+                    
+                existingFPs.append(fp.upper())
+                q.append(make_archive(f"{name}.json", tree))
+                    
+                ##Finish Dumping the file
                     
         await asyncio.gather(*q)     
         filename = os.path.basename(src)   
@@ -116,16 +122,20 @@ async def unpackassets(queue, src, exportNames):
         queue.put(f"{src} failed to unpack")
         return
     
-def run(queue, src, exportNames):
+def run(queue, src, exportTypes, exportNames):
     loop = asyncio.get_event_loop()
-    loop.run_until_complete(unpackassets(queue, src, exportNames))
+    loop.run_until_complete(unpackassets(queue, src, exportTypes, exportNames))
     
 async def main():
     path = "AssetFolder"
     
     type = Types()
     type.readTypes()
-    exportNames = type.getTypeNames()
+    exportTypes = type.getTypeNames()
+    
+    exports = Exports()
+    exports.readExports()
+    exportNames = exports.getExportNames()
 
     if not os.path.exists(path):
         os.makedirs(path, 0o666)
@@ -152,10 +162,12 @@ async def main():
     for filepath in filepaths:
         i += 1
         print(f"Unpacking {filepath}")
-        p = unpackassets(q, filepath, exportNames)
+        p = unpackassets(q, filepath, exportTypes, exportNames)
         processes.append(p)
     
     await asyncio.gather(*processes)
+    
+    close_archive()
             
     print("Finished Unpacking "f"{i} Files")
     print("Unpacking took", time.time() - start_time, "seconds to run")
