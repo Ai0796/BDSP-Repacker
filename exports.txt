@@ -1,0 +1,23 @@
+##This is an export fie
+##Put the names of files you want exported
+##Caps is not required, for example POKEMONINFO will be read the same as pokemoninfo
+
+TrainerTable
+FieldEncountTable_d
+DistributionTable
+AddPersonalTable
+EvolveTable
+GrowTable
+ItemTable
+PedestalTable
+PersonalTable
+SealTable
+StoneStatuEeffect
+TamagoWazaTable
+TamaTable
+UgFatherExpansion
+UgFatherExpansion
+UgFatherShopTable
+UgItemTable
+WazaOboeTable
+WazaTable
